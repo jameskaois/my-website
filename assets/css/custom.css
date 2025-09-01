@@ -1,0 +1,137 @@
+/* Sidebar Layout */
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: #1e1e1e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    margin-top: 48px;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+}
+
+.avatar-link {
+    display: block;
+    border-radius: 50%;
+    width: 112px;
+    height: 112px;
+    overflow: hidden;
+    border: 0.5px solid white;
+}
+
+.avatar-link img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transition: transform ease 0.3s;
+    object-fit: cover;
+    object-position: center;
+}
+
+.avatar-link img:hover {
+    transform: scale(1.2);
+}
+
+.sidebar-header h1 {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #717070;
+    transition: color ease 0.3s;
+}
+
+.sidebar-header h1:hover {
+    color: white;
+}
+
+.sidebar-header p {
+    font-size: 14px;
+    font-style: italic;
+    color: #868686;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-nav {
+    padding: 0 24px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #868686;
+    transition: background-color ease 0.3s;
+    margin-bottom: 4px;
+}
+
+.sidebar-nav a:hover {
+    background-color: #262626;
+}
+
+.sidebar-nav a .icon-container {
+    margin-right: 24px;
+    width: 20px;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-footer a {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #232328;
+    color: #787878;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color ease 0.3s;
+    margin-right: 12px;
+}
+
+.sidebar-footer a:hover {
+    color: white;
+}
+
+@media (min-width: 1650px) {
+    .sidebar-header {
+        margin-top: 56px;
+        margin-bottom: 40px;
+        padding-left: 56px;
+        padding-right: 20px;
+    }
+
+    .sidebar-nav {
+        padding: 0 44px;
+    }
+}
+
+.content {
+    padding: 2rem;
+    background: #f9f9f9;
+}

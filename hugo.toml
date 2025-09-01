@@ -1,5 +1,5 @@
 baseURL = "https://yourdomain.com/"   # update before deploy
-title = "Your Name"
+title = "James Cao"
 theme = "PaperMod"
 defaultContentLanguage = "en"
 [pagination]
@@ -39,15 +39,22 @@ uglyURLs = false
     name = "Home"
     url = "/"
     weight = 1
+    pre = "<i class='fa-solid fa-house'></i>"
+
   [[menu.main]]
     name = "Blog"
     url = "/posts/"
     weight = 2
+    pre = "<i class='fa-solid fa-pen-nib'></i>"
+
   [[menu.main]]
     name = "Projects"
     url = "/projects/"
     weight = 3
+    pre = "<i class='fa-solid fa-code'></i>"
+
   [[menu.main]]
     name = "About"
     url = "/about/"
     weight = 4
+    pre = "<i class='fa-solid fa-user'></i>"

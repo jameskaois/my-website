@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="sidebar-layout">
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="{{ .Site.BaseURL }}" class="avatar-link"><img src="/images/avatar.jpg" alt="Avatar Image"></a>
+          <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
+          <p>Cybersecurity Enthusiast • CTF Player • Developer • Lifelong Learner</p>
+        </div>
+
+        <nav class="sidebar-nav">
+  {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}"
+       class="{{ if or ($.Page.IsMenuCurrent "main" .) ($.Page.HasMenuCurrent "main" .) }}active{{ end }}">
+      <span class="icon-container">{{ .Pre }}</span> {{ .Name }}
+    </a>
+  {{ end }}
+</nav>
+
+        <div class="sidebar-footer">
+          <a href="https://github.com/jameskaois" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/hpcao299/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/jameskaois" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://tryhackme.com/p/jameskaois" target="_blank"><i class="fas fa-user-secret"></i></i></a>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="content">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+
+    {{/*  {{ partial "footer.html" . }}  */}}
+  </body>
+</html>
