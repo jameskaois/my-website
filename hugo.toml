@@ -1,0 +1,53 @@
+baseURL = "https://yourdomain.com/"   # update before deploy
+title = "Your Name"
+theme = "PaperMod"
+defaultContentLanguage = "en"
+[pagination]
+  pagerSize = 10
+enableRobotsTXT = true
+
+# pretty URLs
+uglyURLs = false
+
+# syntax highlighting
+[markup]
+  [markup.highlight]
+    noClasses = false
+    guessSyntax = true
+
+# site params (PaperMod)
+[params]
+  env = "production"
+  description = "Portfolio & Blog"
+  author = "Your Name"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  defaultTheme = "auto"
+  disableThemeToggle = false
+
+  # home info card
+  [params.homeInfoParams]
+    Title = "Hi, I'm Your Name"
+    Content = "Security student • Developer • Here’s my work and notes."
+
+# main menu
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
