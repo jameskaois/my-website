@@ -1,0 +1,24 @@
+<aside class="right-sidebar">
+    <!-- Recently Updated -->
+    <section class="recent-posts">
+        <h3>Recently Updated</h3>
+        <ul>
+            {{ range first 5 (where .Site.RegularPages "Type" "posts" | sort "Lastmod" "desc") }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <small>{{ .Lastmod.Format "Jan 2, 2006" }}</small>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+
+    <!-- Trending Tags -->
+    <section class="trending-tags">
+        <h3>Trending Tags</h3>
+        <div class="tags">
+            {{ range first 10 (sort .Site.Taxonomies.tags "Count" "desc") }}
+            <a href="{{ .Page.RelPermalink }}" class="tag"> #{{ .Page.Title }} ({{ .Count }}) </a>
+            {{ end }}
+        </div>
+    </section>
+</aside>

@@ -28,36 +28,17 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><link rel="stylesheet" href="/css/custom.min.3b51b2d1afa8d103c9e3365a0d92ac5392a705f7df1dd2236571070472734ef8.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</noscript><link rel="stylesheet" href="/css/custom.min.8d61a30e7fa2789502a60143937b8a524757b823b0d56529b8101224dccbb878.css" />
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+/>
 <meta property="og:url" content="http://localhost:1313/projects/">
   <meta property="og:site_name" content="James Cao">
   <meta property="og:title" content="Projects">
@@ -86,13 +67,24 @@
   </head>
   <body class="sidebar-layout">
     <div class="container">
+      <header class="mobile-header">
+          <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+          <a href="http://localhost:1313/"><div>James Cao</div></a>
+          <button class="search-btn"><i class="fas fa-search"></i>
+</button>
+        </header>
+
       
       <aside class="sidebar">
+        <button class="mobile-close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         <div class="sidebar-header">
           <a href="http://localhost:1313/" class="avatar-link"><img src="/images/avatar.jpg" alt="Avatar Image"></a>
           <a href="http://localhost:1313/"><h1>James Cao</h1></a>
           <p>Cybersecurity Enthusiast • CTF Player • Developer • Lifelong Learner</p>
         </div>
+
 
         <nav class="sidebar-nav">
   
@@ -101,19 +93,24 @@
       <span class="icon-container"><i class='fa-solid fa-house'></i></span> Home
     </a>
   
-    <a href="/posts/"
+    <a href="/homelab/"
        class="">
-      <span class="icon-container"><i class='fa-solid fa-pen-nib'></i></span> Blog
+      <span class="icon-container"><i class='fa-solid fa-server'></i></span> My Homelab
     </a>
   
-    <a href="/projects/"
+    <a href="/tags/"
        class="">
-      <span class="icon-container"><i class='fa-solid fa-code'></i></span> Projects
+      <span class="icon-container"><i class='fa-solid fa-tags'></i></span> Tags
     </a>
   
-    <a href="/about/"
+    <a href="/portfolio/"
        class="">
-      <span class="icon-container"><i class='fa-solid fa-user'></i></span> About
+      <span class="icon-container"><i class='fa-solid fa-briefcase'></i></span> Portfolio
+    </a>
+  
+    <a href="/cheatsheet/"
+       class="">
+      <span class="icon-container"><i class='fa-solid fa-book'></i></span> Cheatsheet
     </a>
   
 </nav>
@@ -153,5 +150,6 @@
     </div>
 
     
+  <script src="/js/main.min.91c460884e86528e52e915dc1ad70ef7707620a8a27ac1cd0cbf35f48247051f.js" integrity="sha256-kcRgiE6GUo5S6RXcGtcO93B2IKiiesHNDL819IJHBR8="></script>
   </body>
 </html>

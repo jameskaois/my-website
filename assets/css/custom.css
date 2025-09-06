@@ -1,8 +1,19 @@
+html {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Sidebar Layout */
 .container {
-    display: grid;
-    grid-template-columns: 300px 1fr;
     min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: rgb(27, 27, 30);
 }
 
 .sidebar {
@@ -10,6 +21,13 @@
     color: #fff;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 100;
+    height: 100vh;
 }
 
 .sidebar-header {
@@ -43,6 +61,7 @@
 
 .sidebar-header h1 {
     font-size: 28px;
+    font-family: 'Rajdhani', sans-serif;
     margin-top: 20px;
     margin-bottom: 8px;
     color: #717070;
@@ -96,7 +115,6 @@
     display: flex;
     align-items: center;
     padding: 0 32px;
-    margin-bottom: 24px;
     display: flex;
     justify-content: center;
 }
@@ -112,10 +130,108 @@
     justify-content: center;
     transition: color ease 0.3s;
     margin-right: 12px;
+    padding-bottom: 24px;
 }
 
 .sidebar-footer a:hover {
     color: white;
+}
+
+.sidebar .mobile-close-btn {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    padding: 10px;
+    color: #868686;
+    fill: #868686;
+    font-size: 20px;
+    display: none;
+}
+
+.sidebar .mobile-close-btn:active {
+    color: #fff;
+    fill: #fff;
+}
+
+.mobile-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    background: #1e1e1e;
+    color: #fff;
+    z-index: 99;
+    width: 100vw;
+}
+
+.mobile-header i {
+    color: rgb(153, 153, 153);
+    fill: rgb(153, 153, 153);
+}
+
+.mobile-header div {
+    color: rgb(175, 176, 177);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.mobile-header button {
+    padding: 6px 12px;
+}
+
+.content {
+    padding: 20px 20px 0;
+    background: rgb(27, 27, 30);
+    margin-left: 300px;
+    max-width: calc(100vw - 300px);
+}
+
+.content article {
+    margin-bottom: 20px;
+    min-height: unset;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: #1e1e1e;
+    border: 1px solid #29292b;
+    border-radius: 10px;
+    padding: 28px 28px 20px;
+    color: #868686;
+}
+
+.content article h2 {
+    color: #ccc;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content article .entry-header,
+.content article .entry-content,
+.content article .entry-footer {
+    width: 60%;
+}
+
+.content article .entry-content {
+    -webkit-line-clamp: 2;
+}
+
+.content article figure {
+    margin-bottom: 0;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.content article figure img {
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (min-width: 1650px) {
@@ -131,7 +247,53 @@
     }
 }
 
-.content {
-    padding: 2rem;
-    background: #f9f9f9;
+@media (max-width: 849px) {
+    .sidebar {
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        width: 100vw;
+    }
+
+    .sidebar.mobile-open {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+
+    .sidebar .mobile-close-btn {
+        display: block;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+
+    .content {
+        margin-left: 0;
+        max-width: 100vw;
+    }
+}
+
+/* Works in Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 8px; /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    background: #111; /* track (background) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444; /* draggable part */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666; /* hover effect */
+}
+
+/* Works in Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #111; /* thumb color | track color */
 }

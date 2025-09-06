@@ -5,13 +5,24 @@
   </head>
   <body class="sidebar-layout">
     <div class="container">
+      <header class="mobile-header">
+          <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+          <a href="{{ .Site.BaseURL }}"><div>{{ .Site.Title }}</div></a>
+          <button class="search-btn"><i class="fas fa-search"></i>
+</button>
+        </header>
+
       <!-- Sidebar -->
       <aside class="sidebar">
+        <button class="mobile-close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         <div class="sidebar-header">
           <a href="{{ .Site.BaseURL }}" class="avatar-link"><img src="/images/avatar.jpg" alt="Avatar Image"></a>
           <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
           <p>Cybersecurity Enthusiast • CTF Player • Developer • Lifelong Learner</p>
         </div>
+
 
         <nav class="sidebar-nav">
   {{ range .Site.Menus.main }}
@@ -36,6 +47,7 @@
       </main>
     </div>
 
-    {{/*  {{ partial "footer.html" . }}  */}}
+    {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
   </body>
 </html>

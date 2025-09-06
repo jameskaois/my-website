@@ -18,20 +18,18 @@ uglyURLs = false
 # site params (PaperMod)
 [params]
   env = "production"
-  description = "Portfolio & Blog"
-  author = "Your Name"
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  defaultTheme = "auto"
-  disableThemeToggle = false
+  defaultTheme = "dark"
+  disableThemeToggle = true
+  ShowPostCover = true
+  ShowPostCoverInList = true
+  ShowPostCoverInSingle = true
 
   # home info card
-  [params.homeInfoParams]
-    Title = "Hi, I'm Your Name"
-    Content = "Security student • Developer • Here’s my work and notes."
 
 # main menu
 [menu]
@@ -42,19 +40,25 @@ uglyURLs = false
     pre = "<i class='fa-solid fa-house'></i>"
 
   [[menu.main]]
-    name = "Blog"
-    url = "/posts/"
+    name = "My Homelab"
+    url = "/homelab/"
     weight = 2
-    pre = "<i class='fa-solid fa-pen-nib'></i>"
+    pre = "<i class='fa-solid fa-server'></i>"
 
   [[menu.main]]
-    name = "Projects"
-    url = "/projects/"
+    name = "Tags"
+    url = "/tags/"
     weight = 3
-    pre = "<i class='fa-solid fa-code'></i>"
+    pre = "<i class='fa-solid fa-tags'></i>"
 
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Portfolio"
+    url = "/portfolio/"
     weight = 4
-    pre = "<i class='fa-solid fa-user'></i>"
+    pre = "<i class='fa-solid fa-briefcase'></i>"
+
+  [[menu.main]]
+    name = "Cheatsheet"
+    url = "/cheatsheet/"
+    weight = 5
+    pre = "<i class='fa-solid fa-book'></i>"
