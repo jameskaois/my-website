@@ -1,5 +1,5 @@
-{{ define "main" }} {{ $posts := where .Site.RegularPages "Section" "posts" }} {{ range first 10
-(sort $posts "Date" "desc") }}
+{{/* {{ define "main" }} {{ $posts := where .Site.RegularPages "Section" "posts" }} {{ range first
+10 (sort $posts "Date" "desc") }}
 <article class="post-entry">
     <a href="{{ .RelPermalink }}">
         {{ with .Params.cover }} {{ with .image }}
@@ -12,4 +12,28 @@
         </div>
     </a>
 </article>
-{{ end }} {{ end }}
+{{ end }} {{ end }} */}} {{ define "main" }} {{ $paginator := .Paginate (where .Site.RegularPages
+"Section" "posts") }} {{ range $paginator.Pages }}
+<article class="post-entry">
+    <a href="{{ .RelPermalink }}">
+        {{ with .Params.cover }} {{ with .image }}
+        <figure><img src="{{ . }}" alt="{{ $.Title }}" /></figure>
+        {{ end }} {{ end }}
+        <div class="entry-header"><h2>{{ .Title }}</h2></div>
+        <div class="entry-content"><p>{{ .Summary }}</p></div>
+        <div class="entry-footer">
+            <small>{{ .Date.Format "Jan 2, 2006" }} • {{ .ReadingTime }} min read</small>
+        </div>
+    </a>
+</article>
+{{ end }}
+
+<!-- Pagination controls -->
+<nav class="pagination">
+    {{ if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL }}">← Newer Posts</a>
+    {{ end }} {{ if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL }}">Older Posts →</a>
+    {{ end }}
+</nav>
+{{ end }}
