@@ -1,7 +1,7 @@
 ---
 title: 'This is my website'
 date: 2025-09-06
-tags: ['blog', 'hugo']
+tags: ['Blog', 'Hugo']
 description: 'This is a test post.'
 cover:
     image: '/images/posts/hugo-cover.png' # path inside /static

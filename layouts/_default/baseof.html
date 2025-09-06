@@ -43,7 +43,10 @@
 
       <!-- Main content -->
       <main class="content">
-        {{ block "main" . }}{{ end }}
+        <div class="content-container">
+          <div class="inside">{{ block "main" . }}{{ end }}</div>
+            {{ partial "right-sidebar.html" . }}
+        </div>
       </main>
     </div>
 

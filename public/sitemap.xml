@@ -8,6 +8,18 @@
     <loc>http://localhost:1313/tags/blog/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/ctfs/</loc>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/hugo/</loc>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/overthewire/</loc>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/overthewire-bandit-level-0-15/</loc>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>

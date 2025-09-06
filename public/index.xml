@@ -9,6 +9,13 @@
     <lastBuildDate>Sat, 06 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>OverTheWire Bandit Beginner Levels 0 - 15</title>
+      <link>http://localhost:1313/posts/overthewire-bandit-level-0-15/</link>
+      <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/overthewire-bandit-level-0-15/</guid>
+      <description>This is a test post.</description>
+    </item>
+    <item>
       <title>This is my website</title>
       <link>http://localhost:1313/posts/hello-new-website/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
