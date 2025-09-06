@@ -10,4 +10,11 @@
     mobileSidebarCloseBtn.addEventListener('click', () => {
         sidebar.classList.toggle('mobile-open');
     });
+
+    const tableOfContent = document.getElementById('post-content');
+    const postSingle = document.querySelector('.post-single');
+
+    if (postSingle) {
+        tableOfContent.style.display = 'block';
+    }
 })();

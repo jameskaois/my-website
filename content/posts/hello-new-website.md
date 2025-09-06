@@ -1,5 +1,5 @@
 ---
-title: 'This is my website'
+title: 'This Is My Website'
 date: 2025-09-06
 tags: ['Blog', 'Hugo']
 description: 'This is a test post.'

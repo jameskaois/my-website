@@ -361,8 +361,17 @@ body {
     text-decoration: none;
 }
 
+#post-content {
+    display: none;
+}
+
 .post-single header .breadcrumbs a {
     color: #868686;
+}
+
+.post-single header .breadcrumbs a:hover {
+    text-decoration: underline;
+    color: #d2603a;
 }
 
 .post-single .post-title {
@@ -424,6 +433,23 @@ body {
 }
 
 .post-single .paginav a:hover span {
+    color: white;
+}
+
+.page-header h1 {
+    color: #ccc;
+    font-size: 30px;
+}
+
+.terms-tags a {
+    background: transparent;
+    border: 1px solid #2e2f31;
+    color: #868686;
+    transition: all 0.3s ease;
+}
+
+.terms-tags a:hover {
+    background-color: #d2603a;
     color: white;
 }
 
