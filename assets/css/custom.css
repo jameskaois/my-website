@@ -193,7 +193,7 @@ body {
 }
 
 .content-container {
-    margin: 28px auto 0;
+    margin: 20px auto 0;
     padding: 0 16px;
 }
 
@@ -216,7 +216,7 @@ body {
 }
 
 .content .first-entry {
-    margin-top: 0;
+    margin-top: 24px;
 }
 
 .content .post-entry a::before,
@@ -285,6 +285,33 @@ body {
     height: 100%;
 }
 
+.content-footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    padding-bottom: 36px;
+    display: flex;
+    align-items: center;
+    color: #868686;
+    justify-content: space-between;
+    border-top: 1px solid rgb(44, 45, 45);
+    font-size: 12px;
+}
+
+.content-footer a {
+    font-weight: 600;
+    color: #aeaeae;
+    font-size: 12px;
+}
+
+.content-footer a:hover {
+    text-decoration: underline;
+    color: #d2603a;
+}
+
+.right-sidebar {
+    padding-top: 24px;
+}
+
 .right-sidebar section {
     padding-left: 16px;
     border-left: 1px solid rgb(44, 45, 45);
@@ -318,8 +345,8 @@ body {
 
 .right-sidebar .sidebar-tag {
     display: inline-block;
-    border-radius: 12px;
-    padding: 3px 6px;
+    border-radius: 16px;
+    padding: 3px 8px;
     margin-right: 4px;
     min-width: 32px;
     text-align: center;
@@ -332,6 +359,72 @@ body {
     color: white !important;
     background-color: #d2603a;
     text-decoration: none;
+}
+
+.post-single header .breadcrumbs a {
+    color: #868686;
+}
+
+.post-single .post-title {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 30px;
+}
+
+.post-single .post-description,
+.post-single .post-meta {
+    font-size: 14px;
+}
+
+.post-single * {
+    color: rgb(175, 176, 177);
+}
+
+.post-single .post-content {
+    padding-bottom: 24px;
+}
+
+.post-single .post-tags a {
+    border: 1px solid rgb(46, 47, 49);
+    padding: 2px 8px;
+    color: #868686;
+    min-width: 32px;
+    border-radius: 10px;
+    line-height: 20px;
+    transition: background 0.35s ease-in-out;
+    background: transparent;
+}
+
+.post-single .post-tags a:hover {
+    color: #d2603a;
+    background: rgb(43, 56, 62);
+}
+
+.post-single .paginav {
+    margin-top: 24px;
+    background: transparent;
+    border: 1px solid rgb(46, 47, 49);
+}
+
+.post-single .paginav a {
+    padding: 6px 14px;
+    transition: all 0.3s ease;
+}
+
+.post-single .paginav a:hover {
+    background-color: #d2603a;
+}
+
+.post-single .paginav span {
+    color: #d2603a;
+}
+
+.post-single .paginav span.title {
+    color: #868686;
+}
+
+.post-single .paginav a:hover span {
+    color: white;
 }
 
 @media (min-width: 1650px) {
@@ -421,7 +514,6 @@ body {
 @media (max-width: 768px) {
     .content-container {
         padding: 0;
-        margin-top: 14px;
     }
 
     .content .post-entry,
