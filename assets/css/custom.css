@@ -218,7 +218,8 @@ body {
     overflow: hidden;
 }
 
-.content .first-entry {
+.content .first-entry,
+.content .post-entry:first-child {
     margin-top: 24px;
 }
 
@@ -266,7 +267,7 @@ body {
 
 .content .post-entry .entry-footer,
 .content .first-entry .entry-footer {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .content .post-entry figure,

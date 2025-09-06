@@ -1,0 +1,15 @@
+{{ define "main" }} {{ $posts := where .Site.RegularPages "Section" "posts" }} {{ range first 10
+(sort $posts "Date" "desc") }}
+<article class="post-entry">
+    <a href="{{ .RelPermalink }}">
+        {{ with .Params.cover }} {{ with .image }}
+        <figure><img src="{{ . }}" alt="{{ $.Title }}" /></figure>
+        {{ end }} {{ end }}
+        <div class="entry-header"><h2>{{ .Title }}</h2></div>
+        <div class="entry-content"><p>{{ .Summary }}</p></div>
+        <div class="entry-footer">
+            <small>{{ .Date.Format "Jan 2, 2006" }} • {{.ReadingTime}} min read</small>
+        </div>
+    </a>
+</article>
+{{ end }} {{ end }}
