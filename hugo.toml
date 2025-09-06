@@ -40,7 +40,7 @@ uglyURLs = false
     pre = "<i class='fa-solid fa-house'></i>"
 
   [[menu.main]]
-    name = "My Homelab"
+    name = "My Home Lab"
     url = "/homelab/"
     weight = 2
     pre = "<i class='fa-solid fa-server'></i>"

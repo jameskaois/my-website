@@ -7,5 +7,19 @@
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gaining Access</title>
+      <link>http://localhost:1313/categories/gaining-access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/gaining-access/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Hacking</title>
+      <link>http://localhost:1313/categories/network-hacking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/network-hacking/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

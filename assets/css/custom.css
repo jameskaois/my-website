@@ -10,7 +10,6 @@ body {
     background: rgb(27, 27, 30);
 }
 
-/* Sidebar Layout */
 .container {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
@@ -190,15 +189,19 @@ body {
     background: rgb(27, 27, 30);
     margin-left: 300px;
     max-width: calc(100vw - 300px);
+    min-height: 100vh;
 }
 
 .content-container {
     margin: 20px auto 0;
     padding: 0 16px;
+    min-height: 95vh;
 }
 
 .inside {
     padding: 0 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 .content .post-entry,
@@ -365,7 +368,7 @@ body {
     display: none;
 }
 
-.post-single header .breadcrumbs a {
+.breadcrumbs a {
     color: #868686;
 }
 
@@ -595,6 +598,12 @@ body {
     }
 }
 
+@media (max-width: 991px) {
+    .content-footer {
+        flex-direction: column;
+    }
+}
+
 /* Works in Chrome, Edge, Safari */
 ::-webkit-scrollbar {
     width: 8px; /* scrollbar width */
@@ -617,4 +626,63 @@ body {
 * {
     scrollbar-width: thin;
     scrollbar-color: #444 #111; /* thumb color | track color */
+}
+
+.cheatsheet h1 {
+    font-size: 30px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.cheatsheet h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.category {
+    background: #1e1e21;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.category h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: #f2f2f2;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category li {
+    margin: 0.4rem 0;
+}
+
+.category li a {
+    text-decoration: none;
+    color: #868686;
+    display: inline-block;
+    padding: 2px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.category li a:hover {
+    color: #d2603a;
+    text-decoration: underline;
 }

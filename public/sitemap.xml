@@ -38,5 +38,13 @@
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/cheatsheet/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/gaining-access/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cheatsheet/network-hacking/hack-any-wifi-password/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/network-hacking/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</loc>
   </url>
 </urlset>
