@@ -5,7 +5,9 @@ defaultContentLanguage = "en"
 [pagination]
   pagerSize = 10
 enableRobotsTXT = true
-
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
 # pretty URLs
 uglyURLs = false
 
