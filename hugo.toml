@@ -2,6 +2,7 @@ baseURL = "https://jameskaois.com/"   # update before deploy
 title = "James Cao"
 theme = "PaperMod"
 defaultContentLanguage = "en"
+enableRobotsTXT = true
 [pagination]
   pagerSize = 10
 enableRobotsTXT = true
@@ -30,8 +31,13 @@ uglyURLs = false
   ShowPostCover = true
   ShowPostCoverInList = true
   ShowPostCoverInSingle = true
+  description = "James Cao – Cybersecurity Blog, Cheatsheets & Notes"
+  images = ["images/avatar.jpg"]
 
-  # home info card
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 # main menu
 [menu]

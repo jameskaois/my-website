@@ -2,49 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://jameskaois.com/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://jameskaois.com/tags/blog/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/ctfs/</loc>
+    <loc>https://jameskaois.com/tags/ctfs/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://jameskaois.com/tags/hugo/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/overthewire/</loc>
+    <loc>https://jameskaois.com/tags/overthewire/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/overthewire-bandit-level-0-15/</loc>
+    <loc>https://jameskaois.com/posts/overthewire-bandit-level-0-15/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://jameskaois.com/posts/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://jameskaois.com/tags/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/hello-new-website/</loc>
+    <loc>https://jameskaois.com/posts/hello-new-website/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/homelab/</loc>
+    <loc>https://jameskaois.com/homelab/</loc>
     <lastmod>2025-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/portfolio/</loc>
+    <loc>https://jameskaois.com/portfolio/</loc>
     <lastmod>2025-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://jameskaois.com/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/cheatsheet/</loc>
+    <loc>https://jameskaois.com/cheatsheet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/gaining-access/</loc>
+    <loc>https://jameskaois.com/categories/gaining-access/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/cheatsheet/network-hacking/hack-any-wifi-password/</loc>
+    <loc>https://jameskaois.com/cheatsheet/network-hacking/hack-any-wifi-password/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/network-hacking/</loc>
+    <loc>https://jameskaois.com/categories/network-hacking/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</loc>
+    <loc>https://jameskaois.com/cheatsheet/gaining-access/reset-any-windows-password/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

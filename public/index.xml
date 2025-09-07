@@ -2,31 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>James Cao</title>
-    <link>http://localhost:1313/</link>
+    <link>https://jameskaois.com/</link>
     <description>Recent content on James Cao</description>
+    <image>
+      <title>James Cao</title>
+      <url>https://jameskaois.com/images/avatar.jpg</url>
+      <link>https://jameskaois.com/images/avatar.jpg</link>
+    </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Sat, 06 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jameskaois.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OverTheWire Bandit Beginner Levels 0 - 15</title>
-      <link>http://localhost:1313/posts/overthewire-bandit-level-0-15/</link>
+      <link>https://jameskaois.com/posts/overthewire-bandit-level-0-15/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/overthewire-bandit-level-0-15/</guid>
+      <guid>https://jameskaois.com/posts/overthewire-bandit-level-0-15/</guid>
       <description>This is a test post.</description>
     </item>
     <item>
       <title>This Is My Website</title>
-      <link>http://localhost:1313/posts/hello-new-website/</link>
+      <link>https://jameskaois.com/posts/hello-new-website/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-new-website/</guid>
+      <guid>https://jameskaois.com/posts/hello-new-website/</guid>
       <description>This is a test post.</description>
     </item>
     <item>
       <title>My Homelab</title>
-      <link>http://localhost:1313/homelab/</link>
+      <link>https://jameskaois.com/homelab/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/homelab/</guid>
+      <guid>https://jameskaois.com/homelab/</guid>
       <description>&lt;p&gt;Here’s my homelab setup:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Proxmox server running VMs&lt;/li&gt;
@@ -37,9 +42,9 @@
     </item>
     <item>
       <title>Portfolio</title>
-      <link>http://localhost:1313/portfolio/</link>
+      <link>https://jameskaois.com/portfolio/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/portfolio/</guid>
+      <guid>https://jameskaois.com/portfolio/</guid>
       <description>&lt;h2 id=&#34;projects&#34;&gt;Projects&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Project 1:&lt;/strong&gt; Red Team Toolkit&lt;/li&gt;
@@ -49,16 +54,16 @@
     </item>
     <item>
       <title>Hack Any Wifi Password</title>
-      <link>http://localhost:1313/cheatsheet/network-hacking/hack-any-wifi-password/</link>
+      <link>https://jameskaois.com/cheatsheet/network-hacking/hack-any-wifi-password/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cheatsheet/network-hacking/hack-any-wifi-password/</guid>
+      <guid>https://jameskaois.com/cheatsheet/network-hacking/hack-any-wifi-password/</guid>
       <description></description>
     </item>
     <item>
       <title>Reset Any Windows Password</title>
-      <link>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</link>
+      <link>https://jameskaois.com/cheatsheet/gaining-access/reset-any-windows-password/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</guid>
+      <guid>https://jameskaois.com/cheatsheet/gaining-access/reset-any-windows-password/</guid>
       <description></description>
     </item>
   </channel>
