@@ -1,14 +1,15 @@
----
-title: 'OverTheWire Bandit Beginner Levels 16 - 20'
-date: 2025-09-07
-tags: ['OverTheWire', 'CTFs']
-description: 'This is a test post.'
-cover:
-    image: '/images/posts/bandit-cover.png' # path inside /static
-    alt: 'Bandit cover'
-    caption: 'OverTheWire Bandit'
-    relative: false
-draft: false
----
++++
+title = 'OverTheWire Bandit Beginner Levels 16 - 20'
+date = 2025-09-07T00:00:00+07:00
+tags = ['OverTheWire', 'CTFs']
+description = 'This is a test post.'
+draft = false
+
+[cover]
+  image = '/images/posts/bandit-cover.png' # path inside /static
+  alt = 'Bandit cover'
+  caption = 'OverTheWire Bandit'
+  relative = false
++++
 
 Hello world! This is my very first post on my Hugo site.

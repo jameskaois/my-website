@@ -1,15 +1,16 @@
----
-title: 'OverTheWire Bandit Beginner Levels 0 - 15'
-date: 2025-09-06
-tags: ['OverTheWire', 'CTFs']
-description: 'A step-by-step walkthrough of OverTheWire Bandit beginner levels 0 to 15. Learn Linux basics, file manipulation, permissions, and commands through hands-on CTF challenges — perfect for cybersecurity beginners.'
-cover:
-    image: '/images/posts/bandit-cover.png' # path inside /static
-    alt: 'Bandit cover'
-    caption: 'OverTheWire Bandit'
-    relative: false
-draft: false
----
++++
+title = 'OverTheWire Bandit Beginner Levels 0 - 15'
+date = 2025-09-06T01:00:00+07:00
+tags = ['OverTheWire', 'CTFs']
+description = 'A step-by-step walkthrough of OverTheWire Bandit beginner levels 0 to 15. Learn Linux basics, file manipulation, permissions, and commands through hands-on CTF challenges — perfect for cybersecurity beginners.'
+draft = false
+
+[cover]
+  image = '/images/posts/bandit-cover.png' # path inside /static
+  alt = 'Bandit cover'
+  caption = 'OverTheWire Bandit'
+  relative = false
++++
 
 A step-by-step walkthrough of OverTheWire Bandit beginner levels 0 to 15. Learn Linux basics, file manipulation, permissions, and commands through hands-on CTF challenges — perfect for cybersecurity beginners.
 
