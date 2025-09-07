@@ -1,0 +1,95 @@
+{{ define "main" }}
+<article class="post-single">
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs">
+    <a href="{{ "/" | relLangURL }}">Home</a>
+    {{ with .Section }}
+      <span style="margin: 0 4px;">››</span> <a href="{{ . | relURL }}">{{ . | title }}</a>
+    {{ end }}
+    <span style="margin: 0 4px;">››</span> <a>{{ .Title }}</a>
+  </nav>
+
+  <!-- Cover Image -->
+
+  <!-- Post Header -->
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    <p class="post-description">{{.Description}}</p>
+    <p class="post-meta">
+      {{ .Date.Format "Jan 2, 2006" }} • {{ .ReadingTime }} min read
+    </p>
+    {{ with .Params.cover }}
+    {{ with .image }}
+      <figure class="post-cover">
+        <img src="{{ . }}" alt="{{ $.Title }}">
+      </figure>
+    {{ end }}
+  {{ end }}
+  </header>
+
+  <!-- Post Content -->
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{/*  <!-- Author Box -->
+  {{ partial "author-box.html" . }}  */}}
+
+  {{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ if $related }}
+<section class="related-posts">
+  <h3>Related Posts</h3>
+    <div class="related-posts-list">
+        {{ range $related }}
+        <article>
+            <a href="{{ .RelPermalink }}" class="related-item">
+              <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+              <h4 href="{{ .RelPermalink }}">{{ .Title }}</h4>
+              <p>{{ .Description }}</p>
+            </a>
+        </article>
+    {{ end }}
+    </div>
+</section>
+{{ end }}
+
+  <!-- Next / Previous navigation -->
+  <nav class="post-navigation">
+  <!-- Previous -->
+  {{ with .PrevInSection }}
+    <a class="prev-post" href="{{ .RelPermalink }}">
+
+        <span>OLDER</span>
+        <div>{{ .Title }}</div>
+
+    </a>
+  {{ else }}
+    <a class="prev-post disabled">
+
+        <span>OLDER</span>
+        <div>-</div>
+
+    </a>
+  {{ end }}
+
+  <!-- Next -->
+  {{ with .NextInSection }}
+    <a class="next-post" href="{{ .RelPermalink }}">
+
+        <span>NEWER</span>
+        <div>{{ .Title }}</div>
+
+    </a>
+  {{ else }}
+    <a class="next-post disabled">
+
+        <span>NEWER</span>
+        <div>-</div>
+
+    </a>
+  {{ end }}
+</nav>
+
+</article>
+{{ end }}

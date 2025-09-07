@@ -2,29 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on James Cao</title>
-    <link>https://jameskaois.com/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on James Cao</description>
     <image>
       <title>James Cao</title>
-      <url>https://jameskaois.com/images/avatar.jpg</url>
-      <link>https://jameskaois.com/images/avatar.jpg</link>
+      <url>http://localhost:1313/images/avatar.jpg</url>
+      <link>http://localhost:1313/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jameskaois.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OverTheWire Bandit Beginner Levels 16 - 20</title>
+      <link>http://localhost:1313/posts/overthewire-bandit-level-16-20/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/overthewire-bandit-level-16-20/</guid>
+      <description>This is a test post.</description>
+    </item>
     <item>
       <title>OverTheWire Bandit Beginner Levels 0 - 15</title>
-      <link>https://jameskaois.com/posts/overthewire-bandit-level-0-15/</link>
+      <link>http://localhost:1313/posts/overthewire-bandit-level-0-15/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://jameskaois.com/posts/overthewire-bandit-level-0-15/</guid>
+      <guid>http://localhost:1313/posts/overthewire-bandit-level-0-15/</guid>
       <description>This is a test post.</description>
     </item>
     <item>
       <title>This Is My Website</title>
-      <link>https://jameskaois.com/posts/hello-new-website/</link>
+      <link>http://localhost:1313/posts/hello-new-website/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://jameskaois.com/posts/hello-new-website/</guid>
+      <guid>http://localhost:1313/posts/hello-new-website/</guid>
       <description>This is a test post.</description>
     </item>
   </channel>

@@ -39,6 +39,29 @@ uglyURLs = false
   priority = 0.5
   filename = "sitemap.xml"
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[related]
+threshold = 0
+includeNewer = true
+toLower = false
+
+[[related.indices]]
+name = "tags"
+weight = 100
+
+[[related.indices]]
+name = "categories"
+weight = 80
+
+[[related.indices]]
+name = "title"
+weight = 30
+
 # main menu
 [menu]
   [[menu.main]]
