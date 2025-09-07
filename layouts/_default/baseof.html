@@ -61,6 +61,12 @@
       </main>
     </div>
 
+    {{ if .IsPage }}
+  <button id="scrollToTop" class="scroll-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+{{ end }}
+
     {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
   </body>
