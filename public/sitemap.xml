@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/my-website/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>http://localhost:1313/my-website/tags/blog/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ctfs/</loc>
+    <loc>http://localhost:1313/my-website/tags/ctfs/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>http://localhost:1313/my-website/tags/hugo/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/overthewire/</loc>
+    <loc>http://localhost:1313/my-website/tags/overthewire/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/overthewire-bandit-level-0-15/</loc>
+    <loc>http://localhost:1313/my-website/posts/overthewire-bandit-level-0-15/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/my-website/posts/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/my-website/tags/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello-new-website/</loc>
+    <loc>http://localhost:1313/my-website/posts/hello-new-website/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/homelab/</loc>
+    <loc>http://localhost:1313/my-website/homelab/</loc>
     <lastmod>2025-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/</loc>
+    <loc>http://localhost:1313/my-website/portfolio/</loc>
     <lastmod>2025-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/my-website/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/cheatsheet/</loc>
+    <loc>http://localhost:1313/my-website/cheatsheet/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/gaining-access/</loc>
+    <loc>http://localhost:1313/my-website/categories/gaining-access/</loc>
   </url><url>
-    <loc>http://localhost:1313/cheatsheet/network-hacking/hack-any-wifi-password/</loc>
+    <loc>http://localhost:1313/my-website/cheatsheet/network-hacking/hack-any-wifi-password/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/network-hacking/</loc>
+    <loc>http://localhost:1313/my-website/categories/network-hacking/</loc>
   </url><url>
-    <loc>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</loc>
+    <loc>http://localhost:1313/my-website/cheatsheet/gaining-access/reset-any-windows-password/</loc>
   </url>
 </urlset>

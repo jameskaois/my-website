@@ -1,4 +1,4 @@
-baseURL = "https://jameskaois.github.io/my-website/"   # update before deploy
+baseURL = "https://jameskaois.com/"   # update before deploy
 title = "James Cao"
 theme = "PaperMod"
 defaultContentLanguage = "en"
