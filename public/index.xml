@@ -9,10 +9,17 @@
       <url>http://localhost:1313/images/avatar.jpg</url>
       <link>http://localhost:1313/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- 0.149.0</generator>
+    <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Sep 2025 02:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 08 Sep 2025 07:50:34 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OverTheWire Bandit Beginner Levels 31 - 33</title>
+      <link>http://localhost:1313/posts/overthewire-bandit-level-31-33/</link>
+      <pubDate>Mon, 08 Sep 2025 07:50:34 +0700</pubDate>
+      <guid>http://localhost:1313/posts/overthewire-bandit-level-31-33/</guid>
+      <description>A step-by-step walkthrough of OverTheWire Bandit beginner levels 31 to 33. Learn Linux basics, file manipulation, permissions, and commands through hands-on CTF challenges — perfect for cybersecurity beginners.</description>
+    </item>
     <item>
       <title>OverTheWire Bandit Beginner Levels 26 - 30</title>
       <link>http://localhost:1313/posts/overthewire-bandit-level-26-30/</link>
