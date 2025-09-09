@@ -181,6 +181,7 @@ Take a look at tutorial:
 - https://mayadevbe.me/posts/overthewire/krypton/level5/
 
 **Next Level Password**
+
 `RANDOM`
 
 ---
@@ -205,4 +206,5 @@ Take a look at tutorial:
 - https://learnhacking.io/overthewire-krypton-levels-0-9/
 
 **Next Level Password**
+
 `NO MORE!`
