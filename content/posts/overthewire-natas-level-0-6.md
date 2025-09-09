@@ -14,6 +14,8 @@ draft = false
 
 The Natas wargame is part of OverTheWire and focuses on web security challenges. This post covers Levels 0 – 6, with hints, answers, and explanations to help you understand the thought process, not just the final solution.
 
+Each level introduces a new vulnerability — from basic HTML inspection to SQL injection, XSS, command injection, file inclusion, and authentication flaws. The goal is to find the password for the next level by analyzing and exploiting the web application.
+
 ## Natas Level 0 → Level 1
 (Updated: 13 August 2025)
 
