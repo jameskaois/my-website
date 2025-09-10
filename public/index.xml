@@ -11,8 +11,64 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 16:21:09 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 16:36:44 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Windows Fundamentals Part 3 Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-windows-fundamentals-part-3-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:36:44 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-windows-fundamentals-part-3-room-walkthrough/</guid>
+      <description>In part 3 of the Windows Fundamentals module, learn about the built-in Microsoft tools that help keep the device secure, such as Windows Updates, Windows Security, BitLocker, and more...</description>
+    </item>
+    <item>
+      <title>TryHackMe - Windows Fundamentals Part 2 Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-windows-fundamentals-part-2-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:35:17 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-windows-fundamentals-part-2-room-walkthrough/</guid>
+      <description>In part 2 of the Windows Fundamentals module, discover more about System Configuration, UAC Settings, Resource Monitoring, the Windows Registry and more..</description>
+    </item>
+    <item>
+      <title>TryHackMe - Windows Fundamentals Part 1 Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-windows-fundamentals-part-1-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:33:46 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-windows-fundamentals-part-1-room-walkthrough/</guid>
+      <description>In part 1 of the Windows Fundamentals module, we&amp;#39;ll start our journey learning about the Windows desktop, the NTFS file system, UAC, the Control Panel, and more.</description>
+    </item>
+    <item>
+      <title>TryHackMe - What Is Networking Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-what-is-networking-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:31:42 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-what-is-networking-room-walkthrough/</guid>
+      <description>Begin learning the fundamentals of computer networking in this bite-sized and interactive module.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Web Application Security Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-web-application-security-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:29:31 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-web-application-security-room-walkthrough/</guid>
+      <description>Learn about web applications and explore some of their common security issues.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Unified Kill Chain Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-unified-kill-chain-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:27:44 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-unified-kill-chain-room-walkthrough/</guid>
+      <description>The Unified Kill Chain is a framework which establishes the phases of an attack, and a means of identifying and mitigating risk to IT assets.</description>
+    </item>
+    <item>
+      <title>TryHackMe - The Hacker Methodology Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-the-hacker-methodology-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:25:16 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-the-hacker-methodology-room-walkthrough/</guid>
+      <description>Introduction to the Hacker Methodology</description>
+    </item>
+    <item>
+      <title>TryHackMe - Starting Out In Cyber Sec Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-starting-out-in-cyber-sec-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:22:52 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-starting-out-in-cyber-sec-room-walkthrough/</guid>
+      <description>Learn about the different career paths in Cyber Security and how TryHackMe can help!</description>
+    </item>
     <item>
       <title>TryHackMe - Red Team OPSEC Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-red-team-opsec-room-walkthrough/</link>

@@ -25,13 +25,13 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ### 1. OhSINT
 - Download the task image and you can use [Exif Tools](https://exif.tools/), upload your image and get the metadata of that image.
 
-![Guide Image](./screenshots/ohsint-1.png)
+![Guide Image](/images/posts/ohsint-1.png)
 
 **But focus on the `Copyright` field, I find a name/username `OWoodflint`**
 
 - Search `OWoodflint` on Google, I get these results.
 
-![Guide Image](./screenshots/ohsint-2.png)
+![Guide Image](/images/posts/ohsint-2.png)
 
 - A Github repo and X/Twitter account can help me answer some questions.
 

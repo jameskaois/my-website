@@ -62,7 +62,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - Right-click on the Start Menu and click Run. Type lusrmgr.msc. See below
 ```
 
-![Guide image](./screenshots/windows-fundamentals-1-1.png)
+![Guide image](/images/posts/windows-fundamentals-1-1.png)
 
 **=> Answer: `tryhackmebilly`**
 
@@ -71,7 +71,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - Choose user "tryhackmebilly" -> More Actions -> Properties -> Member of
 ```
 
-![Guide image](./screenshots/windows-fundamentals-1-2.png)
+![Guide image](/images/posts/windows-fundamentals-1-2.png)
 
 **=> Answer: `Remote Desktop Users,Users`**
 
@@ -81,7 +81,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - Name "Guest" 
 - Description "Built-in account for guest access to the computer/domain..."
 ```
-![Guide image](./screenshots/windows-fundamentals-1-3.png)
+![Guide image](/images/posts/windows-fundamentals-1-3.png)
 
 **=> Answer: `Guest`**
 
@@ -90,7 +90,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - You can see the description of "tryhackmebilly" user.
 ```
 
-![Guide image](./screenshots/windows-fundamentals-1-4.png)
+![Guide image](/images/posts/windows-fundamentals-1-4.png)
 
 **=> Answer: `window$Fun1!`**
 
@@ -102,7 +102,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ### 8. Settings and the Control Panel
 - In the Control Panel, change the view to <b>Small icons</b>. What is the last setting in the Control Panel view?
 
-![Guide image](./screenshots/windows-fundamentals-1-5.png)
+![Guide image](/images/posts/windows-fundamentals-1-5.png)
 
 **=> Answer: `Windows Defender Firewall`**
 

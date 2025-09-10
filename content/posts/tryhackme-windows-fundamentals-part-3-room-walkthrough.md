@@ -32,17 +32,17 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - Click View Update History > Definition Updates
 - You will see 2 installed updates
 ```
-![Guide image](./screenshots/windows-fundamentals-3-1.png)
+![Guide image](/images/posts/windows-fundamentals-3-1.png)
 **=> Answer: `5/3/2021`**
 
 ### 3. Windows Security
 - Checking the Security section on your VM, which area needs immediate attention?
-![Guide image](./screenshots/windows-fundamentals-3-2.png)
+![Guide image](/images/posts/windows-fundamentals-3-2.png)
 **=> Answer: `Virus & threat protection`**
 
 ### 4. Virus &amp; threat protection
 - Specifically, what is turned off that Windows is notifying you to turn on?
-![Guide image](./screenshots/windows-fundamentals-3-3.png)
+![Guide image](/images/posts/windows-fundamentals-3-3.png)
 **=> Answer: `Real-time protection`**
 
 ### 5. Firewall &amp; network protection
@@ -63,7 +63,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ```
 - Visit https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/
 ```
-![Guide image](./screenshots/windows-fundamentals-3-4.png)
+![Guide image](/images/posts/windows-fundamentals-3-4.png)
 **=> Answer: `startup key`**
 
 ### 9. Volume Shadow Copy Service

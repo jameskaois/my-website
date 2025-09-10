@@ -131,7 +131,7 @@ Like darren do that same with " arthur"
 - Run select * from users;
 - You will see the hash password of admin
 ```
-![Guide Image](./screenshots/owasp-top-10-1.png)
+![Guide Image](/images/posts/owasp-top-10-1.png)
 
 **=> Answer: `6eea9b7ef19179a06954edd0f6c05ceb`**
 
@@ -194,7 +194,7 @@ Like darren do that same with " arthur"
 <root>&read;</root>
 ```
 
-![Guide Image](./screenshots/owasp-top-10-2.png)
+![Guide Image](/images/posts/owasp-top-10-2.png)
 
 - You can see the name:
 ```
@@ -215,7 +215,7 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 <!DOCTYPE root [<!ENTITY read SYSTEM "file:///home/falcon/.ssh/id_rsa">]>
 <root>&read;</root>
 ```
-![Guide Image](./screenshots/owasp-top-10-3.png)
+![Guide Image](/images/posts/owasp-top-10-3.png)
 
 **=> Answer: `MIIEogIBAAKCAQEA7b`**
 
@@ -240,7 +240,7 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 - Login with pensive:PensiveNotes
 ```
 
-![Guide Image](./screenshots/owasp-top-10-4.png)
+![Guide Image](/images/posts/owasp-top-10-4.png)
 
 **=> Answer: `thm{4b9513968fd564a87b28aa1f9d672e17}`**
 
@@ -250,8 +250,8 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 - Type in the search bar: <script>alert(“Hello World”)</script>
 ```
 
-![Guide Image](./screenshots/owasp-top-10-5.png)
-![Guide Image](./screenshots/owasp-top-10-6.png)
+![Guide Image](/images/posts/owasp-top-10-5.png)
+![Guide Image](/images/posts/owasp-top-10-6.png)
 
 **=> Answer: `ThereIsMoreToXSSThanYouThink`**
 
@@ -260,8 +260,8 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 - Type in the search bar: <script>alert(window.location.hostname)</script>
 ```
 
-![Guide Image](./screenshots/owasp-top-10-7.png)
-![Guide Image](./screenshots/owasp-top-10-8.png)
+![Guide Image](/images/posts/owasp-top-10-7.png)
+![Guide Image](/images/posts/owasp-top-10-8.png)
 
 **=> Answer: `ReflectiveXss4TheWin`**
 
@@ -271,7 +271,7 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 - Comment: <h1>Hello world!</h1>
 ```
 
-![Guide Image](./screenshots/owasp-top-10-9.png)
+![Guide Image](/images/posts/owasp-top-10-9.png)
 
 **=> Answer: `HTML_T4gs`**
 
@@ -280,8 +280,8 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 - Comment: <script>alert(document.cookie)</script>
 ```
 
-![Guide Image](./screenshots/owasp-top-10-10.png)
-![Guide Image](./screenshots/owasp-top-10-11.png)
+![Guide Image](/images/posts/owasp-top-10-10.png)
+![Guide Image](/images/posts/owasp-top-10-11.png)
 
 **=> Answer: `W3LL_D0N3_LVL2`**
 
@@ -327,14 +327,14 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 - You will see a cookie name: sessionid
 ```
 
-![Guide image](./screenshots/owasp-top-10-12.png)
+![Guide image](/images/posts/owasp-top-10-12.png)
 ```
 - It is base64 encoded so we have to decode it in order to get the flag.
 - echo "<sessionid encoded>" >> session_hash.txt
 - base64 --decode ./session_hash.txt
 ```
 
-![Guide image](./screenshots/owasp-top-10-13.png)
+![Guide image](/images/posts/owasp-top-10-13.png)
 
 **=> Answer: `THM{good_old_base64_huh}`**
 
@@ -345,7 +345,7 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 - Visit http://<MACHINE_IP>/admin, you will get the flag
 ```
 
-![Guide image](./screenshots/owasp-top-10-14.png)
+![Guide image](/images/posts/owasp-top-10-14.png)
 
 **=> Answer: `THM{heres_the_admin_flag}`**
 
@@ -378,7 +378,7 @@ falcon:x:1000:1000:falcon,,,:/home/falcon:/bin/bash
 ### 30. [Severity 10] Insufficient Logging and Monitoring
 - What IP address is the attacker using?
 
-![Guide image](./screenshots/owasp-top-10-15.png)
+![Guide image](/images/posts/owasp-top-10-15.png)
 
 **=> Answer: `49.99.13.16`**
 

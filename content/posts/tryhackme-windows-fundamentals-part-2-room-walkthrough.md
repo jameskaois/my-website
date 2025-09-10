@@ -35,7 +35,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - Launch About Windows in Tools tab
 ```
 
-![Guide image](./screenshots/windows-fundamentals-2-1.png)
+![Guide image](/images/posts/windows-fundamentals-2-1.png)
 
 **=> Answer: `Windows User`**
 
@@ -43,7 +43,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ```
 - Choose Windows Troubleshooting in Tools tab
 ```
-![Guide image](./screenshots/windows-fundamentals-2-2.png)
+![Guide image](/images/posts/windows-fundamentals-2-2.png)
 
 **=> Answer: `C:\Windows\System32\control.exe /name Microsoft.Troubleshooting`**
 
@@ -74,7 +74,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - Choose Task Scheduler > Task Scheduler Library > GoogleUpdateTaskMachineUA
 - You can see the repeated time in the description
 ```
-![Guide image](./screenshots/windows-fundamentals-2-3.png)
+![Guide image](/images/posts/windows-fundamentals-2-3.png)
 **=> Answer: `6:15 AM`**
 
 - <p>What is the name of the hidden folder that is shared?<br /></p>
@@ -82,7 +82,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - In Computer Management, choose Shared Folder > Shares
 - You can see a hidden shared folder.
 ```
-![Guide image](./screenshots/windows-fundamentals-2-4.png)
+![Guide image](/images/posts/windows-fundamentals-2-4.png)
 **=> Answer: `sh4r3dF0ld3r`**
 
 ### 5. System Information
@@ -91,7 +91,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - Choose System Information in Tools tab
 ```
 
-![Guide image](./screenshots/windows-fundamentals-2-5.png)
+![Guide image](/images/posts/windows-fundamentals-2-5.png)
 
 **=> Answer: `msinfo32.exe`**
 
@@ -100,7 +100,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - Launch System Information in Tools tab
 - You can see the System Name
 ```
-![Guide image](./screenshots/windows-fundamentals-2-6.png)
+![Guide image](/images/posts/windows-fundamentals-2-6.png)
 
 **=> Answer: `THM-WINFUN2`**
 
@@ -109,7 +109,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - In System Information, choose Software Environment > Environment Variables
 - You can see the ComSpec field
 ```
-![Guide image](./screenshots/windows-fundamentals-2-7.png)
+![Guide image](/images/posts/windows-fundamentals-2-7.png)
 **=> Answer: `%SystemRoot%\system32\cmd.exe`**
 
 ### 6. Resource Monitor
@@ -117,7 +117,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ```
 - Choose Resource Monitor in Tools tab
 ```
-![Guide image](./screenshots/windows-fundamentals-2-8.png)
+![Guide image](/images/posts/windows-fundamentals-2-8.png)
 **=> Answer: `resmon.exe`**
 
 ### 7. Command Prompt
@@ -125,7 +125,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ```
 - Choose Internet Protocol Configuration in System Configuration
 ```
-![Guide image](./screenshots/windows-fundamentals-2-9.png)
+![Guide image](/images/posts/windows-fundamentals-2-9.png)
 **=> Answer: `C:\Windows\System32\cmd.exe /k %windir%\system32\ipconfig.exe`**
 
 - <p>For the ipconfig command, how do you show detailed information?</p>
@@ -133,7 +133,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 - In Command Prompt, run ipconfig /? to see the guide
 - You will see the command to show detailed information
 ```
-![Guide image](./screenshots/windows-fundamentals-2-10.png)
+![Guide image](/images/posts/windows-fundamentals-2-10.png)
 **=> Answer: `ipconfig /all`**
 
 ### 8. Registry Editor
@@ -141,7 +141,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ```
 - Choose Registry Editor in System Configuration
 ```
-![Guide image](./screenshots/windows-fundamentals-2-11.png)
+![Guide image](/images/posts/windows-fundamentals-2-11.png)
 **=> Answer: `regedt32.exe`**
 
 ### 9. Conclusion

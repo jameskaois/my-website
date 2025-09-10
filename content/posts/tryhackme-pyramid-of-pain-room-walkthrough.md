@@ -33,13 +33,13 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ### 3. IP Address (Easy)
 - Read the following<a href="https://assets.tryhackme.com/additional/pyramidofpain/task3-anyrun.pdf" target="_blank"> report</a> to answer this question. What is the <b>first IP address</b> the malicious process (<b>PID 1632</b>) attempts to communicate with? 
 
-![Guide Image](./screenshots/pyramid-of-pain-1.png)
+![Guide Image](/images/posts/pyramid-of-pain-1.png)
 
 **=> Answer: `50.87.136.52`**
 
 - Read the following<a href="https://assets.tryhackme.com/additional/pyramidofpain/task3-anyrun.pdf" target="_blank"> report</a> to answer this question. What is the <b>first domain name</b> the malicious process ((<span style="font-weight:bolder">PID 1632</span>) attempts to communicate with?
 
-![Guide Image](./screenshots/pyramid-of-pain-1.png)
+![Guide Image](/images/posts/pyramid-of-pain-1.png)
 
 **=> Answer: `craftingalegacy.com`**
 
@@ -63,13 +63,13 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 ### 5. Host Artifacts (Annoying)
 - A process named <b>regidle.exe</b> makes a POST request to an IP address based in the United States (US) on <b>port 8080</b>. What is the IP address?
 
-![Guide Image](./screenshots/pyramid-of-pain-2.png)
+![Guide Image](/images/posts/pyramid-of-pain-2.png)
 
 **=> Answer: `96.126.101.6`**
 
 - <p>The actor drops a malicious executable (EXE). What is the name of this executable?</p>
 
-![Guide Image](./screenshots/pyramid-of-pain-3.png)
+![Guide Image](/images/posts/pyramid-of-pain-3.png)
 
 **=> Answer: `G_jugk.exe`**
 
