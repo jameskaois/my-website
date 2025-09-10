@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 15:48:13 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 15:52:53 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Intro To Research Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-intro-to-research-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:52:53 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-intro-to-research-room-walkthrough/</guid>
+      <description>A brief introduction to research skills for pentesting.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Intro To Networking Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-intro-to-networking-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:50:39 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-intro-to-networking-room-walkthrough/</guid>
+      <description>An introduction to networking theory and basic networking tools</description>
+    </item>
     <item>
       <title>TryHackMe - HTTP in Detail Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-http-in-detail-room-walkthrough/</link>

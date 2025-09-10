@@ -4,6 +4,12 @@ title = 'TryHackMe - Intro To Networking Room Walkthrough'
 tags = ['TryHackMe', 'CTFs']
 description = "An introduction to networking theory and basic networking tools" 
 draft = false
+
+[cover]
+  image = '/images/posts/tryhackme-intro-to-networking.png'
+  alt = 'TryHackMe Intro To Networking Room'
+  caption = 'TryHackMe Intro To Networking Room'
+  relative = false
 +++
 
 This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
