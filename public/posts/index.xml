@@ -11,8 +11,71 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 15:40:50 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 16:04:55 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Network Services Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-network-services-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:04:55 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-network-services-room-walkthrough/</guid>
+      <description>Learn about, then enumerate and exploit a variety of network services and misconfigurations.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Linux Modules Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-linux-modules-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:02:33 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-linux-modules-room-walkthrough/</guid>
+      <description>Learn linux modules in a fun way.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Linux Fundamentals Part 1 Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-linux-fundamentals-part-1-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:59:46 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-linux-fundamentals-part-1-room-walkthrough/</guid>
+      <description>Embark on the journey of learning the fundamentals of Linux. Learn to run some of the first essential commands on an interactive terminal.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Junior Security Analyst Intro Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-junior-security-analyst-intro-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:55:42 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-junior-security-analyst-intro-room-walkthrough/</guid>
+      <description>Play through a day in the life of a Junior Security Analyst, their responsibilities and qualifications needed to land a role as an analyst.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Intro To Research Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-intro-to-research-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:52:53 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-intro-to-research-room-walkthrough/</guid>
+      <description>A brief introduction to research skills for pentesting.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Intro To Networking Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-intro-to-networking-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:50:39 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-intro-to-networking-room-walkthrough/</guid>
+      <description>An introduction to networking theory and basic networking tools</description>
+    </item>
+    <item>
+      <title>TryHackMe - HTTP in Detail Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-http-in-detail-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:48:13 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-http-in-detail-room-walkthrough/</guid>
+      <description>Learn about how you request content from a web server using the HTTP protocol</description>
+    </item>
+    <item>
+      <title>TryHackMe - Google Dorking Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-google-dorking-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:45:49 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-google-dorking-room-walkthrough/</guid>
+      <description>Explaining how Search Engines work and leveraging them into finding hidden content!</description>
+    </item>
+    <item>
+      <title>TryHackMe - Nmap Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-nmap-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:43:26 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-nmap-room-walkthrough/</guid>
+      <description>An in depth look at scanning with Nmap, a powerful network scanning tool.</description>
+    </item>
     <item>
       <title>TryHackMe - DNS In Detail Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-dns-in-detail-room-walkthrough/</link>

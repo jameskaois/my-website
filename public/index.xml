@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 15:59:46 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 16:04:55 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Network Services Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-network-services-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:04:55 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-network-services-room-walkthrough/</guid>
+      <description>Learn about, then enumerate and exploit a variety of network services and misconfigurations.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Linux Modules Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-linux-modules-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:02:33 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-linux-modules-room-walkthrough/</guid>
+      <description>Learn linux modules in a fun way.</description>
+    </item>
     <item>
       <title>TryHackMe - Linux Fundamentals Part 1 Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-linux-fundamentals-part-1-room-walkthrough/</link>
