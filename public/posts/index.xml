@@ -11,10 +11,17 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Sep 2025 20:51:38 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 15:26:12 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>TryHackMe - Learning Cyber Security Room</title>
+      <title>TryHackMe - Blue Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-blue-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 15:26:12 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-blue-room-walkthrough/</guid>
+      <description>Deploy &amp;amp; hack into a Windows machine, leveraging common misconfigurations issues.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Learning Cyber Security Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-learning-cyber-security-room-walkthrough/</link>
       <pubDate>Tue, 09 Sep 2025 20:51:38 +0700</pubDate>
       <guid>http://localhost:1313/posts/tryhackme-learning-cyber-security-room-walkthrough/</guid>

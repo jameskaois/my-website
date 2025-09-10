@@ -17,6 +17,10 @@ uglyURLs = false
   [markup.highlight]
     noClasses = false
     guessSyntax = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 
 # site params (PaperMod)
 [params]

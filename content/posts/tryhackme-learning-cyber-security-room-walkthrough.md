@@ -1,6 +1,6 @@
 +++
 date = '2025-09-09T20:51:38+07:00'
-title = 'TryHackMe - Learning Cyber Security Room'
+title = 'TryHackMe - Learning Cyber Security Room Walkthrough'
 tags = ['TryHackMe', 'CTFs']
 description = "Get a short introduction to a few of the security topics you'll be learning about."
 draft = false
