@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Sep 2025 09:46:55 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 09 Sep 2025 20:51:38 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Learning Cyber Security Room</title>
+      <link>http://localhost:1313/posts/tryhackme-learning-cyber-security-room-walkthrough/</link>
+      <pubDate>Tue, 09 Sep 2025 20:51:38 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-learning-cyber-security-room-walkthrough/</guid>
+      <description>Get a short introduction to a few of the security topics you&amp;#39;ll be learning about.</description>
+    </item>
     <item>
       <title>OverTheWire Natas Walkthrough Levels 21 - 24</title>
       <link>http://localhost:1313/posts/overthewire-natas-level-21-24/</link>

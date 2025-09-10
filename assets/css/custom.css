@@ -224,8 +224,8 @@ body {
     margin-top: 24px;
 }
 
-.content .post-entry a::before,
-.content .first-entry a::before {
+.content .post-entry a:first-child:before,
+.content .first-entry a:first-child::before {
     content: '';
     position: absolute;
     top: 0;
@@ -238,8 +238,8 @@ body {
     z-index: 10;
 }
 
-.content .post-entry a:hover::before,
-.content .first-entry a:hover::before {
+.content .post-entry a:first-child:hover::before,
+.content .first-entry a:first-child:hover::before {
     opacity: 0.3;
 }
 
@@ -249,6 +249,8 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
+
+
 
 .content .post-entry .entry-header,
 .content .post-entry .entry-content,
@@ -391,6 +393,10 @@ body {
 
 .post-single {
     padding-top: 24px;
+}
+
+.post-single .post-content blockquote {
+    border-color: #d2603a !important;
 }
 
 .post-single h1 {
