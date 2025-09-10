@@ -12,6 +12,10 @@ draft = false
   relative = false
 +++
 
+This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
+
+> Offensive Security Intro Room - Hack your first website (legally in a safe environment) and experience an ethical hacker's job.
+
 ## Overview
 - **Room URL:** [https://tryhackme.com/room/offensivesecurityintro](https://tryhackme.com/room/offensivesecurityintro)
 - **Difficulty:** Easy

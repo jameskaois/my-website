@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 16:04:55 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 16:10:35 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - OHSINT Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-ohsint-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:10:35 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-ohsint-room-walkthrough/</guid>
+      <description>Are you able to use open source intelligence to solve this challenge?</description>
+    </item>
+    <item>
+      <title>TryHackMe - Offensive Security Intro Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-offensive-security-intro-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:08:04 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-offensive-security-intro-room-walkthrough/</guid>
+      <description>Hack your first website (legally in a safe environment) and experience an ethical hacker&amp;#39;s job.</description>
+    </item>
     <item>
       <title>TryHackMe - Network Services Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-network-services-room-walkthrough/</link>
