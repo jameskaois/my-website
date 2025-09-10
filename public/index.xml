@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 16:14:48 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 16:17:33 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Pyramid Of Pain Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-pyramid-of-pain-room-walkthrough/</link>
+      <pubDate>Wed, 10 Sep 2025 16:17:33 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-pyramid-of-pain-room-walkthrough/</guid>
+      <description>Learn what is the Pyramid of Pain and how to utilize this model to determine the level of difficulty it will cause for an adversary to change the indicators associated with them, and their campaign.</description>
+    </item>
     <item>
       <title>TryHackMe - Pentesting Fundamentals Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-pentesting-fundamentals-room-walkthrough/</link>
