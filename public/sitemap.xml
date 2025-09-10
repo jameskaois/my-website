@@ -3,27 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-10T15:32:56+07:00</lastmod>
+    <lastmod>2025-09-10T15:40:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/ctfs/</loc>
-    <lastmod>2025-09-10T15:32:56+07:00</lastmod>
+    <lastmod>2025-09-10T15:40:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-09-10T15:32:56+07:00</lastmod>
+    <lastmod>2025-09-10T15:40:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-09-10T15:32:56+07:00</lastmod>
+    <lastmod>2025-09-10T15:40:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/tryhackme/</loc>
-    <lastmod>2025-09-10T15:32:56+07:00</lastmod>
+    <lastmod>2025-09-10T15:40:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/tryhackme-dns-in-detail-room-walkthrough/</loc>
+    <lastmod>2025-09-10T15:40:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/tryhackme-defensive-security-intro-room-walkthrough/</loc>
+    <lastmod>2025-09-10T15:38:01+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/tryhackme-cyber-kill-chain-room-walkthrough/</loc>
+    <lastmod>2025-09-10T15:35:30+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
