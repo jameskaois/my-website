@@ -42,7 +42,7 @@ _No hints needed!_
 
 **=> Answer: `Singles`**
 
--   <p>Is "<span style="color:rgb(14, 16, 26);background:transparent;margin-top:0pt;margin-bottom:0pt">windows/x64/pingback_reverse_tcp" among singles or staged payload? <br /></span></p>
+-   <p>Is "<span style="background:transparent;margin-top:0pt;margin-bottom:0pt">windows/x64/pingback_reverse_tcp" among singles or staged payload? <br /></span></p>
 
 **=> Answer: `Singles`**
 
@@ -59,7 +59,7 @@ msf6 > use auxiliary/scanner/ssh/ssh_login
 msf6 auxiliary(scanner/ssh/ssh_login) > info
 ```
 
-![Guide image](./screenshots/metasploit-introduction-1.png)
+![Guide image](/images/posts/metasploit-introduction-1.png)
 
 **=> Answer: `todb`**
 
