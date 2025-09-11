@@ -8,7 +8,7 @@
       <header class="mobile-header">
           <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
           <a href="{{ .Site.BaseURL }}"><div>{{ .Site.Title }}</div></a>
-          <button class="search-btn" style="opacity: 0;"><i class="fas fa-search"></i>
+          <button class="mobile-search-btn"><i class="fas fa-search"></i>
 </button>
         </header>
 
@@ -83,6 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 {{ end }}
+
+  <div class="mobile-search-layout">
+    <header><div class="search-container"><span class="absolute left-3 top-2.5 text-gray-400">
+              <i class="fas fa-search"></i>
+            </span>
+  <input
+    id="mobile-search-input"
+    type="text"
+    placeholder="Search..."
+    class="w-full border rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  /></div><button class="cancel-btn">Cancel</button></header>
+  <div class="search-results-list mobile-search-results-list"></div>
+  </div>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
     {{ $script := resources.Get "js/main.js" | minify | fingerprint }}

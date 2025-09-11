@@ -35,18 +35,36 @@
         });
     });
 
+    const mobileSearchBtn = document.querySelector('.mobile-search-btn');
+    const mobileCancelBtn = document.querySelector('.cancel-btn');
+
+    mobileSearchBtn.addEventListener('click', () => {
+        const mobileSearchLayout = document.querySelector('.mobile-search-layout');
+        mobileSearchLayout.classList.toggle('show');
+    });
+
+    mobileCancelBtn.addEventListener('click', () => {
+        const mobileSearchLayout = document.querySelector('.mobile-search-layout');
+        mobileSearchLayout.classList.toggle('show');
+    });
+
     async function initSearch() {
         const res = await fetch('/index.json');
         const data = await res.json();
+        const appWidth = window.innerWidth;
 
         const fuse = new Fuse(data, {
-            keys: ['title', 'description', 'tags'],
+            keys: ['title', 'tags', 'description'],
             threshold: 0.3,
         });
 
-        const input = document.getElementById('search-input');
+        const input = document.getElementById(
+            appWidth <= 849 ? 'mobile-search-input' : 'search-input',
+        );
         const resultsWrapper = document.querySelector('.search-results-wrapper');
-        const resultsList = document.querySelector('.search-results-list');
+        const resultsList = document.querySelector(
+            appWidth <= 849 ? '.mobile-search-results-list' : '.search-results-list',
+        );
 
         input.addEventListener('input', () => {
             const query = input.value.trim();
