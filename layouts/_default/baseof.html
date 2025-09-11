@@ -46,6 +46,19 @@
 
       <!-- Main content -->
       <main class="content">
+        <header class="topnav">
+          <div id="search-container" class="search-container">
+            <span class="absolute left-3 top-2.5 text-gray-400">
+              <i class="fas fa-search"></i>
+            </span>
+  <input
+    id="search-input"
+    type="text"
+    placeholder="Search..."
+    class="w-full border rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+</div>
+        </header>
         <div class="content-container">
           <div class="inside">{{ block "main" . }}{{ end }}  
             <div style="margin-top: auto"><div class="content-footer">
@@ -57,6 +70,10 @@
             {{ partial "right-sidebar.html" . }}
 
          
+            <div class="search-results-wrapper">
+              <div class="search-results-list">
+              </div>
+            </div>
         </div>
       </main>
     </div>
@@ -67,6 +84,7 @@
   </button>
 {{ end }}
 
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
     {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
   </body>

@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - James Cao">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -28,7 +28,7 @@
         }
 
     </style>
-</noscript><link rel="stylesheet" href="/css/custom.min.13293cd3af1bf8d572e0d6ff47b2d901c45613726d9a8bf56b5c8e65c97ec3a3.css" />
+</noscript><link rel="stylesheet" href="/css/custom.min.462a8cdda5a02fc9444d0433500c196fef1042ff5cac02dcd130e6831677d1a0.css" />
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -136,6 +136,20 @@
 
       
       <main class="content">
+        <header class="topnav">
+          <div id="search-container" class="relative max-w-md mx-auto my-4">
+  <input
+    id="search-input"
+    type="text"
+    placeholder="Search posts..."
+    class="w-full border rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+  <span class="absolute left-3 top-2.5 text-gray-400">
+    <i class="fas fa-search"></i>
+  </span>
+  <ul id="search-results" class="mt-2 bg-white shadow rounded-lg hidden"></ul>
+</div>
+        </header>
         <div class="content-container">
           <div class="inside"> 
 <header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
@@ -143,6 +157,25 @@
     Posts
   </h1>
 </header>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-intro-to-iac.png" alt="TryHackMe Intro To IaC Room">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TryHackMe - Intro To IaC Room Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
+Intro To IaC Room - An introduction to infrastructure as code.
+Overview Room URL: https://tryhackme.com/room/introtoiac Difficulty: Easy Time to complete: 90 Walkthrough 1. Introduction No hints needed!
+2. IaC - The Concept Your organisation is preparing to launch a new service called FlyNet. The DevSecOps team provisioned an infrastructure and tested this service in the dev environment. Which IaC characteristic will streamline the provisioning of this same infrastructure in staging and production? =&gt; Answer: Repeatable
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-11 06:27:09 +0700 +07'>September 11, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to TryHackMe - Intro To IaC Room Walkthrough" href="http://localhost:1313/posts/tryhackme-intro-to-iac-room-walkthrough/"></a>
+</article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
@@ -302,24 +335,6 @@ Overview Room URL: https://tryhackme.com/room/opsec Difficulty: Medium Time to c
   <footer class="entry-footer"><span title='2025-09-10 16:21:09 +0700 +07'>September 10, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to TryHackMe - Red Team OPSEC Room Walkthrough" href="http://localhost:1313/posts/tryhackme-red-team-opsec-room-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-red-team-fundamentals.png" alt="TryHackMe Red Team Fundamentals Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Red Team Fundamentals Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
-Red Team Fundamentals Room - Learn about the basics of a red engagement, the main components and stakeholders involved, and how red teaming differs from other cyber security engagements.
-Overview Room URL: https://tryhackme.com/room/redteamfundamentals Difficulty: Easy Time to complete: 20 Walkthrough 1. Introduction No hints needed!
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-10 16:19:22 +0700 +07'>September 10, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Red Team Fundamentals Room Walkthrough" href="http://localhost:1313/posts/tryhackme-red-team-fundamentals-room-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -337,6 +352,8 @@ Overview Room URL: https://tryhackme.com/room/redteamfundamentals Difficulty: Ea
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/tryhackme-intro-to-iac-room-walkthrough/">TryHackMe - Intro To IaC Room Walkthrough</a></div>
+        
         <div><a href="http://localhost:1313/posts/tryhackme-windows-fundamentals-part-3-room-walkthrough/">TryHackMe - Windows Fundamentals Part 3 Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-windows-fundamentals-part-2-room-walkthrough/">TryHackMe - Windows Fundamentals Part 2 Room Walkthrough</a></div>
@@ -344,8 +361,6 @@ Overview Room URL: https://tryhackme.com/room/redteamfundamentals Difficulty: Ea
         <div><a href="http://localhost:1313/posts/tryhackme-windows-fundamentals-part-1-room-walkthrough/">TryHackMe - Windows Fundamentals Part 1 Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-what-is-networking-room-walkthrough/">TryHackMe - What Is Networking Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-web-application-security-room-walkthrough/">TryHackMe - Web Application Security Room Walkthrough</a></div>
         
     </section>
 
@@ -355,14 +370,14 @@ Overview Room URL: https://tryhackme.com/room/redteamfundamentals Difficulty: Ea
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/">
             CTFs
-            <span>(41)</span>
+            <span>(42)</span>
         </a>
 
         
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/tryhackme/">
             TryHackMe
-            <span>(30)</span>
+            <span>(31)</span>
         </a>
 
         
@@ -403,7 +418,8 @@ Overview Room URL: https://tryhackme.com/room/redteamfundamentals Difficulty: Ea
 
     
 
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
     
-  <script src="/js/main.min.fbeeb97bd48376957703a17c49c69a2d3cec686c29acafa4286f1658780c4884.js" integrity="sha256-&#43;&#43;65e9SDdpV3A6F8ScaaLTzsaGwprK&#43;kKG8WWHgMSIQ="></script>
+  <script src="/js/main.min.2e74f218521bbb770cfe6e7ef7009af1a7b40433c3a589cbce0c33ff07e798f3.js" integrity="sha256-LnTyGFIbu3cM/m5&#43;9wCa8ae0BDPDpYnLzgwz/wfnmPM="></script>
   </body>
 </html>

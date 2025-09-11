@@ -9,10 +9,17 @@
       <url>http://localhost:1313/images/avatar.jpg</url>
       <link>http://localhost:1313/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- 0.149.1</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 16:36:44 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 11 Sep 2025 06:27:09 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Intro To IaC Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-intro-to-iac-room-walkthrough/</link>
+      <pubDate>Thu, 11 Sep 2025 06:27:09 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-intro-to-iac-room-walkthrough/</guid>
+      <description>An introduction to infrastructure as code.</description>
+    </item>
     <item>
       <title>TryHackMe - Windows Fundamentals Part 3 Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-windows-fundamentals-part-3-room-walkthrough/</link>
