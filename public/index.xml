@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 16:36:44 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 13 Sep 2025 16:51:15 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Network Services 2 Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-network-services-2-room-walkthrough/</link>
+      <pubDate>Sat, 13 Sep 2025 16:51:15 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-network-services-2-room-walkthrough/</guid>
+      <description>Enumerating and Exploiting More Common Network Services &amp;amp; Misconfigurations</description>
+    </item>
+    <item>
+      <title>TryHackMe - Kenobi Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-kenobi-room-walkthrough/</link>
+      <pubDate>Sat, 13 Sep 2025 16:47:32 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-kenobi-room-walkthrough/</guid>
+      <description>Walkthrough on exploiting a Linux machine. Enumerate Samba for shares, manipulate a vulnerable version of proftpd and escalate your privileges with path variable manipulation.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Intro To IaC Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-intro-to-iac-room-walkthrough/</link>
+      <pubDate>Thu, 11 Sep 2025 06:27:09 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-intro-to-iac-room-walkthrough/</guid>
+      <description>An introduction to infrastructure as code.</description>
+    </item>
     <item>
       <title>TryHackMe - Windows Fundamentals Part 3 Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-windows-fundamentals-part-3-room-walkthrough/</link>
