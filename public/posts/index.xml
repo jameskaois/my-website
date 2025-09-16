@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Sep 2025 16:51:15 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 15:26:24 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Intro to Digital Forensics Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-intro-to-digital-forensics-room-walkthrough/</link>
+      <pubDate>Tue, 16 Sep 2025 15:26:24 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-intro-to-digital-forensics-room-walkthrough/</guid>
+      <description>Learn about digital forensics and related processes and experiment with a practical example.</description>
+    </item>
+    <item>
+      <title>TryHackMe - Advent of Cyber 2024 Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-advent-of-cyber-2024-room-walkthrough/</link>
+      <pubDate>Tue, 16 Sep 2025 15:23:27 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-advent-of-cyber-2024-room-walkthrough/</guid>
+      <description>Dive into the wonderful world of cyber security by engaging in festive beginner-friendly exercises every day in the lead-up to Christmas!</description>
+    </item>
+    <item>
+      <title>TryHackMe - Hydra Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-hydra-room-walkthrough/</link>
+      <pubDate>Tue, 16 Sep 2025 14:19:28 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-hydra-room-walkthrough/</guid>
+      <description>Learn about and use Hydra, a fast network logon cracker, to bruteforce and obtain a website&amp;#39;s credentials.</description>
+    </item>
     <item>
       <title>TryHackMe - Network Services 2 Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-network-services-2-room-walkthrough/</link>
