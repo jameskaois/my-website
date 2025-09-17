@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Sep 2025 15:33:26 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 15:39:11 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Home Lab</title>
+      <link>http://localhost:1313/homelab/</link>
+      <pubDate>Tue, 16 Sep 2025 15:39:11 +0700</pubDate>
+      <guid>http://localhost:1313/homelab/</guid>
+      <description>An overview of my homelab setup where I experiment with cybersecurity, networking, and system administration.</description>
+    </item>
     <item>
       <title>TryHackMe - Detecting Web Attacks Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-detecting-web-attacks-room-walkthrough/</link>
@@ -376,19 +383,6 @@
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0700</pubDate>
       <guid>http://localhost:1313/posts/hello-new-website/</guid>
       <description>This is my personal website where I write about Cybersecurity (CTFs, OverTheWire, tools, tips), Tech &amp;amp; programming, My personal journey in learning and building projects.</description>
-    </item>
-    <item>
-      <title>My Homelab</title>
-      <link>http://localhost:1313/homelab/</link>
-      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/homelab/</guid>
-      <description>&lt;p&gt;Here’s my homelab setup:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Proxmox server running VMs&lt;/li&gt;
-&lt;li&gt;pfSense firewall&lt;/li&gt;
-&lt;li&gt;Mini PC as Docker host&lt;/li&gt;
-&lt;li&gt;Raspberry Pi for fun&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Portfolio</title>
