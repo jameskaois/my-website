@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Sep 2025 15:39:11 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 17 Sep 2025 15:52:40 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Windows 11 on Mac Apple Silicon</title>
+      <link>http://localhost:1313/cheatsheet/home-lab-setup/install-windows-11-on-mac-apple-silicon/</link>
+      <pubDate>Wed, 17 Sep 2025 15:52:40 +0700</pubDate>
+      <guid>http://localhost:1313/cheatsheet/home-lab-setup/install-windows-11-on-mac-apple-silicon/</guid>
+      <description>A complete and updated guide to installing Windows 11 on your Apple Silicon Mac (M1, M2, M3) using UTM (free). Perfect for developers, students, or anyone needing Windows on a Mac.</description>
+    </item>
     <item>
       <title>My Home Lab</title>
       <link>http://localhost:1313/homelab/</link>
