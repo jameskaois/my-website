@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Sep 2025 15:52:40 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Sep 2025 07:59:05 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TP-LINK Archer T2U Plus On Kali Linux</title>
+      <link>http://localhost:1313/cheatsheet/home-lab-setup/tp-link-archer-t2u-plus-on-kali/</link>
+      <pubDate>Thu, 18 Sep 2025 07:59:05 +0700</pubDate>
+      <guid>http://localhost:1313/cheatsheet/home-lab-setup/tp-link-archer-t2u-plus-on-kali/</guid>
+      <description>Guide for using TP-Link Archer T2U Plus on Kali Linux for ethical hacking &amp;amp; pentesting</description>
+    </item>
     <item>
       <title>Install Windows 11 on Mac Apple Silicon</title>
       <link>http://localhost:1313/cheatsheet/home-lab-setup/install-windows-11-on-mac-apple-silicon/</link>
