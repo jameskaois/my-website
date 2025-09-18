@@ -3,37 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-18T07:59:05+07:00</lastmod>
+    <lastmod>2025-09-18T08:03:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/blog/</loc>
-    <lastmod>2025-09-18T07:59:05+07:00</lastmod>
+    <lastmod>2025-09-18T08:03:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-09-18T07:59:05+07:00</lastmod>
+    <lastmod>2025-09-18T08:03:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/cheatsheet/</loc>
-    <lastmod>2025-09-18T07:59:05+07:00</lastmod>
+    <lastmod>2025-09-18T08:03:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/categories/home-lab-setup/</loc>
-    <lastmod>2025-09-18T07:59:05+07:00</lastmod>
+    <lastmod>2025-09-18T08:03:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/homelab/</loc>
-    <lastmod>2025-09-18T07:59:05+07:00</lastmod>
+    <lastmod>2025-09-18T08:03:56+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/cheatsheet/home-lab-setup/install-metasploitable2-on-mac-apple-silicon/</loc>
+    <lastmod>2025-09-18T08:03:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-09-18T07:59:05+07:00</lastmod>
+    <lastmod>2025-09-18T08:03:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>

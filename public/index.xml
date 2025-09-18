@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Sep 2025 07:59:05 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Sep 2025 08:03:56 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Metasploitable 2 on Mac Apple Silicon</title>
+      <link>http://localhost:1313/cheatsheet/home-lab-setup/install-metasploitable2-on-mac-apple-silicon/</link>
+      <pubDate>Thu, 18 Sep 2025 08:03:56 +0700</pubDate>
+      <guid>http://localhost:1313/cheatsheet/home-lab-setup/install-metasploitable2-on-mac-apple-silicon/</guid>
+      <description>A step-by-step guide to install and run Metasploitable 2 on Mac with Apple Silicon (M1, M2, M3, etc.) using UTM. Ideal for ethical hacking, penetration testing, and cybersecurity students.</description>
+    </item>
     <item>
       <title>TP-LINK Archer T2U Plus On Kali Linux</title>
       <link>http://localhost:1313/cheatsheet/home-lab-setup/tp-link-archer-t2u-plus-on-kali/</link>
