@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Sep 2025 08:08:33 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Sep 2025 08:33:43 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reset Any Windows Password (Educational Guide)</title>
+      <link>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</link>
+      <pubDate>Thu, 18 Sep 2025 08:33:43 +0700</pubDate>
+      <guid>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</guid>
+      <description>This tutorial is for educational purposes only. The method described here demonstrates how an attacker or technician could reset a Windows password if they have physical access to the machine.</description>
+    </item>
     <item>
       <title>Atheros AR9271 Adapter Chipset On Kali Linux</title>
       <link>http://localhost:1313/cheatsheet/home-lab-setup/atheros-ar9271-adapter-chipset-on-kali-linux/</link>
@@ -429,13 +436,6 @@
       <link>http://localhost:1313/cheatsheet/network-hacking/hack-any-wifi-password/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/cheatsheet/network-hacking/hack-any-wifi-password/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reset Any Windows Password</title>
-      <link>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cheatsheet/gaining-access/reset-any-windows-password/</guid>
       <description></description>
     </item>
   </channel>
