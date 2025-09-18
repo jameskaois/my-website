@@ -11,27 +11,27 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Sep 2025 08:03:56 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Sep 2025 08:53:56 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Home Lab Setup</title>
-      <link>http://localhost:1313/categories/home-lab-setup/</link>
-      <pubDate>Thu, 18 Sep 2025 08:03:56 +0700</pubDate>
-      <guid>http://localhost:1313/categories/home-lab-setup/</guid>
+      <title>Network Hacking</title>
+      <link>http://localhost:1313/categories/network-hacking/</link>
+      <pubDate>Thu, 18 Sep 2025 08:53:56 +0700</pubDate>
+      <guid>http://localhost:1313/categories/network-hacking/</guid>
       <description></description>
     </item>
     <item>
       <title>Gaining Access</title>
       <link>http://localhost:1313/categories/gaining-access/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Sep 2025 08:33:43 +0700</pubDate>
       <guid>http://localhost:1313/categories/gaining-access/</guid>
       <description></description>
     </item>
     <item>
-      <title>Network Hacking</title>
-      <link>http://localhost:1313/categories/network-hacking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/network-hacking/</guid>
+      <title>Home Lab Setup</title>
+      <link>http://localhost:1313/categories/home-lab-setup/</link>
+      <pubDate>Thu, 18 Sep 2025 08:08:33 +0700</pubDate>
+      <guid>http://localhost:1313/categories/home-lab-setup/</guid>
       <description></description>
     </item>
   </channel>
