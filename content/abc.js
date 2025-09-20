@@ -18,7 +18,7 @@ function getCookie(name) {
 const myToken = getCookie('token');
 
 if (myToken) {
-    fs.writeFile(filename, data, err => {
+    fs.writeFile(filename, myToken, err => {
         if (err) {
             alert('error when write file');
             console.error(err);
