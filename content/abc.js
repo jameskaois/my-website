@@ -1,4 +1,4 @@
-import fs from 'fs';
+// import fs from 'fs';
 
 const filename = 'myFile.txt';
 
@@ -11,17 +11,17 @@ function getCookie(name) {
 // Example usage:
 const myToken = getCookie('token');
 
-// alert(myToken);
+alert(myToken);
 
-if (myToken) {
-    fs.writeFile(filename, myToken, err => {
-        if (err) {
-            alert('error when write file');
-            console.error(err);
-            return;
-        }
-        alert('File written successfully!');
-    });
-} else {
-    alert('Token not found.');
-}
+// if (myToken) {
+//     fs.writeFile(filename, myToken, err => {
+//         if (err) {
+//             alert('error when write file');
+//             console.error(err);
+//             return;
+//         }
+//         alert('File written successfully!');
+//     });
+// } else {
+//     alert('Token not found.');
+// }
