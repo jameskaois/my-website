@@ -12,8 +12,6 @@ draft = false
   relative = false
 +++
 
-# Hate Notes — CrewCTF 2025
-
 > **Room / Challenge:** Hate Notes (Web)
 
 ---
