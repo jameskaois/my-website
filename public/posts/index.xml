@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Sep 2025 15:33:26 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 25 Sep 2025 14:47:48 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crew CTF 2025 - Love Notes Write-up</title>
+      <link>http://localhost:1313/posts/crew-ctf-2025-love-notes-write-up/</link>
+      <pubDate>Thu, 25 Sep 2025 14:47:48 +0700</pubDate>
+      <guid>http://localhost:1313/posts/crew-ctf-2025-love-notes-write-up/</guid>
+      <description>Write messages to your crush but watch out, some hide secrets and some notes are better left unread</description>
+    </item>
+    <item>
+      <title>TryHackMe - SQL Injection Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-sql-injection-room-walkthrough/</link>
+      <pubDate>Thu, 25 Sep 2025 14:37:06 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-sql-injection-room-walkthrough/</guid>
+      <description>Learn how to detect and exploit SQL Injection vulnerabilities</description>
+    </item>
     <item>
       <title>TryHackMe - Detecting Web Attacks Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-detecting-web-attacks-room-walkthrough/</link>
