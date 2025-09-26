@@ -1,5 +1,5 @@
 +++
-date = '2025-09-26T14:47:48+07:00'
+date = '2025-09-26T17:43:45+07:00'
 title = 'Crew CTF 2025 - Hate Notes Write-up'
 tags = ['Crew CTF 2025', 'CTFs']
 description = 'Thinking outside the box gives you a clue (Love Notes), but do you have what it takes to solve it?'

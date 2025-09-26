@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Sep 2025 14:47:48 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 26 Sep 2025 17:44:14 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crew CTF 2025 - Professor View Write-up</title>
+      <link>http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/</link>
+      <pubDate>Fri, 26 Sep 2025 17:44:14 +0700</pubDate>
+      <guid>http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/</guid>
+      <description>A course designed to take students’ knowledge to the next level.</description>
+    </item>
+    <item>
+      <title>Crew CTF 2025 - Hate Notes Write-up</title>
+      <link>http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/</link>
+      <pubDate>Fri, 26 Sep 2025 17:43:45 +0700</pubDate>
+      <guid>http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/</guid>
+      <description>Thinking outside the box gives you a clue (Love Notes), but do you have what it takes to solve it?</description>
+    </item>
     <item>
       <title>Crew CTF 2025 - Love Notes Write-up</title>
       <link>http://localhost:1313/posts/crew-ctf-2025-love-notes-write-up/</link>

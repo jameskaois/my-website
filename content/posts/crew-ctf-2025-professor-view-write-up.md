@@ -1,5 +1,5 @@
 +++
-date = '2025-09-26T14:55:38+07:00'
+date = '2025-09-26T17:44:14+07:00'
 title = 'Crew CTF 2025 - Professor View Write-up'
 tags = ['Crew CTF 2025', 'CTFs']
 description = 'A course designed to take students’ knowledge to the next level.'

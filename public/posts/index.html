@@ -159,6 +159,44 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Crew CTF 2025 - Hate Notes">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Crew CTF 2025 - Hate Notes Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Hate Notes (Web)
+Metadata Author: jameskaois CTF: CrewCTF 2025 Challenge: Hate Notes (web) Target / URL: https://hate-notes.chal.crewc.tf/ Difficulty: Medium Points: 426 Tags: web, xss, sqli, auth, enumeration Date: 21-09-2025 Goal We have to get access to the flag crew{...} in the admin’s note which the bot can view.
+My Solution Love Notes and Hate Notes share 99% of their code, but Love Notes had many more solutions than Hate Notes: My Solution for Love Notes
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-26 17:43:45 +0700 +07'>September 26, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Crew CTF 2025 - Hate Notes Write-up" href="http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Crew CTF 2025 - Professor View">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Crew CTF 2025 - Professor View Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Professor’s View (Web)
+Metadata Author: jameskaois CTF: CrewCTF 2025 Challenge: Professor’s View (web) Target / URL: https://professors-view.chal.crewc.tf/ Difficulty: Hard Points: 477 Tags: web, xss, sqli, auth, enumeration Date: 21-09-2025 Goal We have to get the flag of the Professor which is showned in his dashboard.
+My Solution Here is the Source Code
+Unlike Hate Notes and Love Notes, Professor’s View response is set:
+Content-Security-Policy: script-src &#39;self&#39; https://js.hcaptcha.com/1/api.js; style-src &#39;self&#39;; img-src &#39;self&#39;; font-src &#39;none&#39;; connect-src &#39;none&#39;; media-src &#39;none&#39;; object-src &#39;none&#39;; prefetch-src &#39;none&#39;; frame-ancestors &#39;none&#39;; form-action &#39;self&#39;; So from now on we can skip the XSS and CSS Exfiltration.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-26 14:55:38 +0700 +07'>September 26, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Crew CTF 2025 - Professor View Write-up" href="http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Crew CTF 2025 - Love Notes">
 </figure>
   <header class="entry-header">
@@ -301,42 +339,6 @@ Overview Room URL: https://tryhackme.com/room/networkservices2 Difficulty: Easy 
   <footer class="entry-footer"><span title='2025-09-13 16:51:15 +0700 +07'>September 13, 2025</span>&nbsp;·&nbsp;8 min</footer>
   <a class="entry-link" aria-label="post link to TryHackMe - Network Services 2 Room Walkthrough" href="http://localhost:1313/posts/tryhackme-network-services-2-room-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-kenobi-walkthrough.png" alt="TryHackMe Kenobi Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Kenobi Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
-Kenobi Room - Walkthrough on exploiting a Linux machine. Enumerate Samba for shares, manipulate a vulnerable version of proftpd and escalate your privileges with path variable manipulation.
-Overview Room URL: https://tryhackme.com/room/kenobi Difficulty: Easy Time to complete: 45 Walkthrough 1. Deploy the vulnerable machine Scan the machine with nmap, how many ports are open?
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-13 16:47:32 +0700 +07'>September 13, 2025</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Kenobi Room Walkthrough" href="http://localhost:1313/posts/tryhackme-kenobi-room-walkthrough/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-metasploit-introduction.png" alt="TryHackMe Metasploit Introduction Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Metasploit Introduction Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
-Metasploit Introduction Room - An introduction to the main components of the Metasploit Framework.
-Overview Room URL: https://tryhackme.com/room/metasploitintro Difficulty: Easy Time to complete: 30 Walkthrough 1. Introduction to Metasploit No hints needed!
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-11 10:34:49 +0700 +07'>September 11, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Metasploit Introduction Room Walkthrough" href="http://localhost:1313/posts/tryhackme-metasploit-introduction-room-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -354,15 +356,15 @@ Overview Room URL: https://tryhackme.com/room/metasploitintro Difficulty: Easy T
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/">Crew CTF 2025 - Hate Notes Write-up</a></div>
+        
+        <div><a href="http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/">Crew CTF 2025 - Professor View Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/crew-ctf-2025-love-notes-write-up/">Crew CTF 2025 - Love Notes Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-sql-injection-room-walkthrough/">TryHackMe - SQL Injection Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-detecting-web-attacks-room-walkthrough/">TryHackMe - Detecting Web Attacks Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-owasp-top-10-2021-room-walkthrough/">TryHackMe - OWASP Top 10 2021 Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-intro-to-digital-forensics-room-walkthrough/">TryHackMe - Intro to Digital Forensics Room Walkthrough</a></div>
         
     </section>
 
@@ -372,7 +374,7 @@ Overview Room URL: https://tryhackme.com/room/metasploitintro Difficulty: Easy T
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/">
             CTFs
-            <span>(53)</span>
+            <span>(55)</span>
         </a>
 
         
@@ -405,16 +407,16 @@ Overview Room URL: https://tryhackme.com/room/metasploitintro Difficulty: Easy T
 
         
 
-        <a class="sidebar-tag" href="http://localhost:1313/tags/hacking/">
-            Hacking
-            <span>(2)</span>
+        <a class="sidebar-tag" href="http://localhost:1313/tags/crew-ctf-2025/">
+            Crew CTF 2025
+            <span>(3)</span>
         </a>
 
         
 
-        <a class="sidebar-tag" href="http://localhost:1313/tags/crew-ctf-2025/">
-            Crew CTF 2025
-            <span>(1)</span>
+        <a class="sidebar-tag" href="http://localhost:1313/tags/hacking/">
+            Hacking
+            <span>(2)</span>
         </a>
 
         
