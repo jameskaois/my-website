@@ -39,7 +39,7 @@ Here is the source code, you can download and examine it [here](./open_read_flag
 
 The website is simple with just a read file functionality.
 
-![Guide image](../screenshots/open-read-flag-1.png)
+![Guide image](/images/posts/open-read-flag-1.png)
 
 In `app.py`, there is a `/read` route that enables us to view files:
 
@@ -92,7 +92,7 @@ uuid_pattern = r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a
 
 We can try access it, however we will get the message `Error : Sorry this is protected !`
 
-![Guide image](../screenshots/open-read-flag-2.png)
+![Guide image](/images/posts/open-read-flag-2.png)
 
 I tried loads of payloads, with URL encoding and several methods however still cannot achieve the flag.
 
@@ -100,6 +100,6 @@ Finally, I think of a way that we cannot directly view the `b9cdb7c9-7493-4e82-9
 
 Because the `app.py` is located inside the `app` folder from route so we can view it through this param `?file=/app/app.py`:
 
-![Guide image](../screenshots/open-read-flag-3.png)
+![Guide image](/images/posts/open-read-flag-3.png)
 
 Flag is: `W1{1_f0rg37_7h3_fl4g_15_pl41n_73x7}`

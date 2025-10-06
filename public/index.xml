@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Oct 2025 18:07:03 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 06 Oct 2025 20:37:24 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WannaGame Freshman CTF 2025 - Wave Second For Git Write-up</title>
+      <link>http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 20:37:24 +0700</pubDate>
+      <guid>http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/</guid>
+      <description>GitHub CLI so funny@@. Use it to solve this challenge hehe. The flag has 3 parts.</description>
+    </item>
+    <item>
+      <title>WannaGame Freshman CTF 2025 - Open Read Flag Write-up</title>
+      <link>http://localhost:1313/posts/wannagame-freshman-ctf-open-read-flag-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 20:34:28 +0700</pubDate>
+      <guid>http://localhost:1313/posts/wannagame-freshman-ctf-open-read-flag-writeup/</guid>
+      <description>Follow the title to get the flag !!</description>
+    </item>
+    <item>
+      <title>WannaGame Freshman CTF 2025 - Admin Toi Write-up</title>
+      <link>http://localhost:1313/posts/wannagame-freshman-ctf-admin-toi-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 20:29:28 +0700</pubDate>
+      <guid>http://localhost:1313/posts/wannagame-freshman-ctf-admin-toi-writeup/</guid>
+      <description>Có một admin cực kỳ nóng tính, ông ta sẽ chặn bất cứ ai đăng ký vào trang web của ông ta.</description>
+    </item>
     <item>
       <title>SunShine CTF 2025 - Intergalactic Webhook Service Write-up</title>
       <link>http://localhost:1313/posts/sunshinectf-intergalactic-webhook-service-challenge-writeup/</link>
