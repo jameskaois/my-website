@@ -11,14 +11,21 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Oct 2025 17:50:57 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 06 Oct 2025 18:04:01 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SunShine CTF 2025 - Lunar Auth Write-up</title>
-      <link>http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/</link>
-      <pubDate>Mon, 06 Oct 2025 17:50:57 +0700</pubDate>
-      <guid>http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/</guid>
-      <description>Infiltrate the LunarAuth admin panel and gain access to the super secret FLAG artifact !</description>
+      <title>SunShine CTF 2025 - Lunar File Invasion Write-up</title>
+      <link>http://localhost:1313/posts/sunshinectf-lunar-file-invasion-challenge-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 18:04:01 +0700</pubDate>
+      <guid>http://localhost:1313/posts/sunshinectf-lunar-file-invasion-challenge-writeup/</guid>
+      <description>We recently started a new CMS, weve had issues with random bots scraping our pages but found a solution with robots! Anyways, besides that there are no new bug fixes. Enjoy our product!</description>
+    </item>
+    <item>
+      <title>SunShine CTF 2025 - Web Forge Write-up</title>
+      <link>http://localhost:1313/posts/sunshinectf-web-forge-challenge-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 18:00:44 +0700</pubDate>
+      <guid>http://localhost:1313/posts/sunshinectf-web-forge-challenge-writeup/</guid>
+      <description>Use of automated fuzzing tools are allowed for this challenge. Fuzzing. Not Crawling. All endpoints aside from one are rate limited.</description>
     </item>
     <item>
       <title>SunShine CTF 2025 - Lunar Shop Write-up</title>
@@ -26,6 +33,13 @@
       <pubDate>Mon, 06 Oct 2025 17:50:57 +0700</pubDate>
       <guid>http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/</guid>
       <description>We have amazing new products for our gaming service! Unfortunately we dont sell our unreleased flag product yet !</description>
+    </item>
+    <item>
+      <title>SunShine CTF 2025 - Lunar Auth Write-up</title>
+      <link>http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 17:49:57 +0700</pubDate>
+      <guid>http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/</guid>
+      <description>Infiltrate the LunarAuth admin panel and gain access to the super secret FLAG artifact !</description>
     </item>
     <item>
       <title>Crew CTF 2025 - Professor View Write-up</title>

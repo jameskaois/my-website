@@ -159,6 +159,62 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Lunar File Invasion">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">SunShine CTF 2025 - Lunar File Invasion Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Lunar File Invasion (Web)
+Metadata Author: jameskaois CTF: SunShine CTF 2025 Challenge: Lunar File Invasion (web) Target / URL: https://asteroid.sunshinectf.games Difficulty: Medium / Hard Points: 463 Date: 30-09-2025 Goal We have to get the flag by getting admin authentication and leveraging vulnerability.
+My Solution There are no routes in the home page that we can visit normally.
+Visit /robots.txt we can see the content:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-06 18:04:01 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Lunar File Invasion Write-up" href="http://localhost:1313/posts/sunshinectf-lunar-file-invasion-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Web Forge">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">SunShine CTF 2025 - Web Forge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Web Forge Hub (Web)
+Metadata Author: jameskaois CTF: SunShine CTF 2025 Challenge: Web Forge Hub (web) Target / URL: https://wormhole.sunshinectf.games/ Difficulty: Medium Points: 363 Date: 29-09-2025 Goal We have to get the flag through SSRF Tool
+My Solution This is the home page when we visit the website.
+Through the content of the home page, and the menu links we just have the SSRF Tool which is in /fetch url where we can take step in it.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-06 18:00:44 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;4 min</footer>
+  <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Web Forge Write-up" href="http://localhost:1313/posts/sunshinectf-web-forge-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Lunar Shop">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">SunShine CTF 2025 - Lunar Shop Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Lunar Shop (Web)
+Metadata Author: jameskaois CTF: SunShine CTF 2025 Challenge: Lunar Shop (web) Target / URL: https://meteor.sunshinectf.games Difficulty: Easy Points: 10 Date: 30-09-2025 Goal We have to get the flag by using a vulnerability in the query of product id.
+My Solution There are just 3 routes we can gather information in this website: /, /products, /product?product_id.
+Home page: Products page: Product item details page: ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-06 17:50:57 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Lunar Shop Write-up" href="http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Lunar Auth">
 </figure>
   <header class="entry-header">
@@ -173,28 +229,8 @@ Try access https://comet.sunshinectf.games/robots.txt, the content is:
 # tired of these annoying search engine bots scraping the admin panel page logins: Disallow: /admin This is the content of /admin, there is a login form, we have to bypass this to get access as admin.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-06 17:50:57 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-10-06 17:49:57 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Lunar Auth Write-up" href="http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Lunar Shop">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SunShine CTF 2025 - Lunar Shop Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Lunar Shop (Web)
-Metadata Author: jameskaois CTF: SunShine CTF 2025 Challenge: Lunar Shop (web) Target / URL: https://meteor.sunshinectf.games Difficulty: Easy Points: 10 Date: 06-10-2025 Goal We have to get the flag by bypass the admin authentication.
-My Solution This is the home page, there aren’t any useful information.
-Try access https://comet.sunshinectf.games/robots.txt, the content is:
-# tired of these annoying search engine bots scraping the admin panel page logins: Disallow: /admin This is the content of /admin, there is a login form, we have to bypass this to get access as admin.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-06 17:50:57 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Lunar Shop Write-up" href="http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -307,42 +343,6 @@ Overview Room URL: https://tryhackme.com/room/owasptop102021 Difficulty: Easy Ti
   <footer class="entry-footer"><span title='2025-09-16 15:30:58 +0700 +07'>September 16, 2025</span>&nbsp;·&nbsp;5 min</footer>
   <a class="entry-link" aria-label="post link to TryHackMe - OWASP Top 10 2021 Room Walkthrough" href="http://localhost:1313/posts/tryhackme-owasp-top-10-2021-room-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-intro-to-digital-forensics.png" alt="TryHackMe Intro to Digital Forensics Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Intro to Digital Forensics Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
-Intro to Digital Forensics Room - Learn about digital forensics and related processes and experiment with a practical example.
-Overview Room URL: https://tryhackme.com/room/introdigitalforensics Difficulty: Easy Time to complete: 90 Walkthrough 1. Introduction To Digital Forensics Consider the desk in the photo above. In addition to the smartphone, camera, and SD cards, what would be interesting for digital forensics?
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-16 15:26:24 +0700 +07'>September 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Intro to Digital Forensics Room Walkthrough" href="http://localhost:1313/posts/tryhackme-intro-to-digital-forensics-room-walkthrough/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-advent-of-cyber-2024.png" alt="TryHackMe Advent of Cyber 2024 Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Advent of Cyber 2024 Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
-Advent of Cyber 2024 Room - Dive into the wonderful world of cyber security by engaging in festive beginner-friendly exercises every day in the lead-up to Christmas!
-Overview Room URL: https://tryhackme.com/room/adventofcyber2024 Difficulty: Easy Time to complete: 1440 Walkthrough 1. Introduction Welcome to Advent of Cyber 2024 No hints needed!
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-16 15:23:27 +0700 +07'>September 16, 2025</span>&nbsp;·&nbsp;9 min</footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Advent of Cyber 2024 Room Walkthrough" href="http://localhost:1313/posts/tryhackme-advent-of-cyber-2024-room-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -360,15 +360,15 @@ Overview Room URL: https://tryhackme.com/room/adventofcyber2024 Difficulty: Easy
         <h2>Recently Added</h2>
 
         
-        <div><a href="http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/">SunShine CTF 2025 - Lunar Auth Write-up</a></div>
+        <div><a href="http://localhost:1313/posts/sunshinectf-lunar-file-invasion-challenge-writeup/">SunShine CTF 2025 - Lunar File Invasion Write-up</a></div>
+        
+        <div><a href="http://localhost:1313/posts/sunshinectf-web-forge-challenge-writeup/">SunShine CTF 2025 - Web Forge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/">SunShine CTF 2025 - Lunar Shop Write-up</a></div>
         
+        <div><a href="http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/">SunShine CTF 2025 - Lunar Auth Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/">Crew CTF 2025 - Professor View Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/">Crew CTF 2025 - Hate Notes Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/crew-ctf-2025-love-notes-write-up/">Crew CTF 2025 - Love Notes Write-up</a></div>
         
     </section>
 
@@ -378,7 +378,7 @@ Overview Room URL: https://tryhackme.com/room/adventofcyber2024 Difficulty: Easy
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/">
             CTFs
-            <span>(57)</span>
+            <span>(59)</span>
         </a>
 
         
@@ -411,6 +411,13 @@ Overview Room URL: https://tryhackme.com/room/adventofcyber2024 Difficulty: Easy
 
         
 
+        <a class="sidebar-tag" href="http://localhost:1313/tags/sunshine-ctf-2025/">
+            SunShine CTF 2025
+            <span>(4)</span>
+        </a>
+
+        
+
         <a class="sidebar-tag" href="http://localhost:1313/tags/crew-ctf-2025/">
             Crew CTF 2025
             <span>(3)</span>
@@ -420,13 +427,6 @@ Overview Room URL: https://tryhackme.com/room/adventofcyber2024 Difficulty: Easy
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/hacking/">
             Hacking
-            <span>(2)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/sunshine-ctf-2025/">
-            SunShine CTF 2025
             <span>(2)</span>
         </a>
 
