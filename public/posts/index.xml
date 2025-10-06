@@ -21,6 +21,13 @@
       <description>Infiltrate the LunarAuth admin panel and gain access to the super secret FLAG artifact !</description>
     </item>
     <item>
+      <title>SunShine CTF 2025 - Lunar Shop Write-up</title>
+      <link>http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 17:50:57 +0700</pubDate>
+      <guid>http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/</guid>
+      <description>We have amazing new products for our gaming service! Unfortunately we dont sell our unreleased flag product yet !</description>
+    </item>
+    <item>
       <title>Crew CTF 2025 - Professor View Write-up</title>
       <link>http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/</link>
       <pubDate>Fri, 26 Sep 2025 17:44:14 +0700</pubDate>

@@ -27,6 +27,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/</loc>
+    <lastmod>2025-10-06T17:50:57+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-06T17:50:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
