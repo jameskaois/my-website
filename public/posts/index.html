@@ -159,20 +159,22 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Crew CTF 2025 - Hate Notes">
+        <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Lunar Auth">
 </figure>
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Crew CTF 2025 - Hate Notes Write-up
+    <h2 class="entry-hint-parent">SunShine CTF 2025 - Lunar Auth Write-up
     </h2>
   </header>
   <div class="entry-content">
-    <p> Room / Challenge: Hate Notes (Web)
-Metadata Author: jameskaois CTF: CrewCTF 2025 Challenge: Hate Notes (web) Target / URL: https://hate-notes.chal.crewc.tf/ Difficulty: Medium Points: 426 Tags: web, xss, sqli, auth, enumeration Date: 21-09-2025 Goal We have to get access to the flag crew{...} in the admin’s note which the bot can view.
-My Solution Love Notes and Hate Notes share 99% of their code, but Love Notes had many more solutions than Hate Notes: My Solution for Love Notes
+    <p> Room / Challenge: Lunar Auth (Web)
+Metadata Author: jameskaois CTF: SunShine CTF 2025 Challenge: Lunar Auth (web) Target / URL: https://comet.sunshinectf.games Difficulty: Easy Points: 10 Date: 30-09-2025 Goal We have to get the flag by bypass the admin authentication.
+My Solution This is the home page, there aren’t any useful information.
+Try access https://comet.sunshinectf.games/robots.txt, the content is:
+# tired of these annoying search engine bots scraping the admin panel page logins: Disallow: /admin This is the content of /admin, there is a login form, we have to bypass this to get access as admin.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-26 17:43:45 +0700 +07'>September 26, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Crew CTF 2025 - Hate Notes Write-up" href="http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/"></a>
+  <footer class="entry-footer"><span title='2025-10-06 17:50:57 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Lunar Auth Write-up" href="http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -191,8 +193,26 @@ Unlike Hate Notes and Love Notes, Professor’s View response is set:
 Content-Security-Policy: script-src &#39;self&#39; https://js.hcaptcha.com/1/api.js; style-src &#39;self&#39;; img-src &#39;self&#39;; font-src &#39;none&#39;; connect-src &#39;none&#39;; media-src &#39;none&#39;; object-src &#39;none&#39;; prefetch-src &#39;none&#39;; frame-ancestors &#39;none&#39;; form-action &#39;self&#39;; So from now on we can skip the XSS and CSS Exfiltration.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-26 14:55:38 +0700 +07'>September 26, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-09-26 17:44:14 +0700 +07'>September 26, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Crew CTF 2025 - Professor View Write-up" href="http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Crew CTF 2025 - Hate Notes">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Crew CTF 2025 - Hate Notes Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Hate Notes (Web)
+Metadata Author: jameskaois CTF: CrewCTF 2025 Challenge: Hate Notes (web) Target / URL: https://hate-notes.chal.crewc.tf/ Difficulty: Medium Points: 426 Tags: web, xss, sqli, auth, enumeration Date: 21-09-2025 Goal We have to get access to the flag crew{...} in the admin’s note which the bot can view.
+My Solution Love Notes and Hate Notes share 99% of their code, but Love Notes had many more solutions than Hate Notes: My Solution for Love Notes
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-26 17:43:45 +0700 +07'>September 26, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Crew CTF 2025 - Hate Notes Write-up" href="http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -321,24 +341,6 @@ Overview Room URL: https://tryhackme.com/room/hydra Difficulty: Easy Time to com
   <footer class="entry-footer"><span title='2025-09-16 14:19:28 +0700 +07'>September 16, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to TryHackMe - Hydra Room Walkthrough" href="http://localhost:1313/posts/tryhackme-hydra-room-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-network-services-2.png" alt="TryHackMe Network Services 2 Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Network Services 2 Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
-Network Services 2 Room - Enumerating and Exploiting More Common Network Services &amp; Misconfigurations
-Overview Room URL: https://tryhackme.com/room/networkservices2 Difficulty: Easy Time to complete: 60 Walkthrough 1. Get Connected No hints needed!
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-13 16:51:15 +0700 +07'>September 13, 2025</span>&nbsp;·&nbsp;8 min</footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Network Services 2 Room Walkthrough" href="http://localhost:1313/posts/tryhackme-network-services-2-room-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -356,15 +358,15 @@ Overview Room URL: https://tryhackme.com/room/networkservices2 Difficulty: Easy 
         <h2>Recently Added</h2>
 
         
-        <div><a href="http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/">Crew CTF 2025 - Hate Notes Write-up</a></div>
+        <div><a href="http://localhost:1313/posts/sunshinectf-lunar-auth-challenge-writeup/">SunShine CTF 2025 - Lunar Auth Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/">Crew CTF 2025 - Professor View Write-up</a></div>
+        
+        <div><a href="http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/">Crew CTF 2025 - Hate Notes Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/crew-ctf-2025-love-notes-write-up/">Crew CTF 2025 - Love Notes Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-sql-injection-room-walkthrough/">TryHackMe - SQL Injection Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-detecting-web-attacks-room-walkthrough/">TryHackMe - Detecting Web Attacks Room Walkthrough</a></div>
         
     </section>
 
@@ -374,7 +376,7 @@ Overview Room URL: https://tryhackme.com/room/networkservices2 Difficulty: Easy 
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/">
             CTFs
-            <span>(55)</span>
+            <span>(56)</span>
         </a>
 
         
@@ -423,6 +425,13 @@ Overview Room URL: https://tryhackme.com/room/networkservices2 Difficulty: Easy 
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/hugo/">
             Hugo
+            <span>(1)</span>
+        </a>
+
+        
+
+        <a class="sidebar-tag" href="http://localhost:1313/tags/sunshine-ctf-2025/">
+            SunShine CTF 2025
             <span>(1)</span>
         </a>
 
