@@ -24,7 +24,7 @@ draft = false
 -   **Target / URL:** `https://comet.sunshinectf.games`
 -   **Difficulty:** `Easy`
 -   **Points:** `10`
--   **Date:** `30-09-2025`
+-   **Date:** `06-10-2025`
 
 ---
 
