@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Oct 2025 18:04:01 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 06 Oct 2025 18:07:03 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SunShine CTF 2025 - Intergalactic Webhook Service Write-up</title>
+      <link>http://localhost:1313/posts/sunshinectf-intergalactic-webhook-service-challenge-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 18:07:03 +0700</pubDate>
+      <guid>http://localhost:1313/posts/sunshinectf-intergalactic-webhook-service-challenge-writeup/</guid>
+      <description>Infiltrate the LunarAuth admin panel and gain access to the super secret FLAG artifact !</description>
+    </item>
     <item>
       <title>SunShine CTF 2025 - Lunar File Invasion Write-up</title>
       <link>http://localhost:1313/posts/sunshinectf-lunar-file-invasion-challenge-writeup/</link>
