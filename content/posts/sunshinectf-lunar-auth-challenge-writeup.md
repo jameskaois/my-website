@@ -1,5 +1,5 @@
 +++
-date = '2025-10-06T17:50:57+07:00'
+date = '2025-10-06T17:49:57+07:00'
 title = 'SunShine CTF 2025 - Lunar Auth Write-up'
 tags = ['SunShine CTF 2025', 'CTFs']
 description = 'Infiltrate the LunarAuth admin panel and gain access to the super secret FLAG artifact !'
