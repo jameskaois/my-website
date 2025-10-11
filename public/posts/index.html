@@ -159,6 +159,62 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.webp" alt="DVWA Cover">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Exploting IMPOSSIBLE Security Level CSRF - DVWA
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>DVWA’s CSRF Challenge This challenge works around a password reset form, enabling admin to change their password. The first three levels can be exploited with these solutions:
+LOW Security Level: we just need a URL with correct params setup, from that URL make a GET request and we can change the password. MEDIUM Security Level: this level adds a check of Referer header, since it should be the same as where the request originated from, a simple curl command may exploit this level. HIGH Security Level: this is where the game plays, it needs a CSRF token for every request to change the password. This is not so hard to exploit - a Python script can exploit it. For more information: https://github.com/jameskaois/dvwa-vulnerabilities/tree/main/csrf
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-11 20:05:17 +0700 +07'>October 11, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Exploting IMPOSSIBLE Security Level CSRF - DVWA" href="http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-freshman-ctf-2025.jpg" alt="WannaGame Freshman CTF 2025 - Wave Second For Git">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WannaGame Freshman CTF 2025 - Wave Second For Git Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Wave Second For Git (Misc)
+Metadata Author: jameskaois CTF: WannaGame Freshman CTF 2025 Challenge: Wave Second For Git (Misc) Difficulty: Medium Points: 451 Solves: 8 Date: 06-10-2025 Goal We have to get the flag by using Git cli.
+My Solution Here is the source, you can download it here
+There is the flag.txt with this content:
+VzF7ZzF0aHViXw== It is encoded with base64 algorithm, it is easy to decode it, result is the first part of the flag:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-06 20:37:24 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to WannaGame Freshman CTF 2025 - Wave Second For Git Write-up" href="http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-freshman-ctf-2025.jpg" alt="WannaGame Freshman CTF 2025 - Open Read Flag">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WannaGame Freshman CTF 2025 - Open Read Flag Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Open Read Flag (Web)
+Metadata Author: jameskaois CTF: WannaGame Freshman CTF 2025 Challenge: Open Read Flag (web) Target / URL: http://61.28.236.247:10000/ Difficulty: Medium Points: 484 Solves: 5 Date: 06-10-2025 Goal We have to get the flag by leveraging the view file functionality.
+My Solution Here is the source code, you can download and examine it here
+The website is simple with just a read file functionality.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-06 20:34:28 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to WannaGame Freshman CTF 2025 - Open Read Flag Write-up" href="http://localhost:1313/posts/wannagame-freshman-ctf-open-read-flag-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-freshman-ctf-2025.jpg" alt="WannaGame Freshman CTF 2025 - Admin Toi">
 </figure>
   <header class="entry-header">
@@ -292,61 +348,6 @@ Content-Security-Policy: script-src &#39;self&#39; https://js.hcaptcha.com/1/api
   <footer class="entry-footer"><span title='2025-09-26 17:44:14 +0700 +07'>September 26, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Crew CTF 2025 - Professor View Write-up" href="http://localhost:1313/posts/crew-ctf-2025-professor-view-write-up/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Crew CTF 2025 - Hate Notes">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Crew CTF 2025 - Hate Notes Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Hate Notes (Web)
-Metadata Author: jameskaois CTF: CrewCTF 2025 Challenge: Hate Notes (web) Target / URL: https://hate-notes.chal.crewc.tf/ Difficulty: Medium Points: 426 Tags: web, xss, sqli, auth, enumeration Date: 21-09-2025 Goal We have to get access to the flag crew{...} in the admin’s note which the bot can view.
-My Solution Love Notes and Hate Notes share 99% of their code, but Love Notes had many more solutions than Hate Notes: My Solution for Love Notes
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-26 17:43:45 +0700 +07'>September 26, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Crew CTF 2025 - Hate Notes Write-up" href="http://localhost:1313/posts/crew-ctf-2025-hate-notes-write-up/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Crew CTF 2025 - Love Notes">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Crew CTF 2025 - Love Notes Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Love Notes (Web)
-Metadata Author: jameskaois CTF: CrewCTF 2025 Challenge: Love Notes (web) Target / URL: https://love-notes.chal.crewc.tf/ Difficulty: Medium Points: 50 Tags: web, xss, sqli, auth, enumeration Date: 20-09-2025 Goal We have to get access to the flag crew{...} in the admin’s note which the bot can view.
-My Solution Firstly, you can examine the source code of the Love Notes, here is the link to it Source Code.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-25 14:47:48 +0700 +07'>September 25, 2025</span>&nbsp;·&nbsp;5 min</footer>
-  <a class="entry-link" aria-label="post link to Crew CTF 2025 - Love Notes Write-up" href="http://localhost:1313/posts/crew-ctf-2025-love-notes-write-up/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-sql-injection.png" alt="TryHackMe SQL Injection Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - SQL Injection Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is my TryHackMe walkthrough, created to document my learning journey and share solutions with the community. The writeups include a mix of hints, step-by-step explanations, and final answers to help players who get stuck, while still encouraging independent problem-solving.
-SQL Injection Room - Learn how to detect and exploit SQL Injection vulnerabilities
-Overview Room URL: https://tryhackme.com/room/sqlinjectionlm Difficulty: Medium Time to complete: 30 Walkthrough 1. Brief What does SQL stand for?
-=&gt; Answer: Structured Query Language
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-25 14:37:06 +0700 +07'>September 25, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - SQL Injection Room Walkthrough" href="http://localhost:1313/posts/tryhackme-sql-injection-room-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -364,15 +365,15 @@ Overview Room URL: https://tryhackme.com/room/sqlinjectionlm Difficulty: Medium 
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/">Exploting IMPOSSIBLE Security Level CSRF - DVWA</a></div>
+        
+        <div><a href="http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/">WannaGame Freshman CTF 2025 - Wave Second For Git Write-up</a></div>
+        
+        <div><a href="http://localhost:1313/posts/wannagame-freshman-ctf-open-read-flag-writeup/">WannaGame Freshman CTF 2025 - Open Read Flag Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/wannagame-freshman-ctf-admin-toi-writeup/">WannaGame Freshman CTF 2025 - Admin Toi Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/sunshinectf-intergalactic-webhook-service-challenge-writeup/">SunShine CTF 2025 - Intergalactic Webhook Service Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/sunshinectf-lunar-file-invasion-challenge-writeup/">SunShine CTF 2025 - Lunar File Invasion Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/sunshinectf-web-forge-challenge-writeup/">SunShine CTF 2025 - Web Forge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/">SunShine CTF 2025 - Lunar Shop Write-up</a></div>
         
     </section>
 
@@ -382,7 +383,7 @@ Overview Room URL: https://tryhackme.com/room/sqlinjectionlm Difficulty: Medium 
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/">
             CTFs
-            <span>(61)</span>
+            <span>(63)</span>
         </a>
 
         
@@ -403,7 +404,7 @@ Overview Room URL: https://tryhackme.com/room/sqlinjectionlm Difficulty: Medium 
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/blog/">
             Blog
-            <span>(7)</span>
+            <span>(8)</span>
         </a>
 
         
@@ -431,20 +432,20 @@ Overview Room URL: https://tryhackme.com/room/sqlinjectionlm Difficulty: Medium 
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/hacking/">
             Hacking
-            <span>(2)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/hugo/">
-            Hugo
-            <span>(1)</span>
+            <span>(3)</span>
         </a>
 
         
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/wannagame-freshman-ctf-2025/">
             WannaGame Freshman CTF 2025
+            <span>(3)</span>
+        </a>
+
+        
+
+        <a class="sidebar-tag" href="http://localhost:1313/tags/hugo/">
+            Hugo
             <span>(1)</span>
         </a>
 

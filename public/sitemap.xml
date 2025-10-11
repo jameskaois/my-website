@@ -3,27 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-06T20:29:28+07:00</lastmod>
+    <lastmod>2025-10-11T20:05:17+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/ctfs/</loc>
-    <lastmod>2025-10-06T20:29:28+07:00</lastmod>
+    <loc>http://localhost:1313/tags/blog/</loc>
+    <lastmod>2025-10-11T20:05:17+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/</loc>
+    <lastmod>2025-10-11T20:05:17+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/hacking/</loc>
+    <lastmod>2025-10-11T20:05:17+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-10-06T20:29:28+07:00</lastmod>
+    <lastmod>2025-10-11T20:05:17+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-10-06T20:29:28+07:00</lastmod>
+    <lastmod>2025-10-11T20:05:17+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/ctfs/</loc>
+    <lastmod>2025-10-06T20:37:24+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/wannagame-freshman-ctf-2025/</loc>
-    <lastmod>2025-10-06T20:29:28+07:00</lastmod>
+    <lastmod>2025-10-06T20:37:24+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/</loc>
+    <lastmod>2025-10-06T20:37:24+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/wannagame-freshman-ctf-open-read-flag-writeup/</loc>
+    <lastmod>2025-10-06T20:34:28+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -92,11 +117,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
-    <lastmod>2025-09-18T08:53:56+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-09-18T08:53:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -108,11 +128,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/cheatsheet/network-hacking/cracking-wifi-password-documentary/</loc>
-    <lastmod>2025-09-18T08:53:56+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/hacking/</loc>
     <lastmod>2025-09-18T08:53:56+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

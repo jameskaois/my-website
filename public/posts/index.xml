@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Oct 2025 20:29:28 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 11 Oct 2025 20:05:17 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploting IMPOSSIBLE Security Level CSRF - DVWA</title>
+      <link>http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/</link>
+      <pubDate>Sat, 11 Oct 2025 20:05:17 +0700</pubDate>
+      <guid>http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/</guid>
+      <description>A step-by-step guide on how I exploit the IMPOSSIBLE security level of CSRF vulnerability in DVWA (Damn Vulnerable Web App).</description>
+    </item>
+    <item>
+      <title>WannaGame Freshman CTF 2025 - Wave Second For Git Write-up</title>
+      <link>http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 20:37:24 +0700</pubDate>
+      <guid>http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/</guid>
+      <description>GitHub CLI so funny@@. Use it to solve this challenge hehe. The flag has 3 parts.</description>
+    </item>
+    <item>
+      <title>WannaGame Freshman CTF 2025 - Open Read Flag Write-up</title>
+      <link>http://localhost:1313/posts/wannagame-freshman-ctf-open-read-flag-writeup/</link>
+      <pubDate>Mon, 06 Oct 2025 20:34:28 +0700</pubDate>
+      <guid>http://localhost:1313/posts/wannagame-freshman-ctf-open-read-flag-writeup/</guid>
+      <description>Follow the title to get the flag !!</description>
+    </item>
     <item>
       <title>WannaGame Freshman CTF 2025 - Admin Toi Write-up</title>
       <link>http://localhost:1313/posts/wannagame-freshman-ctf-admin-toi-writeup/</link>
