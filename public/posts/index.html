@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-csp-bypass.jpg" alt="DVWA CSP Bypass">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA CSP Bypass Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: CSP Bypass Impact: Bypass CSP policy and inject our desired Javascript code. LOW Security Level This Security Level allow these scripts:
+$headerCSP = &#34;Content-Security-Policy: script-src &#39;self&#39; https://pastebin.com hastebin.com www.toptal.com example.com code.jquery.com https://ssl.google-analytics.com https://digi.ninja ;&#34;; // allows js from self, pastebin.com, hastebin.com, jquery, digi.ninja, and google analytics. As it allows https://digi.ninja so we can use https://digi.ninja/dvwa/cookie.js. Result:
+MEDIUM Security Level The CSP now is new
+$headerCSP = &#34;Content-Security-Policy: script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;nonce-TmV2ZXIgZ29pbmcgdG8gZ2l2ZSB5b3UgdXA=&#39;;&#34;; It allows script with nonce: TmV2ZXIgZ29pbmcgdG8gZ2l2ZSB5b3UgdXA= so the payload is:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-16 14:48:02 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA CSP Bypass Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-csp-bypass-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cryptography.jpg" alt="DVWA Cryptography">
 </figure>
   <header class="entry-header">
@@ -324,25 +343,6 @@ def is_ip_allowed(url): parsed = urlparse(url) host = parsed.hostname or &#39;&#
   <footer class="entry-footer"><span title='2025-10-06 18:07:03 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Intergalactic Webhook Service Write-up" href="http://localhost:1313/posts/sunshinectf-intergalactic-webhook-service-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Lunar File Invasion">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SunShine CTF 2025 - Lunar File Invasion Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Lunar File Invasion (Web)
-Metadata Author: jameskaois CTF: SunShine CTF 2025 Challenge: Lunar File Invasion (web) Target / URL: https://asteroid.sunshinectf.games Difficulty: Medium / Hard Points: 463 Date: 30-09-2025 Goal We have to get the flag by getting admin authentication and leveraging vulnerability.
-My Solution There are no routes in the home page that we can visit normally.
-Visit /robots.txt we can see the content:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-06 18:04:01 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Lunar File Invasion Write-up" href="http://localhost:1313/posts/sunshinectf-lunar-file-invasion-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -360,6 +360,8 @@ Visit /robots.txt we can see the content:
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-csp-bypass-low-medium-high-security/">DVWA CSP Bypass Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-cryptography-low-medium-high-security/">DVWA Cryptography Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-command-injection-low-medium-high-security/">DVWA Command Injection Low/Medium/High Security</a></div>
@@ -367,8 +369,6 @@ Visit /robots.txt we can see the content:
         <div><a href="http://localhost:1313/posts/dvwa-brute-force-low-medium-high-security/">DVWA Brute Force Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-authorisation-bypass-low-med-high-security/">DVWA Authorisation Bypass Low/Medium/High Security</a></div>
-        
-        <div><a href="http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/">Exploting IMPOSSIBLE Security Level CSRF - DVWA</a></div>
         
     </section>
 
@@ -406,7 +406,7 @@ Visit /robots.txt we can see the content:
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
             DVWA
-            <span>(5)</span>
+            <span>(6)</span>
         </a>
 
         
