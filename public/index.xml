@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Oct 2025 14:48:02 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 16 Oct 2025 14:55:40 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DVWA CSRF Low/Medium/High Security</title>
+      <link>http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/</link>
+      <pubDate>Thu, 16 Oct 2025 14:55:40 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/</guid>
+      <description>CSRF attack change any accounts passwords.</description>
+    </item>
     <item>
       <title>DVWA CSP Bypass Low/Medium/High Security</title>
       <link>http://localhost:1313/posts/dvwa-csp-bypass-low-medium-high-security/</link>
