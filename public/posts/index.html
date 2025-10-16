@@ -159,6 +159,23 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-command-injection.jpg" alt="DVWA Command Injection">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA Command Injection Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: Command injection Impact: Get access to server resources through ping function. LOW Security Level This LOW level ping function doesn’t have any filter or regex to check the input we enter for them. Therefore, we can leverage this vulnerability to execute additional commands to the server. Example:
+1.1.1.1; id This payload will ping 1.1.1.1 but also run id. The result is:
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data. 64 bytes from 1.1.1.1: icmp_seq=1 ttl=52 time=63.0 ms 64 bytes from 1.1.1.1: icmp_seq=2 ttl=52 time=93.5 ms 64 bytes from 1.1.1.1: icmp_seq=3 ttl=52 time=76.8 ms 64 bytes from 1.1.1.1: icmp_seq=4 ttl=52 time=50.4 ms --- 1.1.1.1 ping statistics --- 4 packets transmitted, 4 received, 0% packet loss, time 3005ms rtt min/avg/max/mdev = 50.401/70.910/93.461/16.016 ms uid=33(www-data) gid=33(www-data) groups=33(www-data) ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-16 14:40:01 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA Command Injection Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-command-injection-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-brute-force.jpg" alt="DVWA Brute Force">
 </figure>
   <header class="entry-header">
@@ -326,24 +343,6 @@ Through the content of the home page, and the menu links we just have the SSRF T
   <footer class="entry-footer"><span title='2025-10-06 18:00:44 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;4 min</footer>
   <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Web Forge Write-up" href="http://localhost:1313/posts/sunshinectf-web-forge-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Lunar Shop">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SunShine CTF 2025 - Lunar Shop Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Lunar Shop (Web)
-Metadata Author: jameskaois CTF: SunShine CTF 2025 Challenge: Lunar Shop (web) Target / URL: https://meteor.sunshinectf.games Difficulty: Easy Points: 10 Date: 30-09-2025 Goal We have to get the flag by using a vulnerability in the query of product id.
-My Solution There are just 3 routes we can gather information in this website: /, /products, /product?product_id.
-Home page: Products page: Product item details page: ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-06 17:50:57 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Lunar Shop Write-up" href="http://localhost:1313/posts/sunshinectf-lunar-shop-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -361,6 +360,8 @@ Home page: Products page: Product item details page: ...</p>
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-command-injection-low-medium-high-security/">DVWA Command Injection Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-brute-force-low-medium-high-security/">DVWA Brute Force Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-authorisation-bypass-low-med-high-security/">DVWA Authorisation Bypass Low/Medium/High Security</a></div>
@@ -368,8 +369,6 @@ Home page: Products page: Product item details page: ...</p>
         <div><a href="http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/">Exploting IMPOSSIBLE Security Level CSRF - DVWA</a></div>
         
         <div><a href="http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/">WannaGame Freshman CTF 2025 - Wave Second For Git Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/wannagame-freshman-ctf-open-read-flag-writeup/">WannaGame Freshman CTF 2025 - Open Read Flag Write-up</a></div>
         
     </section>
 
@@ -412,6 +411,13 @@ Home page: Products page: Product item details page: ...</p>
 
         
 
+        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
+            DVWA
+            <span>(4)</span>
+        </a>
+
+        
+
         <a class="sidebar-tag" href="http://localhost:1313/tags/homelab/">
             Homelab
             <span>(4)</span>
@@ -421,13 +427,6 @@ Home page: Products page: Product item details page: ...</p>
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/crew-ctf-2025/">
             Crew CTF 2025
-            <span>(3)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
-            DVWA
             <span>(3)</span>
         </a>
 
