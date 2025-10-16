@@ -2,7 +2,7 @@
 date = '2025-10-16T14:14:20+07:00'
 title = 'DVWA Authorisation Bypass Low/Medium/High Security'
 draft = false
-tags = ['Crew CTF 2025', 'DVWA']
+tags = ['DVWA']
 description = 'Leveraging vulnerabilities to get access to user manager system.'
 
 [cover]
