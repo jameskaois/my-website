@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Oct 2025 14:40:01 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 16 Oct 2025 14:43:16 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DVWA Cryptography Low/Medium/High Security</title>
+      <link>http://localhost:1313/posts/dvwa-cryptography-low-medium-high-security/</link>
+      <pubDate>Thu, 16 Oct 2025 14:43:16 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dvwa-cryptography-low-medium-high-security/</guid>
+      <description>Decode the encoded string to get the correct password.</description>
+    </item>
     <item>
       <title>DVWA Command Injection Low/Medium/High Security</title>
       <link>http://localhost:1313/posts/dvwa-command-injection-low-medium-high-security/</link>

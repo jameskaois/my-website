@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cryptography.jpg" alt="DVWA Cryptography">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA Cryptography Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: Cryptography Impact: Decode the encoded string to get the correct password. LOW Security Level In the source code this is how decoding process works:
+$decoded = xor_this (base64_decode ($password), $key); First Base64 Decode the password then decode with XOR and the key is wachtwoord. I use CyberChef to decode this encoded string:
+Result:
+Your new password is: Olifant MEDIUM Security Level The tokens are encrypted using an Electronic Code Book based algorithm (AES-128-ECB). aes-128-ebc is a 128 bit block cipher. 128 bits is 16 bytes, but to make things human readable, the bytes are represented as hex characters meaning each byte is two characters. This gives you a block size of 32 characters.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-16 14:43:16 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA Cryptography Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-cryptography-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-command-injection.jpg" alt="DVWA Command Injection">
 </figure>
   <header class="entry-header">
@@ -324,25 +343,6 @@ Visit /robots.txt we can see the content:
   <footer class="entry-footer"><span title='2025-10-06 18:04:01 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Lunar File Invasion Write-up" href="http://localhost:1313/posts/sunshinectf-lunar-file-invasion-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/sunshinectf.png" alt="SunShine CTF 2025 - Web Forge">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SunShine CTF 2025 - Web Forge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Web Forge Hub (Web)
-Metadata Author: jameskaois CTF: SunShine CTF 2025 Challenge: Web Forge Hub (web) Target / URL: https://wormhole.sunshinectf.games/ Difficulty: Medium Points: 363 Date: 29-09-2025 Goal We have to get the flag through SSRF Tool
-My Solution This is the home page when we visit the website.
-Through the content of the home page, and the menu links we just have the SSRF Tool which is in /fetch url where we can take step in it.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-06 18:00:44 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;4 min</footer>
-  <a class="entry-link" aria-label="post link to SunShine CTF 2025 - Web Forge Write-up" href="http://localhost:1313/posts/sunshinectf-web-forge-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -360,6 +360,8 @@ Through the content of the home page, and the menu links we just have the SSRF T
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-cryptography-low-medium-high-security/">DVWA Cryptography Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-command-injection-low-medium-high-security/">DVWA Command Injection Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-brute-force-low-medium-high-security/">DVWA Brute Force Low/Medium/High Security</a></div>
@@ -367,8 +369,6 @@ Through the content of the home page, and the menu links we just have the SSRF T
         <div><a href="http://localhost:1313/posts/dvwa-authorisation-bypass-low-med-high-security/">DVWA Authorisation Bypass Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/">Exploting IMPOSSIBLE Security Level CSRF - DVWA</a></div>
-        
-        <div><a href="http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/">WannaGame Freshman CTF 2025 - Wave Second For Git Write-up</a></div>
         
     </section>
 
@@ -404,16 +404,16 @@ Through the content of the home page, and the menu links we just have the SSRF T
 
         
 
-        <a class="sidebar-tag" href="http://localhost:1313/tags/sunshine-ctf-2025/">
-            SunShine CTF 2025
+        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
+            DVWA
             <span>(5)</span>
         </a>
 
         
 
-        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
-            DVWA
-            <span>(4)</span>
+        <a class="sidebar-tag" href="http://localhost:1313/tags/sunshine-ctf-2025/">
+            SunShine CTF 2025
+            <span>(5)</span>
         </a>
 
         
