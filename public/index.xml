@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Oct 2025 20:05:17 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 16 Oct 2025 14:14:20 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DVWA Authorisation Bypass Low/Medium/High Security</title>
+      <link>http://localhost:1313/posts/dvwa-authorisation-bypass-low-med-high-security/</link>
+      <pubDate>Thu, 16 Oct 2025 14:14:20 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dvwa-authorisation-bypass-low-med-high-security/</guid>
+      <description>Leveraging vulnerabilities to get access to user manager system.</description>
+    </item>
     <item>
       <title>Exploting IMPOSSIBLE Security Level CSRF - DVWA</title>
       <link>http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/</link>

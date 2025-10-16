@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-11T20:05:17+07:00</lastmod>
+    <lastmod>2025-10-16T14:14:20+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/dvwa-authorisation-bypass-low-med-high-security/</loc>
+    <lastmod>2025-10-16T14:14:20+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-10-16T14:14:20+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -18,11 +28,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/hacking/</loc>
-    <lastmod>2025-10-11T20:05:17+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-10-11T20:05:17+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
