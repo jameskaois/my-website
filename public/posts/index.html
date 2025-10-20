@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA Open HTTP Redirect">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA Open Http Redirect Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: Open HTTP Redirect
+Impact: Taking advantage of redirects to trick users go to other websites.
+LOW Security Level The source code in vulnerabilities/open_redirect/source/low.php is:
+if (array_key_exists (&#34;redirect&#34;, $_GET) &amp;&amp; $_GET[&#39;redirect&#39;] != &#34;&#34;) { header (&#34;location: &#34; . $_GET[&#39;redirect&#39;]); exit; } http_response_code (500); ?&gt; &lt;p&gt;Missing redirect target.&lt;/p&gt; &lt;?php exit; No checks so we can leverage this if you check the url of Quote 1 and Quote 2 it is: source/low.php?redirect=info.php?id=1, so we can use this redirect query param to redirect users to whatever page we want:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-20 19:41:09 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA Open Http Redirect Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA Javascript Attacks">
 </figure>
   <header class="entry-header">
@@ -318,26 +337,6 @@ LOW Security Level: we just need a URL with correct params setup, from that URL 
   <footer class="entry-footer"><span title='2025-10-11 20:05:17 +0700 +07'>October 11, 2025</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to Exploting IMPOSSIBLE Security Level CSRF - DVWA" href="http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-freshman-ctf-2025.jpg" alt="WannaGame Freshman CTF 2025 - Wave Second For Git">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">WannaGame Freshman CTF 2025 - Wave Second For Git Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Wave Second For Git (Misc)
-Metadata Author: jameskaois CTF: WannaGame Freshman CTF 2025 Challenge: Wave Second For Git (Misc) Difficulty: Medium Points: 451 Solves: 8 Date: 06-10-2025 Goal We have to get the flag by using Git cli.
-My Solution Here is the source, you can download it here
-There is the flag.txt with this content:
-VzF7ZzF0aHViXw== It is encoded with base64 algorithm, it is easy to decode it, result is the first part of the flag:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-06 20:37:24 +0700 +07'>October 6, 2025</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to WannaGame Freshman CTF 2025 - Wave Second For Git Write-up" href="http://localhost:1313/posts/wannagame-freshman-ctf-wave-second-for-git-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -355,6 +354,8 @@ VzF7ZzF0aHViXw== It is encoded with base64 algorithm, it is easy to decode it, r
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/">DVWA Open Http Redirect Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-javascript-attacks-low-medium-high-security/">DVWA Javascript Attacks Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-file-upload-low-medium-high-security/">DVWA File Upload Low/Medium/High Security</a></div>
@@ -362,8 +363,6 @@ VzF7ZzF0aHViXw== It is encoded with base64 algorithm, it is easy to decode it, r
         <div><a href="http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/">DVWA CSRF Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-csp-bypass-low-medium-high-security/">DVWA CSP Bypass Low/Medium/High Security</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dvwa-cryptography-low-medium-high-security/">DVWA Cryptography Low/Medium/High Security</a></div>
         
     </section>
 
@@ -394,7 +393,7 @@ VzF7ZzF0aHViXw== It is encoded with base64 algorithm, it is easy to decode it, r
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
             DVWA
-            <span>(9)</span>
+            <span>(10)</span>
         </a>
 
         
