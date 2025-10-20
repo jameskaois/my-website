@@ -9,14 +9,10 @@
 
     <section>
         <h2>Trending Tags</h2>
-        {{ range .Site.Taxonomies.tags.ByCount }}
-
-        <a class="sidebar-tag" href="{{ .Page.Permalink }}">
-            {{ .Page.Title }}
-            <span>({{ .Count }})</span>
-        </a>
-
-        {{ end }}
+        {{ $allowed := slice "CTFs" "TryHackMe" "OverTheWire" "DVWA" "Blog" }} {{ range
+        .Site.Taxonomies.tags.ByCount }} {{ if in $allowed .Page.Title }}
+        <a class="sidebar-tag" href="{{ .Page.Permalink }}"> {{ .Page.Title }} </a>
+        {{ end }} {{ end }}
     </section>
 
     <section id="post-content">
