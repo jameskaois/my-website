@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA SQL Injection">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA SQL Injection Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: SQL Injection
+Impact: Using vulnerability in SQL queries to get access to restricted data.
+LOW Security Level The source code doesn’t have any check on the input id it just pass the value to the query. We can easily use this payload to get tables list:
+&#39; UNION SELECT user, password FROM users # Source code doesn’t check anything:
+$query = &#34;SELECT first_name, last_name FROM users WHERE user_id = &#39;$id&#39;;&#34;; Result: ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-20 19:48:35 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA SQL Injection Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA SQL Injection Blind">
 </figure>
   <header class="entry-header">
@@ -181,7 +200,7 @@ $exists = false; if ($result !== false) { try { $exists = (mysqli_num_rows( $res
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA Open HTTP Redirect">
 </figure>
   <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA Open Http Redirect Low/Medium/High Security
+    <h2 class="entry-hint-parent">DVWA Open HTTP Redirect Low/Medium/High Security
     </h2>
   </header>
   <div class="entry-content">
@@ -192,7 +211,7 @@ if (array_key_exists (&#34;redirect&#34;, $_GET) &amp;&amp; $_GET[&#39;redirect&
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-10-20 19:41:09 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA Open Http Redirect Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/"></a>
+  <a class="entry-link" aria-label="post link to DVWA Open HTTP Redirect Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -321,24 +340,6 @@ import requests baseUrl = &#34;http://localhost/DVWA/vulnerabilities/brute/?Logi
   <footer class="entry-footer"><span title='2025-10-16 14:35:21 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to DVWA Brute Force Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-brute-force-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-authorisation-bypass.jpg" alt="DVWA Authorisation Bypass">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA Authorisation Bypass Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: Authorisation Bypass Impact: Leveraging vulnerabilities to get access to user manager system. LOW Security Level The source code doesn’t have any checks. You can use gordonb / abc123 this account (this is not an admin account). Since the source code doesn’t have any checks so we can just access to the URL: http://localhost/DVWA/vulnerabilities/authbypass/
-MEDIUM Security Level The source code now updated with a check:
-/* Only the admin user is allowed to access this page. Have a look at these two files for possible vulnerabilities: * vulnerabilities/authbypass/get_user_data.php * vulnerabilities/authbypass/change_user_details.php */ if (dvwaCurrentUser() != &#34;admin&#34;) { print &#34;Unauthorised&#34;; http_response_code(403); exit; } Let’s take a look at those 2 files, visit get_user_data.php we got:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-16 14:14:20 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA Authorisation Bypass Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-authorisation-bypass-low-med-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -356,15 +357,15 @@ MEDIUM Security Level The source code now updated with a check:
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/">DVWA SQL Injection Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-sql-injection-blind-low-medium-high-security/">DVWA SQL Injection Blind Low/Medium/High Security</a></div>
         
-        <div><a href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/">DVWA Open Http Redirect Low/Medium/High Security</a></div>
+        <div><a href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/">DVWA Open HTTP Redirect Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-javascript-attacks-low-medium-high-security/">DVWA Javascript Attacks Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-file-upload-low-medium-high-security/">DVWA File Upload Low/Medium/High Security</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/">DVWA CSRF Low/Medium/High Security</a></div>
         
     </section>
 
@@ -388,7 +389,7 @@ MEDIUM Security Level The source code now updated with a check:
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
             DVWA
-            <span>(11)</span>
+            <span>(12)</span>
         </a>
 
         
