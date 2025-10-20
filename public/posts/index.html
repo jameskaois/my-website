@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA SQL Injection Blind">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA SQL Injection Blind Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: SQL Blind Injection
+Impact: Levaraging SQL Blind Injection to get the data that we aren’t supposed to know.
+LOW Security Level The SQL Blind Injection is basically harder for us to retreive our desired data when comparing to normal SQL Injection. You can see this code from the source:
+$exists = false; if ($result !== false) { try { $exists = (mysqli_num_rows( $result ) &gt; 0); } catch(Exception $e) { $exists = false; } } And whatever we give id param it just have 2 results:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-20 19:44:32 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA SQL Injection Blind Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-sql-injection-blind-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA Open HTTP Redirect">
 </figure>
   <header class="entry-header">
@@ -320,23 +339,6 @@ MEDIUM Security Level The source code now updated with a check:
   <footer class="entry-footer"><span title='2025-10-16 14:14:20 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to DVWA Authorisation Bypass Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-authorisation-bypass-low-med-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.webp" alt="DVWA Cover">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Exploting IMPOSSIBLE Security Level CSRF - DVWA
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>DVWA’s CSRF Challenge This challenge works around a password reset form, enabling admin to change their password. The first three levels can be exploited with these solutions:
-LOW Security Level: we just need a URL with correct params setup, from that URL make a GET request and we can change the password. MEDIUM Security Level: this level adds a check of Referer header, since it should be the same as where the request originated from, a simple curl command may exploit this level. HIGH Security Level: this is where the game plays, it needs a CSRF token for every request to change the password. This is not so hard to exploit - a Python script can exploit it. For more information: https://github.com/jameskaois/dvwa-vulnerabilities/tree/main/csrf
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-11 20:05:17 +0700 +07'>October 11, 2025</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to Exploting IMPOSSIBLE Security Level CSRF - DVWA" href="http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -354,6 +356,8 @@ LOW Security Level: we just need a URL with correct params setup, from that URL 
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-sql-injection-blind-low-medium-high-security/">DVWA SQL Injection Blind Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/">DVWA Open Http Redirect Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-javascript-attacks-low-medium-high-security/">DVWA Javascript Attacks Low/Medium/High Security</a></div>
@@ -361,8 +365,6 @@ LOW Security Level: we just need a URL with correct params setup, from that URL 
         <div><a href="http://localhost:1313/posts/dvwa-file-upload-low-medium-high-security/">DVWA File Upload Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/">DVWA CSRF Low/Medium/High Security</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dvwa-csp-bypass-low-medium-high-security/">DVWA CSP Bypass Low/Medium/High Security</a></div>
         
     </section>
 
@@ -384,16 +386,16 @@ LOW Security Level: we just need a URL with correct params setup, from that URL 
 
         
 
-        <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/">
-            OverTheWire
+        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
+            DVWA
             <span>(11)</span>
         </a>
 
         
 
-        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
-            DVWA
-            <span>(10)</span>
+        <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/">
+            OverTheWire
+            <span>(11)</span>
         </a>
 
         
