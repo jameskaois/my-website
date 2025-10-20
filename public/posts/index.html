@@ -159,6 +159,27 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS Reflected">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA XSS Reflected Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: XSS (Reflected)
+Impact: Leveraging XSS Scripting to get our desired data.
+LOW Security Level The source code doesn’t have any check:
+header (&#34;X-XSS-Protection: 0&#34;); // Is there any input? if( array_key_exists( &#34;name&#34;, $_GET ) &amp;&amp; $_GET[ &#39;name&#39; ] != NULL ) { // Feedback for end user echo &#39;&lt;pre&gt;Hello &#39; . $_GET[ &#39;name&#39; ] . &#39;&lt;/pre&gt;&#39;; } So similar to XSS (DOM) we can use simple payload &lt;script&gt;alert(document.cookie)&lt;/script&gt;
+MEDIUM Security Level This source code has new check on &lt;script&gt;:
+header (&#34;X-XSS-Protection: 0&#34;); // Is there any input? if( array_key_exists( &#34;name&#34;, $_GET ) &amp;&amp; $_GET[ &#39;name&#39; ] != NULL ) { // Get input $name = str_replace( &#39;&lt;script&gt;&#39;, &#39;&#39;, $_GET[ &#39;name&#39; ] ); // Feedback for end user echo &#34;&lt;pre&gt;Hello {$name}&lt;/pre&gt;&#34;; } So we can use the img trick: &lt;img src=x onerror=alert(document.cookie)&gt;
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-20 19:58:05 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA XSS Reflected Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-reflected-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS DOM">
 </figure>
   <header class="entry-header">
@@ -326,25 +347,6 @@ $headerCSP = &#34;Content-Security-Policy: script-src &#39;self&#39; &#39;unsafe
   <footer class="entry-footer"><span title='2025-10-16 14:48:02 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to DVWA CSP Bypass Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-csp-bypass-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cryptography.jpg" alt="DVWA Cryptography">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA Cryptography Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: Cryptography Impact: Decode the encoded string to get the correct password. LOW Security Level In the source code this is how decoding process works:
-$decoded = xor_this (base64_decode ($password), $key); First Base64 Decode the password then decode with XOR and the key is wachtwoord. I use CyberChef to decode this encoded string:
-Result:
-Your new password is: Olifant MEDIUM Security Level The tokens are encrypted using an Electronic Code Book based algorithm (AES-128-ECB). aes-128-ebc is a 128 bit block cipher. 128 bits is 16 bytes, but to make things human readable, the bytes are represented as hex characters meaning each byte is two characters. This gives you a block size of 32 characters.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-16 14:43:16 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA Cryptography Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-cryptography-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -362,6 +364,8 @@ Your new password is: Olifant MEDIUM Security Level The tokens are encrypted usi
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-xss-reflected-low-medium-high-security/">DVWA XSS Reflected Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-xss-dom-low-medium-high-security/">DVWA XSS DOM Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-weak-session-ids-low-medium-high-security/">DVWA Weak Session IDs Low/Medium/High Security</a></div>
@@ -369,8 +373,6 @@ Your new password is: Olifant MEDIUM Security Level The tokens are encrypted usi
         <div><a href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/">DVWA SQL Injection Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-sql-injection-blind-low-medium-high-security/">DVWA SQL Injection Blind Low/Medium/High Security</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/">DVWA Open HTTP Redirect Low/Medium/High Security</a></div>
         
     </section>
 
@@ -394,7 +396,7 @@ Your new password is: Olifant MEDIUM Security Level The tokens are encrypted usi
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
             DVWA
-            <span>(14)</span>
+            <span>(15)</span>
         </a>
 
         
