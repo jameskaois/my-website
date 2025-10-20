@@ -3,26 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-16T14:55:40+07:00</lastmod>
+    <lastmod>2025-10-20T19:36:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/dvwa/</loc>
-    <lastmod>2025-10-16T14:55:40+07:00</lastmod>
+    <lastmod>2025-10-20T19:36:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/</loc>
-    <lastmod>2025-10-16T14:55:40+07:00</lastmod>
+    <loc>http://localhost:1313/posts/dvwa-javascript-attacks-low-medium-high-security/</loc>
+    <lastmod>2025-10-20T19:36:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-10-16T14:55:40+07:00</lastmod>
+    <lastmod>2025-10-20T19:36:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-20T19:36:29+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/dvwa-file-upload-low-medium-high-security/</loc>
+    <lastmod>2025-10-16T15:00:11+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/</loc>
     <lastmod>2025-10-16T14:55:40+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
