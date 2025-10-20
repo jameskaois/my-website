@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Oct 2025 19:58:05 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 20 Oct 2025 20:01:18 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DVWA XSS Stored Low/Medium/High Security</title>
+      <link>http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/</link>
+      <pubDate>Mon, 20 Oct 2025 20:01:18 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/</guid>
+      <description>Leveraging XSS Scripting to get our desired data.</description>
+    </item>
     <item>
       <title>DVWA XSS Reflected Low/Medium/High Security</title>
       <link>http://localhost:1313/posts/dvwa-xss-reflected-low-medium-high-security/</link>

@@ -159,6 +159,24 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS Stored">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA XSS Stored Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: XSS (Stored)
+Impact: Leveraging XSS Scripting to get our desired data.
+LOW Security Level if( isset( $_POST[ &#39;btnSign&#39; ] ) ) { // Get input $message = trim( $_POST[ &#39;mtxMessage&#39; ] ); $name = trim( $_POST[ &#39;txtName&#39; ] ); // Sanitize message input $message = stripslashes( $message ); $message = ((isset($GLOBALS[&#34;___mysqli_ston&#34;]) &amp;&amp; is_object($GLOBALS[&#34;___mysqli_ston&#34;])) ? mysqli_real_escape_string($GLOBALS[&#34;___mysqli_ston&#34;], $message ) : ((trigger_error(&#34;[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.&#34;, E_USER_ERROR)) ? &#34;&#34; : &#34;&#34;)); // Sanitize name input $name = ((isset($GLOBALS[&#34;___mysqli_ston&#34;]) &amp;&amp; is_object($GLOBALS[&#34;___mysqli_ston&#34;])) ? mysqli_real_escape_string($GLOBALS[&#34;___mysqli_ston&#34;], $name ) : ((trigger_error(&#34;[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.&#34;, E_USER_ERROR)) ? &#34;&#34; : &#34;&#34;)); // Update database $query = &#34;INSERT INTO guestbook ( comment, name ) VALUES ( &#39;$message&#39;, &#39;$name&#39; );&#34;; $result = mysqli_query($GLOBALS[&#34;___mysqli_ston&#34;], $query ) or die( &#39;&lt;pre&gt;&#39; . ((is_object($GLOBALS[&#34;___mysqli_ston&#34;])) ? mysqli_error($GLOBALS[&#34;___mysqli_ston&#34;]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . &#39;&lt;/pre&gt;&#39; ); //mysql_close(); } The app just INSERT the records to database with no checks
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-20 20:01:18 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA XSS Stored Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS Reflected">
 </figure>
   <header class="entry-header">
@@ -328,25 +346,6 @@ MEDIUM Security Level In this MEDIUM level, it has a check condition before exec
   <footer class="entry-footer"><span title='2025-10-16 14:55:40 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to DVWA CSRF Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-csp-bypass.jpg" alt="DVWA CSP Bypass">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA CSP Bypass Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: CSP Bypass Impact: Bypass CSP policy and inject our desired Javascript code. LOW Security Level This Security Level allow these scripts:
-$headerCSP = &#34;Content-Security-Policy: script-src &#39;self&#39; https://pastebin.com hastebin.com www.toptal.com example.com code.jquery.com https://ssl.google-analytics.com https://digi.ninja ;&#34;; // allows js from self, pastebin.com, hastebin.com, jquery, digi.ninja, and google analytics. As it allows https://digi.ninja so we can use https://digi.ninja/dvwa/cookie.js. Result:
-MEDIUM Security Level The CSP now is new
-$headerCSP = &#34;Content-Security-Policy: script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;nonce-TmV2ZXIgZ29pbmcgdG8gZ2l2ZSB5b3UgdXA=&#39;;&#34;; It allows script with nonce: TmV2ZXIgZ29pbmcgdG8gZ2l2ZSB5b3UgdXA= so the payload is:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-16 14:48:02 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA CSP Bypass Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-csp-bypass-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -364,6 +363,8 @@ $headerCSP = &#34;Content-Security-Policy: script-src &#39;self&#39; &#39;unsafe
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/">DVWA XSS Stored Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-xss-reflected-low-medium-high-security/">DVWA XSS Reflected Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-xss-dom-low-medium-high-security/">DVWA XSS DOM Low/Medium/High Security</a></div>
@@ -371,8 +372,6 @@ $headerCSP = &#34;Content-Security-Policy: script-src &#39;self&#39; &#39;unsafe
         <div><a href="http://localhost:1313/posts/dvwa-weak-session-ids-low-medium-high-security/">DVWA Weak Session IDs Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/">DVWA SQL Injection Low/Medium/High Security</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dvwa-sql-injection-blind-low-medium-high-security/">DVWA SQL Injection Blind Low/Medium/High Security</a></div>
         
     </section>
 
@@ -396,7 +395,7 @@ $headerCSP = &#34;Content-Security-Policy: script-src &#39;self&#39; &#39;unsafe
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
             DVWA
-            <span>(15)</span>
+            <span>(16)</span>
         </a>
 
         
