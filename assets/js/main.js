@@ -33,6 +33,65 @@
         btn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        const postContent = document.querySelector('.post-single .post-content');
+        if (!postContent) return;
+
+        // Create overlay and zoomed image container
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        overlay.style.display = 'flex';
+        overlay.style.justifyContent = 'center';
+        overlay.style.alignItems = 'center';
+        overlay.style.cursor = 'zoom-out';
+        overlay.style.zIndex = '9999';
+        overlay.style.transition = 'opacity 0.25s ease';
+        overlay.style.opacity = '0';
+        overlay.style.pointerEvents = 'none';
+
+        const zoomedImg = document.createElement('img');
+        zoomedImg.style.maxWidth = '90%';
+        zoomedImg.style.maxHeight = '90%';
+        zoomedImg.style.borderRadius = '8px';
+        zoomedImg.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+        zoomedImg.style.transition = 'transform 0.3s ease';
+        overlay.appendChild(zoomedImg);
+
+        document.body.appendChild(overlay);
+
+        let isZoomed = false;
+
+        // When clicking an image inside post
+        postContent.querySelectorAll('img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => {
+                zoomedImg.src = img.src;
+                overlay.style.opacity = '1';
+                overlay.style.pointerEvents = 'auto';
+                isZoomed = true;
+            });
+        });
+
+        // Close zoom when clicking overlay
+        overlay.addEventListener('click', () => {
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+            isZoomed = false;
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', e => {
+            if (isZoomed && e.key === 'Escape') {
+                overlay.style.opacity = '0';
+                overlay.style.pointerEvents = 'none';
+                isZoomed = false;
+            }
+        });
     });
 
     const mobileSearchBtn = document.querySelector('.mobile-search-btn');
