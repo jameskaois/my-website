@@ -1,7 +1,7 @@
 +++
 date = '2025-10-20T19:41:09+07:00'
 draft = false
-title = 'DVWA Open Http Redirect Low/Medium/High Security'
+title = 'DVWA Open HTTP Redirect Low/Medium/High Security'
 tags = ['DVWA']
 description = 'Use Javascript vulnerability to gain access.'
 
