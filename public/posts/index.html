@@ -159,6 +159,26 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS DOM">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DVWA XSS DOM Low/Medium/High Security
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description Vulnerability: XSS (DOM)
+Impact: Leveraging XSS Scripting to get our desired data.
+LOW Security Level This source code doesn’t have any checks:
+&lt;?php # No protections, anything goes ?&gt; And the choosing language functionality take the value and add them to the query param default on the URL: /vulnerabilities/xss_d/?default=&lt;value&gt;, the web app with take the &lt;value&gt; render them to the first option element:
+You can try type a Javascript code to get cookie of the browser: ?default=&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-20 19:54:51 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to DVWA XSS DOM Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-dom-low-medium-high-security/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA Weak Session IDs">
 </figure>
   <header class="entry-header">
@@ -325,23 +345,6 @@ Your new password is: Olifant MEDIUM Security Level The tokens are encrypted usi
   <footer class="entry-footer"><span title='2025-10-16 14:43:16 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to DVWA Cryptography Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-cryptography-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-command-injection.jpg" alt="DVWA Command Injection">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA Command Injection Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: Command injection Impact: Get access to server resources through ping function. LOW Security Level This LOW level ping function doesn’t have any filter or regex to check the input we enter for them. Therefore, we can leverage this vulnerability to execute additional commands to the server. Example:
-1.1.1.1; id This payload will ping 1.1.1.1 but also run id. The result is:
-PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data. 64 bytes from 1.1.1.1: icmp_seq=1 ttl=52 time=63.0 ms 64 bytes from 1.1.1.1: icmp_seq=2 ttl=52 time=93.5 ms 64 bytes from 1.1.1.1: icmp_seq=3 ttl=52 time=76.8 ms 64 bytes from 1.1.1.1: icmp_seq=4 ttl=52 time=50.4 ms --- 1.1.1.1 ping statistics --- 4 packets transmitted, 4 received, 0% packet loss, time 3005ms rtt min/avg/max/mdev = 50.401/70.910/93.461/16.016 ms uid=33(www-data) gid=33(www-data) groups=33(www-data) ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-16 14:40:01 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA Command Injection Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-command-injection-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -359,6 +362,8 @@ PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data. 64 bytes from 1.1.1.1: icmp_seq=1 t
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dvwa-xss-dom-low-medium-high-security/">DVWA XSS DOM Low/Medium/High Security</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-weak-session-ids-low-medium-high-security/">DVWA Weak Session IDs Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/">DVWA SQL Injection Low/Medium/High Security</a></div>
@@ -366,8 +371,6 @@ PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data. 64 bytes from 1.1.1.1: icmp_seq=1 t
         <div><a href="http://localhost:1313/posts/dvwa-sql-injection-blind-low-medium-high-security/">DVWA SQL Injection Blind Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-open-http-redirect-low-medium-high-security/">DVWA Open HTTP Redirect Low/Medium/High Security</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dvwa-javascript-attacks-low-medium-high-security/">DVWA Javascript Attacks Low/Medium/High Security</a></div>
         
     </section>
 
@@ -391,7 +394,7 @@ PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data. 64 bytes from 1.1.1.1: icmp_seq=1 t
 
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
             DVWA
-            <span>(13)</span>
+            <span>(14)</span>
         </a>
 
         
