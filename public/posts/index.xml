@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Oct 2025 09:15:29 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 09:20:51 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QnQSec CTF - s3cr3ct w3b Revenge Writeup</title>
+      <link>http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/</link>
+      <pubDate>Mon, 27 Oct 2025 09:20:51 +0700</pubDate>
+      <guid>http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/</guid>
+      <description>I have hidden secret in this web can you find out the secret?</description>
+    </item>
+    <item>
+      <title>QnQSec CTF - s3cr3ct w3b Writeup</title>
+      <link>http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-writeup/</link>
+      <pubDate>Mon, 27 Oct 2025 09:18:41 +0700</pubDate>
+      <guid>http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-writeup/</guid>
+      <description>I have hidden secret in this web can you find out the secret?</description>
+    </item>
     <item>
       <title>QnQSec CTF - QnQSec Portal Writeup</title>
       <link>http://localhost:1313/posts/qnqsec-ctf-qnqsec-portal-writeup/</link>
