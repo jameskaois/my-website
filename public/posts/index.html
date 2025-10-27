@@ -159,10 +159,28 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/qnqsec-cover.jpg" alt="QnQSec CTF - Secure Letter">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">QnQSec CTF - Secure Letter Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Secure-Letter (Web)
+Metadata Author: jameskaois CTF: QnQSec CTF 2025 Challenge: Secure-Letter (web) Target / URL: http://161.97.155.116:3001/ Points: 50 Date: 20-10-2025 Goal We have to get the flag by using XSS to get the flag from bot.
+My Solution This solution is written after the server has beed shut down, so I will use my mind. First let’s examine the source code, there is a route that we can use to inject Javascript code (XSS): /letter route
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-27 09:23:15 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to QnQSec CTF - Secure Letter Writeup" href="http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/qnqsec-cover.jpg" alt="QnQSec CTF - s3cr3ct w3b Revenge">
 </figure>
   <header class="entry-header">
-    <h2 class="entry-hint-parent">QnQSec CTF - s3cr3ct w3b Revenge Writeup
+    <h2 class="entry-hint-parent">QnQSec CTF - s3cr3ct w3b revenge Writeup
     </h2>
   </header>
   <div class="entry-content">
@@ -173,7 +191,7 @@ FROM php:8.2-apache RUN docker-php-ext-install pdo pdo_mysql RUN a2enmod rewrite
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-10-27 09:20:51 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to QnQSec CTF - s3cr3ct w3b Revenge Writeup" href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/"></a>
+  <a class="entry-link" aria-label="post link to QnQSec CTF - s3cr3ct w3b revenge Writeup" href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -332,25 +350,6 @@ $query = &#34;SELECT first_name, last_name FROM users WHERE user_id = &#39;$id&#
   <footer class="entry-footer"><span title='2025-10-20 19:48:35 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to DVWA SQL Injection Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA SQL Injection Blind">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA SQL Injection Blind Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: SQL Blind Injection
-Impact: Levaraging SQL Blind Injection to get the data that we aren’t supposed to know.
-LOW Security Level The SQL Blind Injection is basically harder for us to retreive our desired data when comparing to normal SQL Injection. You can see this code from the source:
-$exists = false; if ($result !== false) { try { $exists = (mysqli_num_rows( $result ) &gt; 0); } catch(Exception $e) { $exists = false; } } And whatever we give id param it just have 2 results:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-20 19:44:32 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA SQL Injection Blind Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-sql-injection-blind-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -368,15 +367,15 @@ $exists = false; if ($result !== false) { try { $exists = (mysqli_num_rows( $res
         <h2>Recently Added</h2>
 
         
-        <div><a href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/">QnQSec CTF - s3cr3ct w3b Revenge Writeup</a></div>
+        <div><a href="http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/">QnQSec CTF - Secure Letter Writeup</a></div>
+        
+        <div><a href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/">QnQSec CTF - s3cr3ct w3b revenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-writeup/">QnQSec CTF - s3cr3ct w3b Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-qnqsec-portal-writeup/">QnQSec CTF - QnQSec Portal Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-a-easy-web-writeup/">QnQSec CTF - A Easy Web Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/">DVWA XSS Stored Low/Medium/High Security</a></div>
         
     </section>
 

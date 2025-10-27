@@ -11,10 +11,17 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Oct 2025 09:20:51 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 09:23:15 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>QnQSec CTF - s3cr3ct w3b Revenge Writeup</title>
+      <title>QnQSec CTF - Secure Letter Writeup</title>
+      <link>http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/</link>
+      <pubDate>Mon, 27 Oct 2025 09:23:15 +0700</pubDate>
+      <guid>http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/</guid>
+      <description>Ive made a secure letter app that supports all browsers, even the oldest ones! Ive even specifically told my AI make it SUPER secure!</description>
+    </item>
+    <item>
+      <title>QnQSec CTF - s3cr3ct w3b revenge Writeup</title>
       <link>http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/</link>
       <pubDate>Mon, 27 Oct 2025 09:20:51 +0700</pubDate>
       <guid>http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/</guid>
