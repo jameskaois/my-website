@@ -3,31 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <lastmod>2025-10-27T09:15:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/ctfs/</loc>
-    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <lastmod>2025-10-27T09:15:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <lastmod>2025-10-27T09:15:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/qnqsec-ctf-a-easy-web-writeup/</loc>
-    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <loc>http://localhost:1313/posts/qnqsec-ctf-qnqsec-portal-writeup/</loc>
+    <lastmod>2025-10-27T09:15:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/qnqsec-ctf-2025/</loc>
-    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <lastmod>2025-10-27T09:15:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-27T09:15:29+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/qnqsec-ctf-a-easy-web-writeup/</loc>
     <lastmod>2025-10-27T09:11:05+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
