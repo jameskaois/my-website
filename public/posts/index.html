@@ -159,6 +159,26 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/qnqsec-cover.jpg" alt="QnQSec CTF - A Easy Web">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">QnQSec CTF - A Easy Web Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: A Easy Web (Web)
+Metadata Author: jameskaois CTF: QnQSec CTF 2025 Challenge: A Easy Web (web) Target / URL: http://161.97.155.116:5000/ Points: 50 Date: 20-10-2025 Goal We have to get the flag by guessing the UID to gain access as admin.
+My Solution This is an easy challenge however we need to do some guessing and hope for luck.
+The description of the challenge is:
+This is the web I mad for testing but I don’t know if there anything strange can you help me figure out? We need to find something strange in the website to leverage it and gain access as admin. Let’s visit the page:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-27 09:11:05 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to QnQSec CTF - A Easy Web Writeup" href="http://localhost:1313/posts/qnqsec-ctf-a-easy-web-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS Stored">
 </figure>
   <header class="entry-header">
@@ -328,24 +348,6 @@ if( isset( $_POST[ &#39;Upload&#39; ] ) ) { // Where are we going to be writing 
   <footer class="entry-footer"><span title='2025-10-16 15:00:11 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to DVWA File Upload Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-file-upload-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-csrf.jpg" alt="DVWA CSRF">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA CSRF Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: CSRF Impact: CSRF attack change any accounts’ passwords. LOW Security Level Make a change password request for testing and inspecting the Network I can see the change password request is a GET request with password_new and password_conf params:
-http://localhost/DVWA/vulnerabilities/csrf/?password_new=123&amp;password_conf=123&amp;Change=Change We can send this URL to trick any users to click on and their accounts’ password will be changed.
-MEDIUM Security Level In this MEDIUM level, it has a check condition before executing code:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-16 14:55:40 +0700 +07'>October 16, 2025</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA CSRF Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-csrf-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -363,6 +365,8 @@ MEDIUM Security Level In this MEDIUM level, it has a check condition before exec
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/qnqsec-ctf-a-easy-web-writeup/">QnQSec CTF - A Easy Web Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/">DVWA XSS Stored Low/Medium/High Security</a></div>
         
         <div><a href="http://localhost:1313/posts/dvwa-xss-reflected-low-medium-high-security/">DVWA XSS Reflected Low/Medium/High Security</a></div>
@@ -371,90 +375,21 @@ MEDIUM Security Level In this MEDIUM level, it has a check condition before exec
         
         <div><a href="http://localhost:1313/posts/dvwa-weak-session-ids-low-medium-high-security/">DVWA Weak Session IDs Low/Medium/High Security</a></div>
         
-        <div><a href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/">DVWA SQL Injection Low/Medium/High Security</a></div>
-        
     </section>
 
     <section>
         <h2>Trending Tags</h2>
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/">
-            CTFs
-            <span>(63)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/tryhackme/">
-            TryHackMe
-            <span>(41)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/">
-            DVWA
-            <span>(16)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/">
-            OverTheWire
-            <span>(11)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/blog/">
-            Blog
-            <span>(7)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/sunshine-ctf-2025/">
-            SunShine CTF 2025
-            <span>(5)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/homelab/">
-            Homelab
-            <span>(4)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/crew-ctf-2025/">
-            Crew CTF 2025
-            <span>(3)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/wannagame-freshman-ctf-2025/">
-            WannaGame Freshman CTF 2025
-            <span>(3)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/hacking/">
-            Hacking
-            <span>(2)</span>
-        </a>
-
-        
-
-        <a class="sidebar-tag" href="http://localhost:1313/tags/hugo/">
-            Hugo
-            <span>(1)</span>
-        </a>
-
-        
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/"> CTFs </a>
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/tryhackme/"> TryHackMe </a>
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/"> DVWA </a>
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/blog/"> Blog </a>
+                       
     </section>
 
     <section id="post-content">
@@ -490,6 +425,6 @@ MEDIUM Security Level In this MEDIUM level, it has a check condition before exec
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
     
-  <script src="/js/main.min.1b8848617161d0228a42852680a4f4b30ae175bc5377e622a71c0080d3c84dd6.js" integrity="sha256-G4hIYXFh0CKKQoUmgKT0swrhdbxTd&#43;YipxwAgNPITdY="></script>
+  <script src="/js/main.min.f498cffc329d7737369b890ae55066dbfda3abb029afa9e21a7d3da5938afc88.js" integrity="sha256-9JjP/DKddzc2m4kK5VBm2/2jq7Apr6niGn09pZOK/Ig="></script>
   </body>
 </html>

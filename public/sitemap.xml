@@ -3,7 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-20T20:01:18+07:00</lastmod>
+    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/ctfs/</loc>
+    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/qnqsec-ctf-a-easy-web-writeup/</loc>
+    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/qnqsec-ctf-2025/</loc>
+    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-27T09:11:05+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -13,16 +38,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/</loc>
-    <lastmod>2025-10-20T20:01:18+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-10-20T20:01:18+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-20T20:01:18+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -99,11 +114,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/exploit-impossible-security-level-csrf-dvwa/</loc>
     <lastmod>2025-10-11T20:05:17+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/ctfs/</loc>
-    <lastmod>2025-10-06T20:37:24+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
