@@ -1,7 +1,7 @@
 +++
 date = '2025-09-16T14:19:28+07:00'
 title = 'TryHackMe - Hydra Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Learn about and use Hydra, a fast network logon cracker, to bruteforce and obtain a website's credentials." 
 draft = false
 

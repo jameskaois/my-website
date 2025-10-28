@@ -1,7 +1,7 @@
 +++
 date = '2025-09-11T10:32:19+07:00'
 title = 'TryHackMe - Vulnversity Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Learn about active recon, web app attacks and privilege escalation."
 draft = false
 

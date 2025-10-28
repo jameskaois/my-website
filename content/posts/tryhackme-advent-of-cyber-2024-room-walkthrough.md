@@ -1,7 +1,7 @@
 +++
 date = '2025-09-16T15:23:27+07:00'
 title = 'TryHackMe - Advent of Cyber 2024 Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Dive into the wonderful world of cyber security by engaging in festive beginner-friendly exercises every day in the lead-up to Christmas!" 
 draft = false
 

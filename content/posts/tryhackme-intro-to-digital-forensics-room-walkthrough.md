@@ -1,7 +1,7 @@
 +++
 date = '2025-09-16T15:26:24+07:00'
 title = 'TryHackMe - Intro to Digital Forensics Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Learn about digital forensics and related processes and experiment with a practical example."
 draft = false
 

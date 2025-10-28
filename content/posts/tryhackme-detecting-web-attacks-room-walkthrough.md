@@ -1,7 +1,7 @@
 +++
 date = '2025-09-16T15:33:26+07:00'
 title = 'TryHackMe - Detecting Web Attacks Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Explore web attacks and detection methods through log and network traffic analysis."
 draft = false
 

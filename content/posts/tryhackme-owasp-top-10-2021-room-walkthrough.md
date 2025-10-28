@@ -1,7 +1,7 @@
 +++
 date = '2025-09-16T15:30:58+07:00'
 title = 'TryHackMe - OWASP Top 10 2021 Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Learn about and exploit each of the OWASP Top 10 vulnerabilities; the 10 most critical web security risks."
 draft = false
 

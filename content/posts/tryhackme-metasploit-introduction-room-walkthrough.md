@@ -1,7 +1,7 @@
 +++
 date = '2025-09-11T10:34:49+07:00'
 title = 'TryHackMe - Metasploit Introduction Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "An introduction to the main components of the Metasploit Framework." 
 draft = false
 

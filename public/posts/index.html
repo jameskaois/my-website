@@ -159,6 +159,46 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-linux-privesc.png" alt="TryHackMe Linux Privesc Room">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TryHackMe - Linux Privesc Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview Room URL: https://tryhackme.com/room/linuxprivesc Difficulty: Medium Time to complete: 75 Walkthrough 1. Deploy the Vulnerable Debian VM Deploy the machine and login to the &#34;user&#34; account using SSH.
+sudo openvpn &lt;file&gt;.ovpn No answer needed!
+Run the &#34;id&#34; command. What is the result?
+user@debian:~$ id uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev) =&gt; Answer: uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev)
+2. Service Exploits No hints needed!
+3. Weak File Permissions - Readable /etc/shadow What is the root user&#39;s password hash?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-27 09:31:05 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to TryHackMe - Linux Privesc Walkthrough" href="http://localhost:1313/posts/tryhackme-linux-privesc-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-network-traffic-basics.png" alt="TryHackMe Network Traffic Basics Room">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TryHackMe - Network Traffic Basics Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview Room URL: https://tryhackme.com/room/networktrafficbasics Difficulty: Easy Time to complete: 60 Walkthrough 1. Introduction No hints needed!
+2. What is the Purpose of Network Traffic Analysis? What is the name of the technique used to smuggle C2 commands via DNS?
+=&gt; Answer: DNS Tunneling
+3. What Network Traffic Can We Observe? Look at the HTTP example in the task and answer the following question: What is the size of the ZIP attachment included in the HTTP response? Note down the answer in bytes.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-27 09:28:53 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to TryHackMe - Network Traffic Basics Walkthrough" href="http://localhost:1313/posts/tryhackme-network-traffic-basics-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/qnqsec-cover.jpg" alt="QnQSec CTF - Secure Letter">
 </figure>
   <header class="entry-header">
@@ -311,45 +351,6 @@ You can try type a Javascript code to get cookie of the browser: ?default=&lt;sc
   <footer class="entry-footer"><span title='2025-10-20 19:54:51 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to DVWA XSS DOM Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-dom-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA Weak Session IDs">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA Weak Session IDs Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: Weak Session IDs
-Impact: Session IDs may be guessed to gain access as other accounts.
-LOW Security Level This level has really simple code:
-&lt;?php $html = &#34;&#34;; if ($_SERVER[&#39;REQUEST_METHOD&#39;] == &#34;POST&#34;) { if (!isset ($_SESSION[&#39;last_session_id&#39;])) { $_SESSION[&#39;last_session_id&#39;] = 0; } $_SESSION[&#39;last_session_id&#39;]&#43;&#43;; $cookie_value = $_SESSION[&#39;last_session_id&#39;]; setcookie(&#34;dvwaSession&#34;, $cookie_value); } ?&gt; The dvwaSession cookie will simply increases 1 when we click the Generate button.
-MEDIUM Security Level This MEDIUM Security Level is also simple it take time() value which is the current Unix timestamp and set that to dvwaSession cookie value:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-20 19:52:18 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA Weak Session IDs Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-weak-session-ids-low-medium-high-security/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA SQL Injection">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA SQL Injection Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: SQL Injection
-Impact: Using vulnerability in SQL queries to get access to restricted data.
-LOW Security Level The source code doesn’t have any check on the input id it just pass the value to the query. We can easily use this payload to get tables list:
-&#39; UNION SELECT user, password FROM users # Source code doesn’t check anything:
-$query = &#34;SELECT first_name, last_name FROM users WHERE user_id = &#39;$id&#39;;&#34;; Result: ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-20 19:48:35 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA SQL Injection Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-sql-injection-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -367,24 +368,24 @@ $query = &#34;SELECT first_name, last_name FROM users WHERE user_id = &#39;$id&#
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/tryhackme-linux-privesc-walkthrough/">TryHackMe - Linux Privesc Walkthrough</a></div>
+        
+        <div><a href="http://localhost:1313/posts/tryhackme-network-traffic-basics-walkthrough/">TryHackMe - Network Traffic Basics Walkthrough</a></div>
+        
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/">QnQSec CTF - Secure Letter Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/">QnQSec CTF - s3cr3ct w3b revenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-writeup/">QnQSec CTF - s3cr3ct w3b Writeup</a></div>
         
-        <div><a href="http://localhost:1313/posts/qnqsec-ctf-qnqsec-portal-writeup/">QnQSec CTF - QnQSec Portal Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/qnqsec-ctf-a-easy-web-writeup/">QnQSec CTF - A Easy Web Writeup</a></div>
-        
     </section>
 
     <section>
         <h2>Trending Tags</h2>
           
-        <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/"> CTFs </a>
-          
         <a class="sidebar-tag" href="http://localhost:1313/tags/tryhackme/"> TryHackMe </a>
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/"> CTFs </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/"> DVWA </a>
           

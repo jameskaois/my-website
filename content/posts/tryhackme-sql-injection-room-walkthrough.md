@@ -1,7 +1,7 @@
 +++
 date = '2025-09-25T14:37:06+07:00'
 title = 'TryHackMe - SQL Injection Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Learn how to detect and exploit SQL Injection vulnerabilities"
 draft = false
 

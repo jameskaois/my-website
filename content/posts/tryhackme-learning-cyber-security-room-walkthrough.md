@@ -1,7 +1,7 @@
 +++
 date = '2025-09-09T20:51:38+07:00'
 title = 'TryHackMe - Learning Cyber Security Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Get a short introduction to a few of the security topics you'll be learning about."
 draft = false
 
@@ -17,24 +17,29 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 > Learning Cyber Security Room - Get a short introduction to a few of the security topics you'll be learning about.
 
 ## Overview
-- **Room URL:** [https://tryhackme.com/room/beginnerpathintro](https://tryhackme.com/room/beginnerpathintro)
-- **Difficulty:** Easy
-- **Time to complete:** 45
+
+-   **Room URL:** [https://tryhackme.com/room/beginnerpathintro](https://tryhackme.com/room/beginnerpathintro)
+-   **Difficulty:** Easy
+-   **Time to complete:** 45
 
 ## Walkthrough
+
 ### 1. Web Application Security
-- What is the username of the BookFace account you will be taking over?
+
+-   What is the username of the BookFace account you will be taking over?
 
 **=> Answer: `Ben.Spring`**
 
-- Hack the BookFace account to reveal this task's answer!
+-   Hack the BookFace account to reveal this task's answer!
 
 **=> Answer: `THM{BRUTEFORCING}`**
 
 ### 2. Network Security
-- How much did the data breach cost Target?
+
+-   How much did the data breach cost Target?
 
 **=> Answer: `$300 million`**
 
 ### 3. Learning Roadmap
-*No hints needed!*
+
+_No hints needed!_

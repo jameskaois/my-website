@@ -1,7 +1,7 @@
 +++
 date = '2025-10-27T09:28:53+07:00'
 title = 'TryHackMe - Network Traffic Basics Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "This room teaches the basics of Network Traffic Analysis." 
 draft = false
 

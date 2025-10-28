@@ -1,7 +1,7 @@
 +++
 date = '2025-09-10T15:32:56+07:00'
 title = 'TryHackMe - Careers In Cyber Room Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Learn about the different careers in cyber security."
 draft = false
 
@@ -17,9 +17,11 @@ This is my TryHackMe walkthrough, created to document my learning journey and sh
 > Careers In Cyber Room - Learn about the different careers in cyber security.
 
 ## Overview
-- **Room URL:** [https://tryhackme.com/room/careersincyber](https://tryhackme.com/room/careersincyber)
-- **Difficulty:** Info
-- **Time to complete:** 30
+
+-   **Room URL:** [https://tryhackme.com/room/careersincyber](https://tryhackme.com/room/careersincyber)
+-   **Difficulty:** Info
+-   **Time to complete:** 30
 
 ## Walkthrough
-*No hints needed!*
+
+_No hints needed!_

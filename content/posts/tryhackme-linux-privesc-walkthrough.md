@@ -1,7 +1,7 @@
 +++
 date = '2025-10-27T09:31:05+07:00'
 title = 'TryHackMe - Linux Privesc Walkthrough'
-tags = ['TryHackMe', 'CTFs']
+tags = ['TryHackMe']
 description = "Practice your Linux Privilege Escalation skills on an intentionally misconfigured Debian VM with multiple ways to get root!" 
 draft = false
 
