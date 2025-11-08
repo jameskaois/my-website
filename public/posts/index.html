@@ -159,6 +159,26 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-mango.jpg" alt="DreamHack - Mango">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Mango Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Mango (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: Mango (web) Link: https://dreamhack.io/wargame/challenges/90 Level: 2 Date: 07-11-2025 Goal Get the flag by leveraging blind NoSQL Injection.
+My Solution You can download and examine the source code here.
+The web app just have one main.js file to examine:
+const express = require(&#39;express&#39;); const app = express(); const mongoose = require(&#39;mongoose&#39;); mongoose.connect(&#39;mongodb://localhost/main&#39;, { useNewUrlParser: true, useUnifiedTopology: true, }); const db = mongoose.connection; // flag is in db, {&#39;uid&#39;: &#39;admin&#39;, &#39;upw&#39;: &#39;DH{32alphanumeric}&#39;} const BAN = [&#39;admin&#39;, &#39;dh&#39;, &#39;admi&#39;]; filter = function (data) { const dump = JSON.stringify(data).toLowerCase(); var flag = false; BAN.forEach(function (word) { if (dump.indexOf(word) != -1) flag = true; }); return flag; }; app.get(&#39;/login&#39;, function (req, res) { if (filter(req.query)) { res.send(&#39;filter&#39;); return; } const { uid, upw } = req.query; db.collection(&#39;user&#39;).findOne( { uid: uid, upw: upw, }, function (err, result) { if (err) { res.send(&#39;err&#39;); } else if (result) { res.send(result[&#39;uid&#39;]); } else { res.send(&#39;undefined&#39;); } }, ); }); app.get(&#39;/&#39;, function (req, res) { res.send(&#39;/login?uid=guest&amp;upw=guest&#39;); }); app.listen(8000, &#39;0.0.0.0&#39;); We have to leverage /login route to get the flag. There is a filter function that prevents us from use admin, dh and admi in the route. For example, when we visit /login?uid=admin&amp;upw=DH{ received filter:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-08 10:08:32 +0700 +07'>November 8, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Mango Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-linux-privesc.png" alt="TryHackMe Linux Privesc Room">
 </figure>
   <header class="entry-header">
@@ -331,26 +351,6 @@ header (&#34;X-XSS-Protection: 0&#34;); // Is there any input? if( array_key_exi
   <footer class="entry-footer"><span title='2025-10-20 19:58:05 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to DVWA XSS Reflected Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-reflected-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS DOM">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA XSS DOM Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: XSS (DOM)
-Impact: Leveraging XSS Scripting to get our desired data.
-LOW Security Level This source code doesn’t have any checks:
-&lt;?php # No protections, anything goes ?&gt; And the choosing language functionality take the value and add them to the query param default on the URL: /vulnerabilities/xss_d/?default=&lt;value&gt;, the web app with take the &lt;value&gt; render them to the first option element:
-You can try type a Javascript code to get cookie of the browser: ?default=&lt;script&gt;alert(document.cookie)&lt;/script&gt;
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-20 19:54:51 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA XSS DOM Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-dom-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -368,6 +368,8 @@ You can try type a Javascript code to get cookie of the browser: ?default=&lt;sc
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/">DreamHack - Mango Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/tryhackme-linux-privesc-walkthrough/">TryHackMe - Linux Privesc Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-network-traffic-basics-walkthrough/">TryHackMe - Network Traffic Basics Walkthrough</a></div>
@@ -375,8 +377,6 @@ You can try type a Javascript code to get cookie of the browser: ?default=&lt;sc
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/">QnQSec CTF - Secure Letter Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/">QnQSec CTF - s3cr3ct w3b revenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-writeup/">QnQSec CTF - s3cr3ct w3b Writeup</a></div>
         
     </section>
 
@@ -392,7 +392,7 @@ You can try type a Javascript code to get cookie of the browser: ?default=&lt;sc
         <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/blog/"> Blog </a>
-                       
+                         
     </section>
 
     <section id="post-content">

@@ -3,17 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-27T09:31:05+07:00</lastmod>
+    <lastmod>2025-11-08T10:08:32+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/ctfs/</loc>
+    <lastmod>2025-11-08T10:08:32+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/dreamhack/</loc>
+    <lastmod>2025-11-08T10:08:32+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/</loc>
+    <lastmod>2025-11-08T10:08:32+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-10-27T09:31:05+07:00</lastmod>
+    <lastmod>2025-11-08T10:08:32+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-10-27T09:31:05+07:00</lastmod>
+    <lastmod>2025-11-08T10:08:32+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -29,11 +44,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/tryhackme-network-traffic-basics-walkthrough/</loc>
     <lastmod>2025-10-27T09:28:53+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/ctfs/</loc>
-    <lastmod>2025-10-27T09:23:15+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
