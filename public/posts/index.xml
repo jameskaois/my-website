@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Nov 2025 10:08:32 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 09 Nov 2025 15:05:03 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Toolbox Vim Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/</link>
+      <pubDate>Sun, 09 Nov 2025 15:05:03 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/</guid>
+      <description>Learn vim, a universal text editor that can be incredibly powerful when used properly. From basic text editing to editing of binary files, Vim can be an important arsenal in a security toolkit.</description>
+    </item>
     <item>
       <title>DreamHack - Mango Web Challenge Write-up</title>
       <link>http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/</link>

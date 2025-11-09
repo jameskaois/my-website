@@ -159,6 +159,29 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-toolbox-vim.png" alt="TryHackMe Toolbox Vim">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TryHackMe - Toolbox Vim Room Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview Room URL: https://tryhackme.com/room/toolboxvim Difficulty: Easy Time to complete: 45 Walkthrough 1. Task 1 No answer needed!
+2. Task 2 How do we enter &#34;INSERT&#34; mode? =&gt; Answer: i
+How do we start entering text into our new Vim document?
+=&gt; Answer: typing
+How do we return to command mode? =&gt; Answer: esc
+How do we move the cursor left?
+=&gt; Answer: h
+How do we move the cursor right?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-09 15:05:03 +0700 +07'>November 9, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to TryHackMe - Toolbox Vim Room Walkthrough" href="http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-mango.jpg" alt="DreamHack - Mango">
 </figure>
   <header class="entry-header">
@@ -330,27 +353,6 @@ LOW Security Level if( isset( $_POST[ &#39;btnSign&#39; ] ) ) { // Get input $me
   <footer class="entry-footer"><span title='2025-10-20 20:01:18 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to DVWA XSS Stored Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS Reflected">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA XSS Reflected Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: XSS (Reflected)
-Impact: Leveraging XSS Scripting to get our desired data.
-LOW Security Level The source code doesn’t have any check:
-header (&#34;X-XSS-Protection: 0&#34;); // Is there any input? if( array_key_exists( &#34;name&#34;, $_GET ) &amp;&amp; $_GET[ &#39;name&#39; ] != NULL ) { // Feedback for end user echo &#39;&lt;pre&gt;Hello &#39; . $_GET[ &#39;name&#39; ] . &#39;&lt;/pre&gt;&#39;; } So similar to XSS (DOM) we can use simple payload &lt;script&gt;alert(document.cookie)&lt;/script&gt;
-MEDIUM Security Level This source code has new check on &lt;script&gt;:
-header (&#34;X-XSS-Protection: 0&#34;); // Is there any input? if( array_key_exists( &#34;name&#34;, $_GET ) &amp;&amp; $_GET[ &#39;name&#39; ] != NULL ) { // Get input $name = str_replace( &#39;&lt;script&gt;&#39;, &#39;&#39;, $_GET[ &#39;name&#39; ] ); // Feedback for end user echo &#34;&lt;pre&gt;Hello {$name}&lt;/pre&gt;&#34;; } So we can use the img trick: &lt;img src=x onerror=alert(document.cookie)&gt;
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-20 19:58:05 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA XSS Reflected Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-reflected-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -368,6 +370,8 @@ header (&#34;X-XSS-Protection: 0&#34;); // Is there any input? if( array_key_exi
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/">TryHackMe - Toolbox Vim Room Walkthrough</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/">DreamHack - Mango Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-linux-privesc-walkthrough/">TryHackMe - Linux Privesc Walkthrough</a></div>
@@ -375,8 +379,6 @@ header (&#34;X-XSS-Protection: 0&#34;); // Is there any input? if( array_key_exi
         <div><a href="http://localhost:1313/posts/tryhackme-network-traffic-basics-walkthrough/">TryHackMe - Network Traffic Basics Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/">QnQSec CTF - Secure Letter Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/">QnQSec CTF - s3cr3ct w3b revenge Writeup</a></div>
         
     </section>
 

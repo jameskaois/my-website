@@ -88,11 +88,11 @@ _No answer needed!_
 
 **=> Answer: `:w`**
 
--   <p>How do we <span style="font-size:1rem;color:rgb(0, 0, 0)">write the file, but don't exit- as root?</span><br /></p>
+-   <p>How do we <span style="font-size:1rem;">write the file, but don't exit- as root?</span><br /></p>
 
 **=> Answer: `:w !sudo tee %`**
 
--   <p>How do we <span style="color:rgb(0, 0, 0);font-size:1rem">write and quit?</span></p>
+-   <p>How do we <span style="font-size:1rem">write and quit?</span></p>
 
 **=> Answer: `:wq`**
 
