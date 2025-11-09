@@ -159,6 +159,27 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-putting-it-all-together.png" alt="TryHackMe Putting It All Together Room">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TryHackMe - Putting It All Together Room Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview Room URL: https://tryhackme.com/room/puttingitalltogether Difficulty: Easy Time to complete: 15 Walkthrough 1. Putting It All Together No answer needed!
+2. Other Components What can be used to host static files and speed up a clients visit to a website?
+=&gt; Answer: CDN
+What does a load balancer perform to make sure a host is still alive?
+=&gt; Answer: health check
+What can be used to help against the hacking of a website?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-09 15:25:37 +0700 +07'>November 9, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to TryHackMe - Putting It All Together Room Walkthrough" href="http://localhost:1313/posts/tryhackme-putting-it-all-together-room-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-how-websites-work.png" alt="TryHackMe How Websites Work Room">
 </figure>
   <header class="entry-header">
@@ -334,26 +355,6 @@ FROM php:8.2-apache RUN docker-php-ext-install pdo pdo_mysql RUN a2enmod rewrite
   <footer class="entry-footer"><span title='2025-10-27 09:18:41 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to QnQSec CTF - s3cr3ct w3b Writeup" href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/qnqsec-cover.jpg" alt="QnQSec CTF - QnQSec Portal">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">QnQSec CTF - QnQSec Portal Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: QnQSec Portal (Web)
-Metadata Author: jameskaois CTF: QnQSec CTF 2025 Challenge: QnQSec Portal (web) Target / URL: http://161.97.155.116:5001/ Points: 50 Date: 20-10-2025 Goal We have to get the flag by get access as admin.
-My Solution First we have to examine the app.py. There are some noticable routes:
-/login route:
-@app.route(&#39;/login&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): if request.method == &#39;GET&#39;: return render_template(&#39;login.html&#39;) username = (request.form.get(&#39;username&#39;) or &#39;&#39;).strip() password = request.form.get(&#39;password&#39;) or &#39;&#39; if not username or not password: flash(&#39;Missing username or password&#39;, &#39;error&#39;) return render_template(&#39;login.html&#39;) db = get_db() row = db.execute( &#39;select username, password from users where username = lower(?) and password = ?&#39;, (username, md5(password.encode()).hexdigest()) ).fetchone() if row: session[&#39;user&#39;] = username.title() role = &#34;admin&#34; if username.lower() == &#34;flag&#34; else &#34;user&#34; token = generate_jwt(session[&#39;user&#39;],role,app.config[&#39;JWT_EXPIRES_MIN&#39;],app.config[&#39;JWT_SECRET&#39;]) resp = make_response(redirect(url_for(&#39;account&#39;))) resp.set_cookie(&#34;admin_jwt&#34;, token, httponly=False, samesite=&#34;Lax&#34;) return resp flash(&#39;Invalid username or password&#39;, &#39;error&#39;) return render_template(&#39;login.html&#39;) /account route:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-27 09:15:29 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;4 min</footer>
-  <a class="entry-link" aria-label="post link to QnQSec CTF - QnQSec Portal Writeup" href="http://localhost:1313/posts/qnqsec-ctf-qnqsec-portal-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -371,6 +372,8 @@ My Solution First we have to examine the app.py. There are some noticable routes
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/tryhackme-putting-it-all-together-room-walkthrough/">TryHackMe - Putting It All Together Room Walkthrough</a></div>
+        
         <div><a href="http://localhost:1313/posts/tryhackme-how-websites-work-room-walkthrough/">TryHackMe - How Websites Work Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-linux-strength-training-room-walkthrough/">TryHackMe - Linux Strength Training Room Walkthrough</a></div>
@@ -378,8 +381,6 @@ My Solution First we have to examine the app.py. There are some noticable routes
         <div><a href="http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/">TryHackMe - Toolbox Vim Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/">DreamHack - Mango Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-linux-privesc-walkthrough/">TryHackMe - Linux Privesc Walkthrough</a></div>
         
     </section>
 
