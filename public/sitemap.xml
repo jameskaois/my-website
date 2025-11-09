@@ -3,22 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-11-09T15:08:44+07:00</lastmod>
+    <lastmod>2025-11-09T15:13:25+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-11-09T15:08:44+07:00</lastmod>
+    <lastmod>2025-11-09T15:13:25+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-11-09T15:08:44+07:00</lastmod>
+    <lastmod>2025-11-09T15:13:25+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/tryhackme/</loc>
-    <lastmod>2025-11-09T15:08:44+07:00</lastmod>
+    <lastmod>2025-11-09T15:13:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/tryhackme-how-websites-work-room-walkthrough/</loc>
+    <lastmod>2025-11-09T15:13:25+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
