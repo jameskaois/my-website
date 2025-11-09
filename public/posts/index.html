@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-linux-strength-training.png" alt="TryHackMe Linux Strength Training Room">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TryHackMe - Linux Strength Training Room Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview Room URL: https://tryhackme.com/room/linuxstrengthtraining Difficulty: Easy Time to complete: 45 Walkthrough 1. Intro No answer needed!
+2. Finding your way around linux - overview What is the correct option for finding files based on group
+=&gt; Answer: -group
+What is format for finding a file with the user named Francis and with a size of 52 kilobytes in the directory /home/francis/ =&gt; Answer: find /home/francis -type f -user Francis -size 52k
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-09 15:08:44 +0700 +07'>November 9, 2025</span>&nbsp;·&nbsp;6 min</footer>
+  <a class="entry-link" aria-label="post link to TryHackMe - Linux Strength Training Room Walkthrough" href="http://localhost:1313/posts/tryhackme-linux-strength-training-room-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-toolbox-vim.png" alt="TryHackMe Toolbox Vim">
 </figure>
   <header class="entry-header">
@@ -335,24 +354,6 @@ This is the web I mad for testing but I don’t know if there anything strange c
   <footer class="entry-footer"><span title='2025-10-27 09:11:05 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to QnQSec CTF - A Easy Web Writeup" href="http://localhost:1313/posts/qnqsec-ctf-a-easy-web-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dvwa-cover.png" alt="DVWA XSS Stored">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DVWA XSS Stored Low/Medium/High Security
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description Vulnerability: XSS (Stored)
-Impact: Leveraging XSS Scripting to get our desired data.
-LOW Security Level if( isset( $_POST[ &#39;btnSign&#39; ] ) ) { // Get input $message = trim( $_POST[ &#39;mtxMessage&#39; ] ); $name = trim( $_POST[ &#39;txtName&#39; ] ); // Sanitize message input $message = stripslashes( $message ); $message = ((isset($GLOBALS[&#34;___mysqli_ston&#34;]) &amp;&amp; is_object($GLOBALS[&#34;___mysqli_ston&#34;])) ? mysqli_real_escape_string($GLOBALS[&#34;___mysqli_ston&#34;], $message ) : ((trigger_error(&#34;[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.&#34;, E_USER_ERROR)) ? &#34;&#34; : &#34;&#34;)); // Sanitize name input $name = ((isset($GLOBALS[&#34;___mysqli_ston&#34;]) &amp;&amp; is_object($GLOBALS[&#34;___mysqli_ston&#34;])) ? mysqli_real_escape_string($GLOBALS[&#34;___mysqli_ston&#34;], $name ) : ((trigger_error(&#34;[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.&#34;, E_USER_ERROR)) ? &#34;&#34; : &#34;&#34;)); // Update database $query = &#34;INSERT INTO guestbook ( comment, name ) VALUES ( &#39;$message&#39;, &#39;$name&#39; );&#34;; $result = mysqli_query($GLOBALS[&#34;___mysqli_ston&#34;], $query ) or die( &#39;&lt;pre&gt;&#39; . ((is_object($GLOBALS[&#34;___mysqli_ston&#34;])) ? mysqli_error($GLOBALS[&#34;___mysqli_ston&#34;]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . &#39;&lt;/pre&gt;&#39; ); //mysql_close(); } The app just INSERT the records to database with no checks
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-20 20:01:18 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to DVWA XSS Stored Low/Medium/High Security" href="http://localhost:1313/posts/dvwa-xss-stored-low-medium-high-security/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -370,6 +371,8 @@ LOW Security Level if( isset( $_POST[ &#39;btnSign&#39; ] ) ) { // Get input $me
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/tryhackme-linux-strength-training-room-walkthrough/">TryHackMe - Linux Strength Training Room Walkthrough</a></div>
+        
         <div><a href="http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/">TryHackMe - Toolbox Vim Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/">DreamHack - Mango Web Challenge Write-up</a></div>
@@ -377,8 +380,6 @@ LOW Security Level if( isset( $_POST[ &#39;btnSign&#39; ] ) ) { // Get input $me
         <div><a href="http://localhost:1313/posts/tryhackme-linux-privesc-walkthrough/">TryHackMe - Linux Privesc Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-network-traffic-basics-walkthrough/">TryHackMe - Network Traffic Basics Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/">QnQSec CTF - Secure Letter Writeup</a></div>
         
     </section>
 

@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Nov 2025 15:05:03 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 09 Nov 2025 15:08:44 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Linux Strength Training Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-linux-strength-training-room-walkthrough/</link>
+      <pubDate>Sun, 09 Nov 2025 15:08:44 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-linux-strength-training-room-walkthrough/</guid>
+      <description>Guided room for beginners to learn/reinforce linux command line skills</description>
+    </item>
     <item>
       <title>TryHackMe - Toolbox Vim Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/</link>
