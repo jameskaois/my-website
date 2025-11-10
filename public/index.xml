@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Nov 2025 09:40:37 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 14:55:01 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - blind-command Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-blind-command-web-challenge-writeup/</link>
+      <pubDate>Mon, 10 Nov 2025 14:55:01 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-blind-command-web-challenge-writeup/</guid>
+      <description>Read the flag file XD</description>
+    </item>
     <item>
       <title>DreamHack - web-ssrf Web Challenge Write-up</title>
       <link>http://localhost:1313/posts/dreamhack-web-ssrf-web-challenge-writeup/</link>
