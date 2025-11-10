@@ -159,6 +159,43 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-funjs.jpg" alt="DreamHack - funjs">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - funjs Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: funjs (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: funjs (web) Link: https://dreamhack.io/wargame/challenges/116 Level: 2 Date: 10-11-2025 Goal Examining the index.html and solving the flag.
+My Solution The web app is the index.html. I will comment the moveBox function to test more comfortably:
+function init() { box = document.getElementById(&#34;formbox&#34;); {{ /* setInterval(moveBox,1000); */ }} } We have to submit the correct flag in order to get the flag, if not we will received NOP!:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-10 20:19:07 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to DreamHack - funjs Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-funjs-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-blind-command.jpg" alt="DreamHack - blind-command">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - blind-command Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: blind-command (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: blind-command (web) Link: https://dreamhack.io/wargame/challenges/73 Level: 2 Date: 10-11-2025 Goal My Solution The app is simple with just one app.py:
+#!/usr/bin/env python3 from flask import Flask, request import os app = Flask(__name__) @app.route(&#39;/&#39; , methods=[&#39;GET&#39;]) def index(): cmd = request.args.get(&#39;cmd&#39;, &#39;&#39;) if not cmd: return &#34;?cmd=[cmd]&#34; if request.method == &#39;GET&#39;: &#39;&#39; else: os.system(cmd) return cmd app.run(host=&#39;0.0.0.0&#39;, port=8000) It is only one route that we can leverage. It needs us to have cmd arguments which is executed by os.system(cmd) however there is a check:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-10 14:55:01 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to DreamHack - blind-command Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-blind-command-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-web-ssrf.jpg" alt="DreamHack - web-ssrf">
 </figure>
   <header class="entry-header">
@@ -319,43 +356,6 @@ user@debian:~$ id uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(f
   <footer class="entry-footer"><span title='2025-10-27 09:28:53 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to TryHackMe - Network Traffic Basics Walkthrough" href="http://localhost:1313/posts/tryhackme-network-traffic-basics-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/qnqsec-cover.jpg" alt="QnQSec CTF - Secure Letter">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">QnQSec CTF - Secure Letter Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Secure-Letter (Web)
-Metadata Author: jameskaois CTF: QnQSec CTF 2025 Challenge: Secure-Letter (web) Target / URL: http://161.97.155.116:3001/ Points: 50 Date: 20-10-2025 Goal We have to get the flag by using XSS to get the flag from bot.
-My Solution This solution is written after the server has beed shut down, so I will use my mind. First let’s examine the source code, there is a route that we can use to inject Javascript code (XSS): /letter route
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-27 09:23:15 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to QnQSec CTF - Secure Letter Writeup" href="http://localhost:1313/posts/qnqsec-ctf-secure-letter-writeup/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/qnqsec-cover.jpg" alt="QnQSec CTF - s3cr3ct w3b Revenge">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">QnQSec CTF - s3cr3ct w3b revenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: s3cr3ct_w3b revenge (Web)
-Metadata Author: jameskaois CTF: QnQSec CTF 2025 Challenge: s3cr3ct_w3b revenge (web) Target / URL: http://161.97.155.116:8088/ Points: 50 Date: 20-10-2025 Goal We have to get the flag by leveraging XML viewer.
-My Solution Examine the source code, the source code is written in PHP however examine the Dockerfile, unlike s3cre3ct_web the DockerFile now is different:
-FROM php:8.2-apache RUN docker-php-ext-install pdo pdo_mysql RUN a2enmod rewrite COPY public/ /var/www/html/ RUN mkdir -p /var/flags &amp;&amp; chown www-data:www-data /var/flags COPY flag.txt /var/flags/flag.txt WORKDIR /var/www/html/ EXPOSE 80 The flag.txt file is copied to /var/flags/flag.txt so we cannot access it like the s3cre3ct_web challenge anymore.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-27 09:20:51 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to QnQSec CTF - s3cr3ct w3b revenge Writeup" href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -373,15 +373,15 @@ FROM php:8.2-apache RUN docker-php-ext-install pdo pdo_mysql RUN a2enmod rewrite
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-funjs-web-challenge-writeup/">DreamHack - funjs Web Challenge Write-up</a></div>
+        
+        <div><a href="http://localhost:1313/posts/dreamhack-blind-command-web-challenge-writeup/">DreamHack - blind-command Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-web-ssrf-web-challenge-writeup/">DreamHack - web-ssrf Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-putting-it-all-together-room-walkthrough/">TryHackMe - Putting It All Together Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-how-websites-work-room-walkthrough/">TryHackMe - How Websites Work Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-linux-strength-training-room-walkthrough/">TryHackMe - Linux Strength Training Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/">TryHackMe - Toolbox Vim Room Walkthrough</a></div>
         
     </section>
 

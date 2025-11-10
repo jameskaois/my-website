@@ -2,8 +2,7 @@
 date = '2025-11-10T20:19:07+07:00'
 title = 'DreamHack - funjs Web Challenge Write-up'
 tags = ['DreamHack', 'CTFs']
-description = 'This is an HTML page that inputs data into an input form and outputs a flag if it is correct and a flag if it is wrong. NOP !
-Analyze the main function to find the correct input values!'
+description = 'This is an HTML page that inputs data into an input form and outputs a flag if it is correct and a flag if it is wrong. NOP ! Analyze the main function to find the correct input values!'
 draft = false
 
 [cover]
