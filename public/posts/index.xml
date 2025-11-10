@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Nov 2025 20:19:07 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 22:16:06 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - login-1 Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-login-1-web-challenge-writeup/</link>
+      <pubDate>Mon, 10 Nov 2025 22:16:06 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-login-1-web-challenge-writeup/</guid>
+      <description>A service with a login function written in python. Obtain a flag by logging in as a user with “admin” rights.</description>
+    </item>
     <item>
       <title>DreamHack - funjs Web Challenge Write-up</title>
       <link>http://localhost:1313/posts/dreamhack-funjs-web-challenge-writeup/</link>
