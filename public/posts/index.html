@@ -159,6 +159,26 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-web-ssrf.jpg" alt="DreamHack - web-ssrf">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - web-ssrf Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: web-ssrf (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: web-ssrf (web) Link: https://dreamhack.io/wargame/challenges/75 Level: 2 Date: 10-11-2025 Goal Using image viewer service to capture the flag.
+My Solution You can download and examine the source code here
+The source code has one main app.py which is the file runs the application, there is a route that we have to pay attention to /img_viewer:
+@app.route(&#34;/img_viewer&#34;, methods=[&#34;GET&#34;, &#34;POST&#34;]) def img_viewer(): if request.method == &#34;GET&#34;: return render_template(&#34;img_viewer.html&#34;) elif request.method == &#34;POST&#34;: url = request.form.get(&#34;url&#34;, &#34;&#34;) urlp = urlparse(url) if url[0] == &#34;/&#34;: url = &#34;http://localhost:8000&#34; &#43; url elif (&#34;localhost&#34; in urlp.netloc) or (&#34;127.0.0.1&#34; in urlp.netloc): data = open(&#34;error.png&#34;, &#34;rb&#34;).read() img = base64.b64encode(data).decode(&#34;utf8&#34;) return render_template(&#34;img_viewer.html&#34;, img=img) try: data = requests.get(url, timeout=3).content img = base64.b64encode(data).decode(&#34;utf8&#34;) except: data = open(&#34;error.png&#34;, &#34;rb&#34;).read() img = base64.b64encode(data).decode(&#34;utf8&#34;) return render_template(&#34;img_viewer.html&#34;, img=img) Firstly, I tried several payloads to get the flag.txt content like /flag.txt, /static/../flag.txt, … however all of them returns this base64 encoded:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-10 09:40:37 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to DreamHack - web-ssrf Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-web-ssrf-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-putting-it-all-together.png" alt="TryHackMe Putting It All Together Room">
 </figure>
   <header class="entry-header">
@@ -336,25 +356,6 @@ FROM php:8.2-apache RUN docker-php-ext-install pdo pdo_mysql RUN a2enmod rewrite
   <footer class="entry-footer"><span title='2025-10-27 09:20:51 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to QnQSec CTF - s3cr3ct w3b revenge Writeup" href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-revenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/qnqsec-cover.jpg" alt="QnQSec CTF - s3cr3ct w3b">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">QnQSec CTF - s3cr3ct w3b Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: s3cr3ct_w3b (Web)
-Metadata Author: jameskaois CTF: QnQSec CTF 2025 Challenge: s3cr3ct_w3b (web) Target / URL: http://161.97.155.116:8081/ Points: 50 Date: 20-10-2025 Goal We have to get the flag by finding the secret.
-My Solution Examine the source code, the source code is written in PHP however examine the Dockerfile, we can find something really “secret”:
-FROM php:8.2-apache RUN docker-php-ext-install pdo pdo_mysql RUN a2enmod rewrite COPY public/ /var/www/html/ COPY includes/ /var/www/html/includes/ COPY flag.txt /var/www/html/ WORKDIR /var/www/html/ EXPOSE 80 The flag.txt file is copied to /var/www/html where it is normally served. So we can easily get the flag by visiting http://161.97.155.116:8081/flag.txt.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-27 09:18:41 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to QnQSec CTF - s3cr3ct w3b Writeup" href="http://localhost:1313/posts/qnqsec-ctf-s3cr3ct-w3b-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -372,6 +373,8 @@ FROM php:8.2-apache RUN docker-php-ext-install pdo pdo_mysql RUN a2enmod rewrite
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-web-ssrf-web-challenge-writeup/">DreamHack - web-ssrf Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/tryhackme-putting-it-all-together-room-walkthrough/">TryHackMe - Putting It All Together Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-how-websites-work-room-walkthrough/">TryHackMe - How Websites Work Room Walkthrough</a></div>
@@ -379,8 +382,6 @@ FROM php:8.2-apache RUN docker-php-ext-install pdo pdo_mysql RUN a2enmod rewrite
         <div><a href="http://localhost:1313/posts/tryhackme-linux-strength-training-room-walkthrough/">TryHackMe - Linux Strength Training Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/">TryHackMe - Toolbox Vim Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/">DreamHack - Mango Web Challenge Write-up</a></div>
         
     </section>
 
