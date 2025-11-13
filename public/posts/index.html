@@ -159,6 +159,44 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-baby-sqlite.jpg" alt="DreamHack - baby-sqlite">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - baby-sqlite Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: baby-sqlite (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: baby-sqlite (web) Link: https://dreamhack.io/wargame/challenges/1 Level: 2 Date: 13-11-2025 Goal Leveraging SQL Injection to bypass the check and get the flag.
+My Solution The app has the /login route:
+@app.route(&#39;/login&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): if request.method == &#39;GET&#39;: return render_template(&#39;login.html&#39;) uid = request.form.get(&#39;uid&#39;, &#39;&#39;).lower() upw = request.form.get(&#39;upw&#39;, &#39;&#39;).lower() level = request.form.get(&#39;level&#39;, &#39;9&#39;).lower() sqli_filter = [&#39;[&#39;, &#39;]&#39;, &#39;,&#39;, &#39;admin&#39;, &#39;select&#39;, &#39;\&#39;&#39;, &#39;&#34;&#39;, &#39;\t&#39;, &#39;\n&#39;, &#39;\r&#39;, &#39;\x08&#39;, &#39;\x09&#39;, &#39;\x00&#39;, &#39;\x0b&#39;, &#39;\x0d&#39;, &#39; &#39;] for x in sqli_filter: if uid.find(x) != -1: return &#39;No Hack!&#39; if upw.find(x) != -1: return &#39;No Hack!&#39; if level.find(x) != -1: return &#39;No Hack!&#39; with app.app_context(): conn = get_db() query = f&#34;SELECT uid FROM users WHERE uid=&#39;{uid}&#39; and upw=&#39;{upw}&#39; and level={level};&#34; try: req = conn.execute(query) result = req.fetchone() if result is not None: uid = result[0] if uid == &#39;admin&#39;: return FLAG except: return &#39;Error!&#39; return &#39;Good!&#39; So here we have to login as admin to get the flag:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-13 11:00:40 +0700 +07'>November 13, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - baby-sqlite Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-baby-sqlite-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-sql-injection-bypass-waf.jpg" alt="DreamHack - sql injection bypass waf Advanced">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - sql injection bypass waf Advanced Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: sql injection bypass WAF Advanced (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: sql injection bypass WAF Advanced (web) Link: https://dreamhack.io/wargame/challenges/416 Level: 2 Date: 12-11-2025 Goal Bypass WAF and use SQL Injection to get the flag
+My Solution The app.py has this WAF check:
+keywords = [&#39;union&#39;, &#39;select&#39;, &#39;from&#39;, &#39;and&#39;, &#39;or&#39;, &#39;admin&#39;, &#39; &#39;, &#39;*&#39;, &#39;/&#39;, &#39;\n&#39;, &#39;\r&#39;, &#39;\t&#39;, &#39;\x0b&#39;, &#39;\x0c&#39;, &#39;-&#39;, &#39;&#43;&#39;] def check_WAF(data): for keyword in keywords: if keyword in data.lower(): return True return False It is harder for us to make requests that we want to do some injection. This is what it looked like when we are blocked by WAF:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-12 15:25:35 +0700 +07'>November 12, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - sql injection bypass waf Advanced Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-sql-injection-bypass-waf-advanced-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-login-1.jpg" alt="DreamHack - login-1">
 </figure>
   <header class="entry-header">
@@ -315,47 +353,6 @@ How do we move the cursor right?
   <footer class="entry-footer"><span title='2025-11-09 15:05:03 +0700 +07'>November 9, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
   <a class="entry-link" aria-label="post link to TryHackMe - Toolbox Vim Room Walkthrough" href="http://localhost:1313/posts/tryhackme-toolbox-vim-room-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-mango.jpg" alt="DreamHack - Mango">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Mango Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Mango (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Mango (web) Link: https://dreamhack.io/wargame/challenges/90 Level: 2 Date: 07-11-2025 Goal Get the flag by leveraging blind NoSQL Injection.
-My Solution You can download and examine the source code here.
-The web app just have one main.js file to examine:
-const express = require(&#39;express&#39;); const app = express(); const mongoose = require(&#39;mongoose&#39;); mongoose.connect(&#39;mongodb://localhost/main&#39;, { useNewUrlParser: true, useUnifiedTopology: true, }); const db = mongoose.connection; // flag is in db, {&#39;uid&#39;: &#39;admin&#39;, &#39;upw&#39;: &#39;DH{32alphanumeric}&#39;} const BAN = [&#39;admin&#39;, &#39;dh&#39;, &#39;admi&#39;]; filter = function (data) { const dump = JSON.stringify(data).toLowerCase(); var flag = false; BAN.forEach(function (word) { if (dump.indexOf(word) != -1) flag = true; }); return flag; }; app.get(&#39;/login&#39;, function (req, res) { if (filter(req.query)) { res.send(&#39;filter&#39;); return; } const { uid, upw } = req.query; db.collection(&#39;user&#39;).findOne( { uid: uid, upw: upw, }, function (err, result) { if (err) { res.send(&#39;err&#39;); } else if (result) { res.send(result[&#39;uid&#39;]); } else { res.send(&#39;undefined&#39;); } }, ); }); app.get(&#39;/&#39;, function (req, res) { res.send(&#39;/login?uid=guest&amp;upw=guest&#39;); }); app.listen(8000, &#39;0.0.0.0&#39;); We have to leverage /login route to get the flag. There is a filter function that prevents us from use admin, dh and admi in the route. For example, when we visit /login?uid=admin&amp;upw=DH{ received filter:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-08 10:08:32 +0700 +07'>November 8, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Mango Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-mango-web-challenge-writeup/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-linux-privesc.png" alt="TryHackMe Linux Privesc Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Linux Privesc Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Room URL: https://tryhackme.com/room/linuxprivesc Difficulty: Medium Time to complete: 75 Walkthrough 1. Deploy the Vulnerable Debian VM Deploy the machine and login to the &#34;user&#34; account using SSH.
-sudo openvpn &lt;file&gt;.ovpn No answer needed!
-Run the &#34;id&#34; command. What is the result?
-user@debian:~$ id uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev) =&gt; Answer: uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev)
-2. Service Exploits No hints needed!
-3. Weak File Permissions - Readable /etc/shadow What is the root user&#39;s password hash?
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-27 09:31:05 +0700 +07'>October 27, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Linux Privesc Walkthrough" href="http://localhost:1313/posts/tryhackme-linux-privesc-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -373,15 +370,15 @@ user@debian:~$ id uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(f
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-baby-sqlite-web-challenge-writeup/">DreamHack - baby-sqlite Web Challenge Write-up</a></div>
+        
+        <div><a href="http://localhost:1313/posts/dreamhack-sql-injection-bypass-waf-advanced-web-challenge-writeup/">DreamHack - sql injection bypass waf Advanced Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-login-1-web-challenge-writeup/">DreamHack - login-1 Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-funjs-web-challenge-writeup/">DreamHack - funjs Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-blind-command-web-challenge-writeup/">DreamHack - blind-command Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-web-ssrf-web-challenge-writeup/">DreamHack - web-ssrf Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-putting-it-all-together-room-walkthrough/">TryHackMe - Putting It All Together Room Walkthrough</a></div>
         
     </section>
 

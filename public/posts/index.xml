@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Nov 2025 22:16:06 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 13 Nov 2025 11:00:40 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - baby-sqlite Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-baby-sqlite-web-challenge-writeup/</link>
+      <pubDate>Thu, 13 Nov 2025 11:00:40 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-baby-sqlite-web-challenge-writeup/</guid>
+      <description>This is a login service. Get a flag through the SQL INJECTION vulnerability!</description>
+    </item>
+    <item>
+      <title>DreamHack - sql injection bypass waf Advanced Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-sql-injection-bypass-waf-advanced-web-challenge-writeup/</link>
+      <pubDate>Wed, 12 Nov 2025 15:25:35 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-sql-injection-bypass-waf-advanced-web-challenge-writeup/</guid>
+      <description>Patched issue with SQL Injection Bypass WAF.</description>
+    </item>
     <item>
       <title>DreamHack - login-1 Web Challenge Write-up</title>
       <link>http://localhost:1313/posts/dreamhack-login-1-web-challenge-writeup/</link>
