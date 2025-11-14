@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Nov 2025 09:28:11 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 14 Nov 2025 14:58:24 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - Client Side Template Injection Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-client-side-template-injection-web-challenge-writeup/</link>
+      <pubDate>Fri, 14 Nov 2025 14:58:24 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-client-side-template-injection-web-challenge-writeup/</guid>
+      <description>This is an exercise in Client Side Template Injection.</description>
+    </item>
     <item>
       <title>DreamHack - file-csp-1 Web Challenge Write-up</title>
       <link>http://localhost:1313/posts/dreamhack-file-csp-1-web-challenge-writeup/</link>
