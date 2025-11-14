@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-file-csp-1.jpg" alt="DreamHack - file-csp-1">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - file-csp-1 Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: file-csp-1 (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: file-csp-1 (web) Link: https://dreamhack.io/wargame/challenges/36 Level: 2 Date: 14-11-2025 Goal Crafted the correct CSP satisfying the needs to get the flag.
+My Solution There are 3 routes in this challenge /test, /live and /verify. The /verify is the route we need to satisfy to get the flag:
+@APP.route(&#39;/verify&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def verify_csp(): global CSP if request.method == &#39;POST&#39;: csp = request.form.get(&#39;csp&#39;) try: options = webdriver.ChromeOptions() for _ in [&#39;headless&#39;, &#39;window-size=1920x1080&#39;, &#39;disable-gpu&#39;, &#39;no-sandbox&#39;, &#39;disable-dev-shm-usage&#39;]: options.add_argument(_) driver = webdriver.Chrome(&#39;/chromedriver&#39;, options=options) driver.implicitly_wait(3) driver.set_page_load_timeout(3) driver.get(f&#39;http://localhost:8000/live?csp={quote(csp)}&#39;) try: a = driver.execute_script(&#39;return a()&#39;); except: a = &#39;error&#39; try: b = driver.execute_script(&#39;return b()&#39;); except: b = &#39;error&#39; try: c = driver.execute_script(&#39;return c()&#39;); except Exception as e: c = &#39;error&#39; c = e try: d = driver.execute_script(&#39;return $(document)&#39;); except: d = &#39;error&#39; if a == &#39;error&#39; and b == &#39;error&#39; and c == &#39;c&#39; and d != &#39;error&#39;: return FLAG return f&#39;Try again!, {a}, {b}, {c}, {d}&#39; except Exception as e: return f&#39;An error occured!, {e}&#39; return render_template(&#39;verify.html&#39;) The /test and /live is where we can use to test our payloads. The app requirements is we have to crafted the correct CSP policy which satisfy the needs in the csp.html:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-14 09:28:11 +0700 +07'>November 14, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - file-csp-1 Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-file-csp-1-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-web-deserialize-python.jpg" alt="DreamHack - web-deserialize-python">
 </figure>
   <header class="entry-header">
@@ -331,25 +350,6 @@ Add a dog image to the page by adding another img tag (&lt;img&gt;) on line 11. 
   <footer class="entry-footer"><span title='2025-11-09 15:13:25 +0700 +07'>November 9, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to TryHackMe - How Websites Work Room Walkthrough" href="http://localhost:1313/posts/tryhackme-how-websites-work-room-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-linux-strength-training.png" alt="TryHackMe Linux Strength Training Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Linux Strength Training Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Room URL: https://tryhackme.com/room/linuxstrengthtraining Difficulty: Easy Time to complete: 45 Walkthrough 1. Intro No answer needed!
-2. Finding your way around linux - overview What is the correct option for finding files based on group
-=&gt; Answer: -group
-What is format for finding a file with the user named Francis and with a size of 52 kilobytes in the directory /home/francis/ =&gt; Answer: find /home/francis -type f -user Francis -size 52k
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-09 15:08:44 +0700 +07'>November 9, 2025</span>&nbsp;·&nbsp;<span>6 min</span></footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Linux Strength Training Room Walkthrough" href="http://localhost:1313/posts/tryhackme-linux-strength-training-room-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -367,6 +367,8 @@ What is format for finding a file with the user named Francis and with a size of
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-file-csp-1-web-challenge-writeup/">DreamHack - file-csp-1 Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-web-deserialize-python-web-challenge-writeup/">DreamHack - web-deserialize-python Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-baby-sqlite-web-challenge-writeup/">DreamHack - baby-sqlite Web Challenge Write-up</a></div>
@@ -374,8 +376,6 @@ What is format for finding a file with the user named Francis and with a size of
         <div><a href="http://localhost:1313/posts/dreamhack-sql-injection-bypass-waf-advanced-web-challenge-writeup/">DreamHack - sql injection bypass waf Advanced Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-login-1-web-challenge-writeup/">DreamHack - login-1 Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-funjs-web-challenge-writeup/">DreamHack - funjs Web Challenge Write-up</a></div>
         
     </section>
 
