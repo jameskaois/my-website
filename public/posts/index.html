@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-easy-login.jpg" alt="DreamHack - easy-login">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - easy-login Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: easy-login (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: easy-login (web) Link: https://dreamhack.io/wargame/challenges/1213 Level: 2 Date: 17-11-2025 Goal Login as admin to get the flag.
+My Solution This is the PHP code in index.php which validates our credentials:
+&lt;?php function generatePassword($length) { $characters = &#39;0123456789abcdef&#39;; $charactersLength = strlen($characters); $pw = &#39;&#39;; for ($i = 0; $i &lt; $length; $i&#43;&#43;) { $pw .= $characters[random_int(0, $charactersLength - 1)]; } return $pw; } function generateOTP() { return &#39;P&#39; . str_pad(strval(random_int(0, 999999)), 6, &#34;0&#34;, STR_PAD_LEFT); } $admin_pw = generatePassword(32); $otp = generateOTP(); function login() { if (!isset($_POST[&#39;cred&#39;])) { echo &#34;Please login...&#34;; return; } if (!($cred = base64_decode($_POST[&#39;cred&#39;]))) { echo &#34;Cred error&#34;; return; } if (!($cred = json_decode($cred, true))) { echo &#34;Cred error&#34;; return; } if (!(isset($cred[&#39;id&#39;]) &amp;&amp; isset($cred[&#39;pw&#39;]) &amp;&amp; isset($cred[&#39;otp&#39;]))) { echo &#34;Cred error&#34;; return; } if ($cred[&#39;id&#39;] != &#39;admin&#39;) { echo &#34;Hello,&#34; . $cred[&#39;id&#39;]; return; } if ($cred[&#39;otp&#39;] != $GLOBALS[&#39;otp&#39;]) { echo &#34;OTP fail&#34;; return; } if (!strcmp($cred[&#39;pw&#39;], $GLOBALS[&#39;admin_pw&#39;])) { require_once(&#39;flag.php&#39;); echo &#34;Hello, admin! get the flag: &#34; . $flag; return; } echo &#34;Password fail&#34;; return; } ?&gt; The problem is this every new request will be compared to new password and OTP so it is impossible to guess/brute-force the creds:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-17 08:20:26 +0700 +07'>November 17, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - easy-login Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-easy-login-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-weblog-1.jpg" alt="DreamHack - weblog-1">
 </figure>
   <header class="entry-header">
@@ -328,26 +347,6 @@ Metadata Author: jameskaois CTF: DreamHack Challenge: blind-command (web) Link: 
   <footer class="entry-footer"><span title='2025-11-10 14:55:01 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - blind-command Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-blind-command-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-web-ssrf.jpg" alt="DreamHack - web-ssrf">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - web-ssrf Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: web-ssrf (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: web-ssrf (web) Link: https://dreamhack.io/wargame/challenges/75 Level: 2 Date: 10-11-2025 Goal Using image viewer service to capture the flag.
-My Solution You can download and examine the source code here
-The source code has one main app.py which is the file runs the application, there is a route that we have to pay attention to /img_viewer:
-@app.route(&#34;/img_viewer&#34;, methods=[&#34;GET&#34;, &#34;POST&#34;]) def img_viewer(): if request.method == &#34;GET&#34;: return render_template(&#34;img_viewer.html&#34;) elif request.method == &#34;POST&#34;: url = request.form.get(&#34;url&#34;, &#34;&#34;) urlp = urlparse(url) if url[0] == &#34;/&#34;: url = &#34;http://localhost:8000&#34; &#43; url elif (&#34;localhost&#34; in urlp.netloc) or (&#34;127.0.0.1&#34; in urlp.netloc): data = open(&#34;error.png&#34;, &#34;rb&#34;).read() img = base64.b64encode(data).decode(&#34;utf8&#34;) return render_template(&#34;img_viewer.html&#34;, img=img) try: data = requests.get(url, timeout=3).content img = base64.b64encode(data).decode(&#34;utf8&#34;) except: data = open(&#34;error.png&#34;, &#34;rb&#34;).read() img = base64.b64encode(data).decode(&#34;utf8&#34;) return render_template(&#34;img_viewer.html&#34;, img=img) Firstly, I tried several payloads to get the flag.txt content like /flag.txt, /static/../flag.txt, … however all of them returns this base64 encoded:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-10 09:40:37 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - web-ssrf Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-web-ssrf-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -365,6 +364,8 @@ The source code has one main app.py which is the file runs the application, ther
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-easy-login-web-challenge-writeup/">DreamHack - easy-login Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-weblog-1-web-challenge-writeup/">DreamHack - weblog-1 Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-client-side-template-injection-web-challenge-writeup/">DreamHack - Client Side Template Injection Web Challenge Write-up</a></div>
@@ -372,8 +373,6 @@ The source code has one main app.py which is the file runs the application, ther
         <div><a href="http://localhost:1313/posts/dreamhack-file-csp-1-web-challenge-writeup/">DreamHack - file-csp-1 Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-web-deserialize-python-web-challenge-writeup/">DreamHack - web-deserialize-python Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-baby-sqlite-web-challenge-writeup/">DreamHack - baby-sqlite Web Challenge Write-up</a></div>
         
     </section>
 
