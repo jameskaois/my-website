@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-relative-path-overwrite.jpg" alt="DreamHack - Relative Path Overwrite">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Relative Path Overwrite Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Relative Path Overwrite (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: Relative Path Overwrite (web) Link: https://dreamhack.io/wargame/challenges/439 Level: 2 Date: 17-11-2025 Goal Injecting XSS and leveraging Relative Path to get the flag.
+My Solution The app has the vuln.php where we can inject XSS Scripting:
+&lt;script src=&#34;filter.js&#34;&gt;&lt;/script&gt; &lt;pre id=param&gt;&lt;/pre&gt; &lt;script&gt; var param_elem = document.getElementById(&#34;param&#34;); var url = new URL(window.location.href); var param = url.searchParams.get(&#34;param&#34;); if (typeof filter !== &#39;undefined&#39;) { for (var i = 0; i &lt; filter.length; i&#43;&#43;) { if (param.toLowerCase().includes(filter[i])) { param = &#34;nope !!&#34;; break; } } } param_elem.innerHTML = param; &lt;/script&gt; However it has a blacklists in filter.js:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-17 09:18:20 +0700 +07'>November 17, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Relative Path Overwrite Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-easy-login.jpg" alt="DreamHack - easy-login">
 </figure>
   <header class="entry-header">
@@ -329,24 +348,6 @@ function init() { box = document.getElementById(&#34;formbox&#34;); {{ /* setInt
   <footer class="entry-footer"><span title='2025-11-10 20:19:07 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - funjs Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-funjs-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-blind-command.jpg" alt="DreamHack - blind-command">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - blind-command Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: blind-command (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: blind-command (web) Link: https://dreamhack.io/wargame/challenges/73 Level: 2 Date: 10-11-2025 Goal My Solution The app is simple with just one app.py:
-#!/usr/bin/env python3 from flask import Flask, request import os app = Flask(__name__) @app.route(&#39;/&#39; , methods=[&#39;GET&#39;]) def index(): cmd = request.args.get(&#39;cmd&#39;, &#39;&#39;) if not cmd: return &#34;?cmd=[cmd]&#34; if request.method == &#39;GET&#39;: &#39;&#39; else: os.system(cmd) return cmd app.run(host=&#39;0.0.0.0&#39;, port=8000) It is only one route that we can leverage. It needs us to have cmd arguments which is executed by os.system(cmd) however there is a check:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-10 14:55:01 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - blind-command Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-blind-command-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -364,6 +365,8 @@ Metadata Author: jameskaois CTF: DreamHack Challenge: blind-command (web) Link: 
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-web-challenge-writeup/">DreamHack - Relative Path Overwrite Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-easy-login-web-challenge-writeup/">DreamHack - easy-login Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-weblog-1-web-challenge-writeup/">DreamHack - weblog-1 Web Challenge Write-up</a></div>
@@ -371,8 +374,6 @@ Metadata Author: jameskaois CTF: DreamHack Challenge: blind-command (web) Link: 
         <div><a href="http://localhost:1313/posts/dreamhack-client-side-template-injection-web-challenge-writeup/">DreamHack - Client Side Template Injection Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-file-csp-1-web-challenge-writeup/">DreamHack - file-csp-1 Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-web-deserialize-python-web-challenge-writeup/">DreamHack - web-deserialize-python Web Challenge Write-up</a></div>
         
     </section>
 
