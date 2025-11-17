@@ -159,6 +159,24 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-tomcat-manager.jpg" alt="DreamHack - Tomcat Manager">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Tomcat Manager Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: tomcat-manager (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: tomcat-manager (web) Link: https://dreamhack.io/wargame/challenges/248 Level: 2 Date: 17-11-2025 Goal Examining the code and leverage LFI and RCE to capture the flag.
+My Solution The source code has the ROOT.war besides Dockerfile and tomcat-users.xml. The tomcat-users.xml content:
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;tomcat-users xmlns=&#34;http://tomcat.apache.org/xml&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://tomcat.apache.org/xml tomcat-users.xsd&#34; version=&#34;1.0&#34;&gt; &lt;role rolename=&#34;manager-gui&#34;/&gt; &lt;role rolename=&#34;manager-script&#34;/&gt; &lt;role rolename=&#34;manager-jmx&#34;/&gt; &lt;role rolename=&#34;manager-status&#34;/&gt; &lt;role rolename=&#34;admin-gui&#34;/&gt; &lt;role rolename=&#34;admin-script&#34;/&gt; &lt;user username=&#34;tomcat&#34; password=&#34;[**SECRET**]&#34; roles=&#34;manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script&#34; /&gt; &lt;/tomcat-users&gt; It suggests that we have to find the password for user tomcat to get access to the code, let’s examine the source in ROOT.war. I use JD-GUI: ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-17 10:28:25 +0700 +07'>November 17, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Tomcat Manager Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-tomcat-manager-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-relative-path-overwrite.jpg" alt="DreamHack - Relative Path Overwrite">
 </figure>
   <header class="entry-header">
@@ -329,25 +347,6 @@ My Solution The app.py has one route that we have to focus on /reset-password:
   <footer class="entry-footer"><span title='2025-11-10 22:16:06 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - login-1 Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-login-1-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-funjs.jpg" alt="DreamHack - funjs">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - funjs Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: funjs (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: funjs (web) Link: https://dreamhack.io/wargame/challenges/116 Level: 2 Date: 10-11-2025 Goal Examining the index.html and solving the flag.
-My Solution The web app is the index.html. I will comment the moveBox function to test more comfortably:
-function init() { box = document.getElementById(&#34;formbox&#34;); {{ /* setInterval(moveBox,1000); */ }} } We have to submit the correct flag in order to get the flag, if not we will received NOP!:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-10 20:19:07 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - funjs Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-funjs-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -365,6 +364,8 @@ function init() { box = document.getElementById(&#34;formbox&#34;); {{ /* setInt
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-tomcat-manager-web-challenge-writeup/">DreamHack - Tomcat Manager Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-web-challenge-writeup/">DreamHack - Relative Path Overwrite Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-easy-login-web-challenge-writeup/">DreamHack - easy-login Web Challenge Write-up</a></div>
@@ -372,8 +373,6 @@ function init() { box = document.getElementById(&#34;formbox&#34;); {{ /* setInt
         <div><a href="http://localhost:1313/posts/dreamhack-weblog-1-web-challenge-writeup/">DreamHack - weblog-1 Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-client-side-template-injection-web-challenge-writeup/">DreamHack - Client Side Template Injection Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-file-csp-1-web-challenge-writeup/">DreamHack - file-csp-1 Web Challenge Write-up</a></div>
         
     </section>
 
