@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-easy-login.jpg" alt="DreamHack - crawling">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - crawling Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: crawling (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: crawling (web) Link: https://dreamhack.io/wargame/challenges/274 Level: 2 Date: 18-11-2025 Goal Leveraging the crawling service to get access to /admin page and get the flag.
+My Solution The web app is simple with the crawling logic, the main logic is in this code:
+def check_get(url): ip = lookup(urlparse(url).netloc.split(&#39;:&#39;)[0]) if ip == False or ip ==&#39;0.0.0.0&#39;: return &#34;Not a valid URL.&#34; res=requests.get(url) if check_global(ip) == False: return &#34;Can you access my admin page~?&#34; for i in res.text.split(&#39;&gt;&#39;): if &#39;referer&#39; in i: ref_host = urlparse(res.headers.get(&#39;refer&#39;)).netloc.split(&#39;:&#39;)[0] if ref_host == &#39;localhost&#39;: return False if ref_host == &#39;127.0.0.1&#39;: return False res=requests.get(url) return res.text It doesn’t allow us to have ip address to 0.0.0.0, also there is a check of IP:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-18 20:23:54 +0700 +07'>November 18, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - crawling Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-tomcat-manager.jpg" alt="DreamHack - Tomcat Manager">
 </figure>
   <header class="entry-header">
@@ -328,25 +347,6 @@ keywords = [&#39;union&#39;, &#39;select&#39;, &#39;from&#39;, &#39;and&#39;, &#
   <footer class="entry-footer"><span title='2025-11-12 15:25:35 +0700 +07'>November 12, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - sql injection bypass waf Advanced Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-sql-injection-bypass-waf-advanced-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-login-1.jpg" alt="DreamHack - login-1">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - login-1 Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: login-1 (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: login-1 (web) Link: https://dreamhack.io/wargame/challenges/47 Level: 2 Date: 10-11-2025 Goal Login as the account with admin rights to get the flag.
-My Solution The app.py has one route that we have to focus on /reset-password:
-@app.route(&#39;/forgot_password&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def forgot_password(): if request.method == &#39;GET&#39;: return render_template(&#39;forgot.html&#39;) else: userid = request.form.get(&#34;userid&#34;) newpassword = request.form.get(&#34;newpassword&#34;) backupCode = request.form.get(&#34;backupCode&#34;, type=int) conn = get_db() cur = conn.cursor() user = cur.execute(&#39;SELECT * FROM user WHERE id = ?&#39;, (userid,)).fetchone() if user: # security for brute force Attack. time.sleep(1) if user[&#39;resetCount&#39;] == MAXRESETCOUNT: return &#34;&lt;script&gt;alert(&#39;reset Count Exceed.&#39;);history.back(-1);&lt;/script&gt;&#34; if user[&#39;backupCode&#39;] == backupCode: newbackupCode = makeBackupcode() updateSQL = &#34;UPDATE user set pw = ?, backupCode = ?, resetCount = 0 where idx = ?&#34; cur.execute(updateSQL, (hashlib.sha256(newpassword.encode()).hexdigest(), newbackupCode, str(user[&#39;idx&#39;]))) msg = f&#34;&lt;b&gt;Password Change Success.&lt;/b&gt;&lt;br/&gt;New BackupCode : {newbackupCode}&#34; else: updateSQL = &#34;UPDATE user set resetCount = resetCount&#43;1 where idx = ?&#34; cur.execute(updateSQL, (str(user[&#39;idx&#39;]))) msg = f&#34;Wrong BackupCode !&lt;br/&gt;&lt;b&gt;Left Count : &lt;/b&gt; {(MAXRESETCOUNT-1)-user[&#39;resetCount&#39;]}&#34; conn.commit() return render_template(&#34;index.html&#34;, msg=msg) return &#34;&lt;script&gt;alert(&#39;User Not Found.&#39;);history.back(-1);&lt;/script&gt;&#34;; Firstly, this code may appears safely without exploitation can be made however the time.sleep(1) is the key where Race Condition come in play. There are 100 possible backup code from 0 -&gt; 100. Therefore, it can be brute-forced. In order to bypass the the max reset count check we can make 100 requests at a time with different backup code. From this we can change the password.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-10 22:16:06 +0700 +07'>November 10, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - login-1 Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-login-1-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -364,6 +364,8 @@ My Solution The app.py has one route that we have to focus on /reset-password:
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/">DreamHack - crawling Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-tomcat-manager-web-challenge-writeup/">DreamHack - Tomcat Manager Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-web-challenge-writeup/">DreamHack - Relative Path Overwrite Web Challenge Write-up</a></div>
@@ -371,8 +373,6 @@ My Solution The app.py has one route that we have to focus on /reset-password:
         <div><a href="http://localhost:1313/posts/dreamhack-easy-login-web-challenge-writeup/">DreamHack - easy-login Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-weblog-1-web-challenge-writeup/">DreamHack - weblog-1 Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-client-side-template-injection-web-challenge-writeup/">DreamHack - Client Side Template Injection Web Challenge Write-up</a></div>
         
     </section>
 
@@ -384,7 +384,9 @@ My Solution The app.py has one route that we have to focus on /reset-password:
         <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/"> CTFs </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/"> DVWA </a>
-            
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/dreamhack/"> DreamHack </a>
+          
         <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/blog/"> Blog </a>
