@@ -159,7 +159,49 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-easy-login.jpg" alt="DreamHack - crawling">
+        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-input-manipulation-prompt-injection.png" alt="TryHackMe Input Manipulation & Prompt Injection Room">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview Room URL: https://tryhackme.com/room/inputmanipulationpromptinjection Difficulty: Easy Time to complete: 45 Walkthrough 1. Introduction No answer needed!
+2. System Prompt Leakage What do we call the exposure of hidden system instructions?
+=&gt; Answer: leakage
+3. Jailbreaking What evasive technique replaces or alters characters to bypass naive keyword filters?
+=&gt; Answer: Obfuscation
+4. Prompt Injection Which injection type smuggles instructions via uploaded documents, web pages, or plugins?
+=&gt; Answer: Indirect
+Which injection type places malicious instructions directly in the user input?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-19 08:33:29 +0700 +07'>November 19, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+  <a class="entry-link" aria-label="post link to TryHackMe - Input Manipulation & Prompt Injection Room Walkthrough" href="http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-relative-path-overwrite-advanced.jpg" alt="DreamHack - Relative Path Overwrite Advanced">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Relative Path Overwrite Advanced (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: Relative Path Overwrite Advanced (web) Link: https://dreamhack.io/wargame/challenges/440 Level: 2 Date: 18-11-2025 Goal Leveraging Relative Path Overwrite and XSS Scripting to force the bot sending the flag to you.
+My Solution The app has the vuln.php where we can inject XSS Scripting:
+&lt;script src=&#34;filter.js&#34;&gt;&lt;/script&gt; &lt;pre id=param&gt;&lt;/pre&gt; &lt;script&gt; var param_elem = document.getElementById(&#34;param&#34;); var url = new URL(window.location.href); var param = url.searchParams.get(&#34;param&#34;); if (typeof filter === &#39;undefined&#39;) { param = &#34;nope !!&#34;; } else { for (var i = 0; i &lt; filter.length; i&#43;&#43;) { if (param.toLowerCase().includes(filter[i])) { param = &#34;nope !!&#34;; break; } } } param_elem.innerHTML = param; &lt;/script&gt; However it needs the filter to not undefined in order to run our param, currently filter is undefined by default: Here is the progress we have to do to exploit the app, first we have to set a filter=[] for the vuln page to prevent the nope !! of filter === &#39;undefined&#39;, then force the bot to make a request to our server with the document.cookie.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-18 21:29:09 +0700 +07'>November 18, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-crawling.jpg" alt="DreamHack - crawling">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">DreamHack - crawling Web Challenge Write-up
@@ -309,44 +351,6 @@ info = pickle.loads(base64.b64decode(session)) The vulnerability here is the pic
   <footer class="entry-footer"><span title='2025-11-13 20:52:56 +0700 +07'>November 13, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - web-deserialize-python Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-web-deserialize-python-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-baby-sqlite.jpg" alt="DreamHack - baby-sqlite">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - baby-sqlite Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: baby-sqlite (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: baby-sqlite (web) Link: https://dreamhack.io/wargame/challenges/1 Level: 2 Date: 13-11-2025 Goal Leveraging SQL Injection to bypass the check and get the flag.
-My Solution The app has the /login route:
-@app.route(&#39;/login&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): if request.method == &#39;GET&#39;: return render_template(&#39;login.html&#39;) uid = request.form.get(&#39;uid&#39;, &#39;&#39;).lower() upw = request.form.get(&#39;upw&#39;, &#39;&#39;).lower() level = request.form.get(&#39;level&#39;, &#39;9&#39;).lower() sqli_filter = [&#39;[&#39;, &#39;]&#39;, &#39;,&#39;, &#39;admin&#39;, &#39;select&#39;, &#39;\&#39;&#39;, &#39;&#34;&#39;, &#39;\t&#39;, &#39;\n&#39;, &#39;\r&#39;, &#39;\x08&#39;, &#39;\x09&#39;, &#39;\x00&#39;, &#39;\x0b&#39;, &#39;\x0d&#39;, &#39; &#39;] for x in sqli_filter: if uid.find(x) != -1: return &#39;No Hack!&#39; if upw.find(x) != -1: return &#39;No Hack!&#39; if level.find(x) != -1: return &#39;No Hack!&#39; with app.app_context(): conn = get_db() query = f&#34;SELECT uid FROM users WHERE uid=&#39;{uid}&#39; and upw=&#39;{upw}&#39; and level={level};&#34; try: req = conn.execute(query) result = req.fetchone() if result is not None: uid = result[0] if uid == &#39;admin&#39;: return FLAG except: return &#39;Error!&#39; return &#39;Good!&#39; So here we have to login as admin to get the flag:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-13 11:00:40 +0700 +07'>November 13, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - baby-sqlite Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-baby-sqlite-web-challenge-writeup/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-sql-injection-bypass-waf.jpg" alt="DreamHack - sql injection bypass waf Advanced">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - sql injection bypass waf Advanced Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: sql injection bypass WAF Advanced (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: sql injection bypass WAF Advanced (web) Link: https://dreamhack.io/wargame/challenges/416 Level: 2 Date: 12-11-2025 Goal Bypass WAF and use SQL Injection to get the flag
-My Solution The app.py has this WAF check:
-keywords = [&#39;union&#39;, &#39;select&#39;, &#39;from&#39;, &#39;and&#39;, &#39;or&#39;, &#39;admin&#39;, &#39; &#39;, &#39;*&#39;, &#39;/&#39;, &#39;\n&#39;, &#39;\r&#39;, &#39;\t&#39;, &#39;\x0b&#39;, &#39;\x0c&#39;, &#39;-&#39;, &#39;&#43;&#39;] def check_WAF(data): for keyword in keywords: if keyword in data.lower(): return True return False It is harder for us to make requests that we want to do some injection. This is what it looked like when we are blocked by WAF:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-12 15:25:35 +0700 +07'>November 12, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - sql injection bypass waf Advanced Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-sql-injection-bypass-waf-advanced-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -364,15 +368,15 @@ keywords = [&#39;union&#39;, &#39;select&#39;, &#39;from&#39;, &#39;and&#39;, &#
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/">TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough</a></div>
+        
+        <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/">DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/">DreamHack - crawling Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-tomcat-manager-web-challenge-writeup/">DreamHack - Tomcat Manager Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-web-challenge-writeup/">DreamHack - Relative Path Overwrite Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-easy-login-web-challenge-writeup/">DreamHack - easy-login Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-weblog-1-web-challenge-writeup/">DreamHack - weblog-1 Web Challenge Write-up</a></div>
         
     </section>
 
@@ -383,9 +387,9 @@ keywords = [&#39;union&#39;, &#39;select&#39;, &#39;from&#39;, &#39;and&#39;, &#
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/"> CTFs </a>
           
-        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/"> DVWA </a>
-          
         <a class="sidebar-tag" href="http://localhost:1313/tags/dreamhack/"> DreamHack </a>
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/dvwa/"> DVWA </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
           

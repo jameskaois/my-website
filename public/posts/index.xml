@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Nov 2025 20:23:54 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 19 Nov 2025 08:33:29 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/</link>
+      <pubDate>Wed, 19 Nov 2025 08:33:29 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/</guid>
+      <description>Understand the basics of LLM Prompt Injection attacks.</description>
+    </item>
+    <item>
+      <title>DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/</link>
+      <pubDate>Tue, 18 Nov 2025 21:29:09 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/</guid>
+      <description>A patched issue for Exercise: Relative Path Overwrite.</description>
+    </item>
     <item>
       <title>DreamHack - crawling Web Challenge Write-up</title>
       <link>http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/</link>
