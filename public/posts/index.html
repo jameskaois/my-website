@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-are-you-admin.jpg" alt="DreamHack - Are you admin?">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Are you admin? Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: are you admin? (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: are you admin? (web) Link: https://dreamhack.io/wargame/challenges/1922 Level: 2 Date: 19-11-2025 Goal XSS Scripting takes in place to get the flag.
+My Solution The app is vulnerable to XSS Scripting:
+@app.route(&#34;/intro&#34;, methods=[&#34;GET&#34;]) def intro(): name = request.args.get(&#34;name&#34;) detail = request.args.get(&#34;detail&#34;) return render_template(&#34;intro.html&#34;, name=name, detail=detail) @app.route(&#34;/report&#34;, methods=[&#34;GET&#34;, &#34;POST&#34;]) def report(): if request.method == &#34;POST&#34;: path = request.form.get(&#34;path&#34;) if not path: return render_template(&#34;report.html&#34;, msg=&#34;fail&#34;) else: parsed_path = urlparse(path) params = parse_qs(parsed_path.query) name = params.get(&#34;name&#34;, [None])[0] detail = params.get(&#34;detail&#34;, [None])[0] if access_page(name, detail): return render_template(&#34;report.html&#34;, message=&#34;Success&#34;) else: return render_template(&#34;report.html&#34;, message=&#34;fail&#34;) else: return render_template(&#34;report.html&#34;) @app.route(&#34;/whoami&#34;, methods=[&#34;GET&#34;]) def whoami(): user_info = &#34;&#34; authorization = request.headers.get(&#39;Authorization&#39;) if authorization: user_info = b64decode(authorization.split(&#39;Basic &#39;)[1].encode()).decode() else: user_info = &#34;guest:guest&#34; id = user_info.split(&#34;:&#34;)[0] password = user_info.split(&#34;:&#34;)[1] if ((id == &#39;admin&#39;) and (password == &#39;[**REDACTED**]&#39;)): message = FLAG return render_template(&#39;whoami.html&#39;,id=id, message=message) else: message = &#34;You are guest&#34; return render_template(&#39;whoami.html&#39;,id=id, message=message) There are 3 routes in the app, /intro is where we use to inject Javascript, /report is to report the URL to the bot, /whoami is where we can use to make the bot to get the flag for us.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-19 10:21:25 +0700 +07'>November 19, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Are you admin? Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-input-manipulation-prompt-injection.png" alt="TryHackMe Input Manipulation & Prompt Injection Room">
 </figure>
   <header class="entry-header">
@@ -331,26 +350,6 @@ My Solution There are 3 routes in this challenge /test, /live and /verify. The /
   <footer class="entry-footer"><span title='2025-11-14 09:28:11 +0700 +07'>November 14, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - file-csp-1 Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-file-csp-1-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-web-deserialize-python.jpg" alt="DreamHack - web-deserialize-python">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - web-deserialize-python Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: web-deserialize-python (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: web-deserialize-python (web) Link: https://dreamhack.io/wargame/challenges/40 Level: 2 Date: 13-11-2025 Goal Leveraging insecure deserialization to retrieve the flag.
-My Solution The vulnerability is in the /check-session route:
-@app.route(&#39;/check_session&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def check_session(): if request.method == &#39;GET&#39;: return render_template(&#39;check_session.html&#39;) elif request.method == &#39;POST&#39;: session = request.form.get(&#39;session&#39;, &#39;&#39;) info = pickle.loads(base64.b64decode(session)) return render_template(&#39;check_session.html&#39;, info=info) The server will loads whatever we pass to the session data:
-info = pickle.loads(base64.b64decode(session)) The vulnerability here is the pickle. Therefore, we can create a malicious payload through Python:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-13 20:52:56 +0700 +07'>November 13, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - web-deserialize-python Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-web-deserialize-python-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -368,6 +367,8 @@ info = pickle.loads(base64.b64decode(session)) The vulnerability here is the pic
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/">DreamHack - Are you admin? Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/">TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/">DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up</a></div>
@@ -375,8 +376,6 @@ info = pickle.loads(base64.b64decode(session)) The vulnerability here is the pic
         <div><a href="http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/">DreamHack - crawling Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-tomcat-manager-web-challenge-writeup/">DreamHack - Tomcat Manager Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-web-challenge-writeup/">DreamHack - Relative Path Overwrite Web Challenge Write-up</a></div>
         
     </section>
 

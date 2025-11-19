@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Nov 2025 08:33:29 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 19 Nov 2025 10:21:25 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - Are you admin? Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/</link>
+      <pubDate>Wed, 19 Nov 2025 10:21:25 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/</guid>
+      <description>Hmm... You look suspicious. Are you admin?</description>
+    </item>
     <item>
       <title>TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/</link>
