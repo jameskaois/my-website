@@ -28,7 +28,7 @@
         }
 
     </style>
-</noscript><link rel="stylesheet" href="/css/custom.min.8bbb1f9dbbeaff90bfe5f954a68a498a1593cc50493a81b872a44d6b1c045faa.css" />
+</noscript><link rel="stylesheet" href="/css/custom.min.07323096e73027a6f11da4b4e6197b91748b25636ea5d4238bbbda0cba573fe1.css" />
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -156,6 +156,25 @@
     Posts
   </h1>
 </header>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-development-env.jpg" alt="DreamHack - development-env">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - development-env Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: development-env (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: development-env (web) Link: https://dreamhack.io/wargame/challenges/783 Level: 2 Date: 20-11-2025 Goal The development environment source code is deployed in production, leverage this to get the flag.
+My Solution The source code has 2 main routes /validate, /:
+app.get(&#39;/&#39;, async (req, res) =&gt; { try { let token = req.cookies.auth || &#39;&#39;; const payloadData = await cryptolib.readJWT(token, &#39;FAKE_KEY&#39;); if (payloadData) { userflag = payloadData[&#39;uid&#39;] == &#39;admin&#39; ? flag : &#39;You are not admin&#39;; res.render(&#39;main&#39;, { username: payloadData[&#39;uid&#39;], flag: userflag }); } else { res.render(&#39;login&#39;); } } catch (e) { if (isDevelopmentEnv) { res.json(JSON.parse(parsetrace(e, { sources: true }).json())); } else { res.json({ message: &#39;error&#39; }); } } }); app.post(&#39;/validate&#39;, async (req, res) =&gt; { try { let contentType = req.header(&#39;Content-Type&#39;).split(&#39;;&#39;)[0]; if ( [&#39;multipart/form-data&#39;, &#39;application/x-www-form-urlencoded&#39;].indexOf(contentType) === -1 ) { throw new Error(&#39;content type not supported&#39;); } else { let bodyKeys = Object.keys(req.body); if (bodyKeys.indexOf(&#39;id&#39;) === -1 || bodyKeys.indexOf(&#39;pw&#39;) === -1) { throw new Error(&#39;missing required parameter&#39;); } else { if ( typeof database[req.body[&#39;id&#39;]] !== &#39;undefined&#39; &amp;&amp; database[req.body[&#39;id&#39;]] === req.body[&#39;pw&#39;] ) { if ( req.get(&#39;User-Agent&#39;).indexOf(&#39;MSIE&#39;) &gt; -1 || req.get(&#39;User-Agent&#39;).indexOf(&#39;Trident&#39;) &gt; -1 ) throw new Error(&#39;IE is not supported&#39;); jwt = await cryptolib.generateJWT(req.body[&#39;id&#39;], &#39;FAKE_KEY&#39;); res.cookie(&#39;auth&#39;, jwt, { maxAge: 30000, }).send(&#34;&lt;script&gt;alert(&#39;success&#39;);document.location.href=&#39;/&#39;&lt;/script&gt;&#34;); } else { res.json({ message: &#39;error&#39;, detail: &#39;invalid id or password&#39; }); } } } } catch (e) { if (isDevelopmentEnv) { res.status(500).json({ message: &#39;devError&#39;, detail: JSON.parse(parsetrace(e, { sources: true }).json()), }); } else { res.json({ message: &#39;error&#39;, detail: e }); } } }); Based on the description, it is a hint that the development source code is published to production. We can find that vulnerable code:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-20 09:59:14 +0700 +07'>November 20, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - development-env Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-development-env-web-challenge-writeup/"></a>
+</article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
@@ -331,25 +350,6 @@ My Solution This challenge is similar to CSP Bypass and DOM XSS, however the CSP
   <footer class="entry-footer"><span title='2025-11-14 14:58:24 +0700 +07'>November 14, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Client Side Template Injection Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-client-side-template-injection-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-file-csp-1.jpg" alt="DreamHack - file-csp-1">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - file-csp-1 Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: file-csp-1 (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: file-csp-1 (web) Link: https://dreamhack.io/wargame/challenges/36 Level: 2 Date: 14-11-2025 Goal Crafted the correct CSP satisfying the needs to get the flag.
-My Solution There are 3 routes in this challenge /test, /live and /verify. The /verify is the route we need to satisfy to get the flag:
-@APP.route(&#39;/verify&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def verify_csp(): global CSP if request.method == &#39;POST&#39;: csp = request.form.get(&#39;csp&#39;) try: options = webdriver.ChromeOptions() for _ in [&#39;headless&#39;, &#39;window-size=1920x1080&#39;, &#39;disable-gpu&#39;, &#39;no-sandbox&#39;, &#39;disable-dev-shm-usage&#39;]: options.add_argument(_) driver = webdriver.Chrome(&#39;/chromedriver&#39;, options=options) driver.implicitly_wait(3) driver.set_page_load_timeout(3) driver.get(f&#39;http://localhost:8000/live?csp={quote(csp)}&#39;) try: a = driver.execute_script(&#39;return a()&#39;); except: a = &#39;error&#39; try: b = driver.execute_script(&#39;return b()&#39;); except: b = &#39;error&#39; try: c = driver.execute_script(&#39;return c()&#39;); except Exception as e: c = &#39;error&#39; c = e try: d = driver.execute_script(&#39;return $(document)&#39;); except: d = &#39;error&#39; if a == &#39;error&#39; and b == &#39;error&#39; and c == &#39;c&#39; and d != &#39;error&#39;: return FLAG return f&#39;Try again!, {a}, {b}, {c}, {d}&#39; except Exception as e: return f&#39;An error occured!, {e}&#39; return render_template(&#39;verify.html&#39;) The /test and /live is where we can use to test our payloads. The app requirements is we have to crafted the correct CSP policy which satisfy the needs in the csp.html:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-14 09:28:11 +0700 +07'>November 14, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - file-csp-1 Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-file-csp-1-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -367,6 +367,8 @@ My Solution There are 3 routes in this challenge /test, /live and /verify. The /
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-development-env-web-challenge-writeup/">DreamHack - development-env Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/">DreamHack - Are you admin? Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/">TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough</a></div>
@@ -374,8 +376,6 @@ My Solution There are 3 routes in this challenge /test, /live and /verify. The /
         <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/">DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/">DreamHack - crawling Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-tomcat-manager-web-challenge-writeup/">DreamHack - Tomcat Manager Web Challenge Write-up</a></div>
         
     </section>
 
