@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Hello, go!">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Hello, Go! Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Hello, go! (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: Hello, go! (web) Link: https://dreamhack.io/wargame/challenges/1999 Level: 2 Date: 20-11-2025 Goal Leveraging SSTI in Go template and get the flag.
+My Solution The app.go has a vulnerable code in how it renders our input:
+t, err := template.New(&#34;page&#34;).Parse( fmt.Sprintf(` &lt;html&gt; &lt;body&gt; &lt;h1&gt;Hello, %s!&lt;/h1&gt; &lt;/body&gt; &lt;/html&gt;`, name)) The server gets our input and render it to the template, then it executes:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-20 21:23:42 +0700 +07'>November 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Hello, Go! Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-hello-go-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-development-env.jpg" alt="DreamHack - development-env">
 </figure>
   <header class="entry-header">
@@ -331,25 +350,6 @@ In the access.log scroll down we can see a bunch of requests of blind SQL Inject
   <footer class="entry-footer"><span title='2025-11-14 16:12:50 +0700 +07'>November 14, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - weblog-1 Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-weblog-1-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-client-side-template-injection.jpg" alt="DreamHack - Client Side Template Injection">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Client Side Template Injection Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Client Side Template Injection (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Client Side Template Injection (web) Link: https://dreamhack.io/wargame/challenges/437 Level: 2 Date: 14-11-2025 Goal Bypassing CSP rules and get the flag with XSS.
-My Solution This challenge is similar to CSP Bypass and DOM XSS, however the CSP policy is different:
-@app.after_request def add_header(response): global nonce response.headers[&#39;Content-Security-Policy&#39;] = f&#34;default-src &#39;self&#39;; img-src https://dreamhack.io; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;nonce-{nonce}&#39; &#39;unsafe-eval&#39; https://ajax.googleapis.com; object-src &#39;none&#39;&#34; nonce = os.urandom(16).hex() return response The app accepts script from https://ajax.googleapis.com, this is a huge security vulnerability we can check it in CSP Evaluator
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-14 14:58:24 +0700 +07'>November 14, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Client Side Template Injection Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-client-side-template-injection-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -367,6 +367,8 @@ My Solution This challenge is similar to CSP Bypass and DOM XSS, however the CSP
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-hello-go-web-challenge-writeup/">DreamHack - Hello, Go! Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-development-env-web-challenge-writeup/">DreamHack - development-env Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/">DreamHack - Are you admin? Web Challenge Write-up</a></div>
@@ -374,8 +376,6 @@ My Solution This challenge is similar to CSP Bypass and DOM XSS, however the CSP
         <div><a href="http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/">TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/">DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/">DreamHack - crawling Web Challenge Write-up</a></div>
         
     </section>
 
