@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Nov 2025 21:23:42 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 21 Nov 2025 09:32:03 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - OWASP Juice Shop Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/</link>
+      <pubDate>Fri, 21 Nov 2025 09:32:03 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/</guid>
+      <description>This room uses the Juice Shop vulnerable web application to learn how to identify and exploit common web application vulnerabilities.</description>
+    </item>
     <item>
       <title>DreamHack - Hello, Go! Web Challenge Write-up</title>
       <link>http://localhost:1313/posts/dreamhack-hello-go-web-challenge-writeup/</link>
