@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 21 Nov 2025 09:32:03 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 21 Nov 2025 15:04:03 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/</link>
+      <pubDate>Fri, 21 Nov 2025 15:04:03 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/</guid>
+      <description>.htaccess crack! can you local bruteforce attack?</description>
+    </item>
     <item>
       <title>TryHackMe - OWASP Juice Shop Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/</link>

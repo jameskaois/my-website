@@ -159,6 +159,21 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-tomcat-manager.jpg" alt="DreamHack - crack crack crack it">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p></p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-21 15:04:03 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>0 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-cove.png" alt="TryHackMe OWASP Juice Shop">
 </figure>
   <header class="entry-header">
@@ -330,25 +345,6 @@ My Solution The app has the vuln.php where we can inject XSS Scripting:
   <footer class="entry-footer"><span title='2025-11-17 09:18:20 +0700 +07'>November 17, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Relative Path Overwrite Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-easy-login.jpg" alt="DreamHack - easy-login">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - easy-login Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: easy-login (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: easy-login (web) Link: https://dreamhack.io/wargame/challenges/1213 Level: 2 Date: 17-11-2025 Goal Login as admin to get the flag.
-My Solution This is the PHP code in index.php which validates our credentials:
-&lt;?php function generatePassword($length) { $characters = &#39;0123456789abcdef&#39;; $charactersLength = strlen($characters); $pw = &#39;&#39;; for ($i = 0; $i &lt; $length; $i&#43;&#43;) { $pw .= $characters[random_int(0, $charactersLength - 1)]; } return $pw; } function generateOTP() { return &#39;P&#39; . str_pad(strval(random_int(0, 999999)), 6, &#34;0&#34;, STR_PAD_LEFT); } $admin_pw = generatePassword(32); $otp = generateOTP(); function login() { if (!isset($_POST[&#39;cred&#39;])) { echo &#34;Please login...&#34;; return; } if (!($cred = base64_decode($_POST[&#39;cred&#39;]))) { echo &#34;Cred error&#34;; return; } if (!($cred = json_decode($cred, true))) { echo &#34;Cred error&#34;; return; } if (!(isset($cred[&#39;id&#39;]) &amp;&amp; isset($cred[&#39;pw&#39;]) &amp;&amp; isset($cred[&#39;otp&#39;]))) { echo &#34;Cred error&#34;; return; } if ($cred[&#39;id&#39;] != &#39;admin&#39;) { echo &#34;Hello,&#34; . $cred[&#39;id&#39;]; return; } if ($cred[&#39;otp&#39;] != $GLOBALS[&#39;otp&#39;]) { echo &#34;OTP fail&#34;; return; } if (!strcmp($cred[&#39;pw&#39;], $GLOBALS[&#39;admin_pw&#39;])) { require_once(&#39;flag.php&#39;); echo &#34;Hello, admin! get the flag: &#34; . $flag; return; } echo &#34;Password fail&#34;; return; } ?&gt; The problem is this every new request will be compared to new password and OTP so it is impossible to guess/brute-force the creds:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-17 08:20:26 +0700 +07'>November 17, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - easy-login Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-easy-login-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -366,6 +362,8 @@ My Solution This is the PHP code in index.php which validates our credentials:
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/">TryHackMe - OWASP Juice Shop Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-hello-go-web-challenge-writeup/">DreamHack - Hello, Go! Web Challenge Write-up</a></div>
@@ -373,8 +371,6 @@ My Solution This is the PHP code in index.php which validates our credentials:
         <div><a href="http://localhost:1313/posts/dreamhack-development-env-web-challenge-writeup/">DreamHack - development-env Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/">DreamHack - Are you admin? Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/">TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough</a></div>
         
     </section>
 
