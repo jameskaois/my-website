@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 21 Nov 2025 15:04:03 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 21 Nov 2025 16:23:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - Not-only Web Challenge Write-up</title>
+      <link>http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/</link>
+      <pubDate>Fri, 21 Nov 2025 16:23:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/</guid>
+      <description>Find a user with admin rights! The user&amp;#39;s password is a flag. The password format is a string containing numbers, uppercase and lowercase letters, and special characters. { }. How many admin users are there? The flag format is DH{}</description>
+    </item>
     <item>
       <title>DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up</title>
       <link>http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/</link>

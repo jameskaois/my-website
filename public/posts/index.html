@@ -159,16 +159,39 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-tomcat-manager.jpg" alt="DreamHack - crack crack crack it">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-cove.jpg" alt="DreamHack - Not-only">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Not-only Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Not-only (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: Not-only (web) Link: https://dreamhack.io/wargame/challenges/1619 Level: 2 Date: 21-11-2025 Goal Find the correct user and brute-force the password to get the flag.
+My Solution Based on the description:
+Find a user with admin rights! The user&#39;s password is a flag. The password format is a string containing numbers, uppercase and lowercase letters, and special characters. { } How many admin users are there? The flag format is DH{} We have some details. We have to:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-21 16:23:00 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Not-only Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - crack crack crack it">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p> Room / Challenge: [wargame.kr] crack crack crack it (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: [wargame.kr] crack crack crack it (web) Link: https://dreamhack.io/wargame/challenges/330 Level: 2 Date: 21-11-2025 Goal Brute-force the password and get the flag.
+My Solution Based on the description:
+oops, i forgot my password!! somebody help me T_T (i remember that my password begin with &#39;G4HeulB&#39; and the other chars is composed of number, lower alphabet only..) notice: this .htaccess file is different each other IP Address. authentication have to be same ip plz, We can create our password generator with Python and use John-the-ripper to brute-force the password:
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-11-21 15:04:03 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>0 min</span></footer>
+  <footer class="entry-footer"><span title='2025-11-21 15:04:03 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/"></a>
 </article>
 
@@ -326,25 +349,6 @@ My Solution The source code has the ROOT.war besides Dockerfile and tomcat-users
   <footer class="entry-footer"><span title='2025-11-17 10:28:25 +0700 +07'>November 17, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Tomcat Manager Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-tomcat-manager-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-relative-path-overwrite.jpg" alt="DreamHack - Relative Path Overwrite">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Relative Path Overwrite Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Relative Path Overwrite (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Relative Path Overwrite (web) Link: https://dreamhack.io/wargame/challenges/439 Level: 2 Date: 17-11-2025 Goal Injecting XSS and leveraging Relative Path to get the flag.
-My Solution The app has the vuln.php where we can inject XSS Scripting:
-&lt;script src=&#34;filter.js&#34;&gt;&lt;/script&gt; &lt;pre id=param&gt;&lt;/pre&gt; &lt;script&gt; var param_elem = document.getElementById(&#34;param&#34;); var url = new URL(window.location.href); var param = url.searchParams.get(&#34;param&#34;); if (typeof filter !== &#39;undefined&#39;) { for (var i = 0; i &lt; filter.length; i&#43;&#43;) { if (param.toLowerCase().includes(filter[i])) { param = &#34;nope !!&#34;; break; } } } param_elem.innerHTML = param; &lt;/script&gt; However it has a blacklists in filter.js:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-17 09:18:20 +0700 +07'>November 17, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Relative Path Overwrite Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -362,6 +366,8 @@ My Solution The app has the vuln.php where we can inject XSS Scripting:
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/">DreamHack - Not-only Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/">TryHackMe - OWASP Juice Shop Room Walkthrough</a></div>
@@ -369,8 +375,6 @@ My Solution The app has the vuln.php where we can inject XSS Scripting:
         <div><a href="http://localhost:1313/posts/dreamhack-hello-go-web-challenge-writeup/">DreamHack - Hello, Go! Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-development-env-web-challenge-writeup/">DreamHack - development-env Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/">DreamHack - Are you admin? Web Challenge Write-up</a></div>
         
     </section>
 
