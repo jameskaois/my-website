@@ -159,7 +159,26 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-cove.jpg" alt="DreamHack - Not-only">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Black-Hacker-Company">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Black-Hacker-Company Web Challenge Write-up
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Black-Hacker-Company (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: Black-Hacker-Company (web) Link: https://dreamhack.io/wargame/challenges/1834 Level: 2 Date: 22-11-2025 Goal Bypass filter and leveraging SSRF to get the flag.
+My Solution The app.py is simple with three routes:
+@app.route(&#39;/user-page&#39;, methods=[&#39;GET&#39;]) def user(): url = request.args.get(&#39;url&#39;) if not url: return jsonify({&#34;swap&#34;: &#34;Write URL&#34;}), 400 if not any(allow in url for allow in ALLOW_HOST): return jsonify({&#34;swap&#34;: &#34;URL not allowed&#34;}), 403 for bad in BLACK_LIST: if bad in url.lower(): return jsonify({&#34;swap&#34;: &#34;BAN LIST&#34;}), 403 try: result = subprocess.run( [&#34;curl&#34;, &#34;-s&#34;, url], text=True, capture_output=True, check=True ) return jsonify({&#34;response&#34;: result.stdout}) except subprocess.CalledProcessError as e: return jsonify({&#34;swap&#34;: &#34;Error!~&#34;, &#34;details&#34;: str(e)}), 500 @app.route(&#39;/access-token&#39;, methods=[&#39;GET&#39;]) def admin(): if request.remote_addr in [&#34;127.0.0.1&#34;]: password = request.args.get(&#34;password&#34;) if password: if password == PASSWORD: return jsonify({&#34;server&#34;: TOKEN}), 200 else: return jsonify({&#34;server&#34;: &#34;Nop~ Password Wrong&gt;&lt;&#34;}), 403 else: return jsonify({&#34;server&#34;: &#34;Write Password!&#34;}), 400 else: return jsonify({&#34;server&#34;: &#34;Only Localhost Can Access : )&#34;}), 403 @app.route(&#39;/admin&#39;, methods=[&#39;GET&#39;]) def check(): if request.args.get(&#34;token&#34;) == TOKEN: return &#34;&lt;h1&gt;dotori-company : $#@&amp;*(@#&amp;*(@)) BeePPP.. &lt;/h1&gt;&#34; &#43; FLAG else: return jsonify({&#34;server&#34;: &#34;you are not admin...&#34;}), 403 The /access-token will check our given password and if correct it will returned token which will be used to get the flag in /admin. However, /access-token just accepts request from 127.0.0.1 IP so we have to use the /user-page. The filter:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-22 09:41:11 +0700 +07'>November 22, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Black-Hacker-Company Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Not-only">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">DreamHack - Not-only Web Challenge Write-up
@@ -331,24 +350,6 @@ def check_get(url): ip = lookup(urlparse(url).netloc.split(&#39;:&#39;)[0]) if i
   <footer class="entry-footer"><span title='2025-11-18 20:23:54 +0700 +07'>November 18, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - crawling Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-tomcat-manager.jpg" alt="DreamHack - Tomcat Manager">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Tomcat Manager Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: tomcat-manager (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: tomcat-manager (web) Link: https://dreamhack.io/wargame/challenges/248 Level: 2 Date: 17-11-2025 Goal Examining the code and leverage LFI and RCE to capture the flag.
-My Solution The source code has the ROOT.war besides Dockerfile and tomcat-users.xml. The tomcat-users.xml content:
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;tomcat-users xmlns=&#34;http://tomcat.apache.org/xml&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://tomcat.apache.org/xml tomcat-users.xsd&#34; version=&#34;1.0&#34;&gt; &lt;role rolename=&#34;manager-gui&#34;/&gt; &lt;role rolename=&#34;manager-script&#34;/&gt; &lt;role rolename=&#34;manager-jmx&#34;/&gt; &lt;role rolename=&#34;manager-status&#34;/&gt; &lt;role rolename=&#34;admin-gui&#34;/&gt; &lt;role rolename=&#34;admin-script&#34;/&gt; &lt;user username=&#34;tomcat&#34; password=&#34;[**SECRET**]&#34; roles=&#34;manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script&#34; /&gt; &lt;/tomcat-users&gt; It suggests that we have to find the password for user tomcat to get access to the code, let’s examine the source in ROOT.war. I use JD-GUI: ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-17 10:28:25 +0700 +07'>November 17, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Tomcat Manager Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-tomcat-manager-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -366,6 +367,8 @@ My Solution The source code has the ROOT.war besides Dockerfile and tomcat-users
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/">DreamHack - Black-Hacker-Company Web Challenge Write-up</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/">DreamHack - Not-only Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up</a></div>
@@ -374,16 +377,14 @@ My Solution The source code has the ROOT.war besides Dockerfile and tomcat-users
         
         <div><a href="http://localhost:1313/posts/dreamhack-hello-go-web-challenge-writeup/">DreamHack - Hello, Go! Web Challenge Write-up</a></div>
         
-        <div><a href="http://localhost:1313/posts/dreamhack-development-env-web-challenge-writeup/">DreamHack - development-env Web Challenge Write-up</a></div>
-        
     </section>
 
     <section>
         <h2>Trending Tags</h2>
           
-        <a class="sidebar-tag" href="http://localhost:1313/tags/tryhackme/"> TryHackMe </a>
-          
         <a class="sidebar-tag" href="http://localhost:1313/tags/ctfs/"> CTFs </a>
+          
+        <a class="sidebar-tag" href="http://localhost:1313/tags/tryhackme/"> TryHackMe </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/dreamhack/"> DreamHack </a>
           
