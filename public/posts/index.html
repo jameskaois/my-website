@@ -159,6 +159,21 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/patriot-ctf-2025-cover.png" alt="Patriot CTF 2025 - Web Challenges Writeups">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Patriot CTF 2025 - Web Challenges Writeups
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p></p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-24 10:34:41 +0700 +07'>November 24, 2025</span>&nbsp;·&nbsp;<span>0 min</span></footer>
+  <a class="entry-link" aria-label="post link to Patriot CTF 2025 - Web Challenges Writeups" href="http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Black-Hacker-Company">
 </figure>
   <header class="entry-header">
@@ -331,25 +346,6 @@ My Solution The app has the vuln.php where we can inject XSS Scripting:
   <footer class="entry-footer"><span title='2025-11-18 21:29:09 +0700 +07'>November 18, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-crawling.jpg" alt="DreamHack - crawling">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - crawling Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: crawling (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: crawling (web) Link: https://dreamhack.io/wargame/challenges/274 Level: 2 Date: 18-11-2025 Goal Leveraging the crawling service to get access to /admin page and get the flag.
-My Solution The web app is simple with the crawling logic, the main logic is in this code:
-def check_get(url): ip = lookup(urlparse(url).netloc.split(&#39;:&#39;)[0]) if ip == False or ip ==&#39;0.0.0.0&#39;: return &#34;Not a valid URL.&#34; res=requests.get(url) if check_global(ip) == False: return &#34;Can you access my admin page~?&#34; for i in res.text.split(&#39;&gt;&#39;): if &#39;referer&#39; in i: ref_host = urlparse(res.headers.get(&#39;refer&#39;)).netloc.split(&#39;:&#39;)[0] if ref_host == &#39;localhost&#39;: return False if ref_host == &#39;127.0.0.1&#39;: return False res=requests.get(url) return res.text It doesn’t allow us to have ip address to 0.0.0.0, also there is a check of IP:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-18 20:23:54 +0700 +07'>November 18, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - crawling Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-crawling-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -367,6 +363,8 @@ def check_get(url): ip = lookup(urlparse(url).netloc.split(&#39;:&#39;)[0]) if i
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/">Patriot CTF 2025 - Web Challenges Writeups</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/">DreamHack - Black-Hacker-Company Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/">DreamHack - Not-only Web Challenge Write-up</a></div>
@@ -374,8 +372,6 @@ def check_get(url): ip = lookup(urlparse(url).netloc.split(&#39;:&#39;)[0]) if i
         <div><a href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/">TryHackMe - OWASP Juice Shop Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-hello-go-web-challenge-writeup/">DreamHack - Hello, Go! Web Challenge Write-up</a></div>
         
     </section>
 
