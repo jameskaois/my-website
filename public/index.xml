@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Nov 2025 10:34:41 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 24 Nov 2025 21:47:12 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - Special Letter Translator Web Challenge Writeup</title>
+      <link>http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/</link>
+      <pubDate>Mon, 24 Nov 2025 21:47:12 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/</guid>
+      <description>One day, Swap found a special letter service! Special You need special permission to decipher a letter! ~ swap: Hmm... Please help Swap to seize VIP rights and decipher the letter.</description>
+    </item>
     <item>
       <title>Patriot CTF 2025 - Web Challenges Writeups</title>
       <link>http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/</link>

@@ -159,16 +159,39 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/patriot-ctf-2025-cover.png" alt="Patriot CTF 2025 - Web Challenges Writeups">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Special Letter Translator">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Special Letter Translator Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Goal Gaining privileges and leveraging RCE to get the flag.
+My Solution Based on the description and the source code the first thing we have to do is gain VIP role, the SECRET_KEY in app.py:
+SECRET_KEY = &#34;SECRET_KEY&#34; Try logged in as guest with password guest check this is the wrong secret key, then we have to brute-force the secret key in order to create our own JWT token, my brute-force Python script:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-24 21:47:12 +0700 +07'>November 24, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Special Letter Translator Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/patriot-ctf-2025-cover2.jpg" alt="Patriot CTF 2025 - Web Challenges Writeups">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">Patriot CTF 2025 - Web Challenges Writeups
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>I’m a player in web, so all my writeups about web challenges in Patriot CTF 2025, since the challs are closed after the event so there aren’t any images of challs. These are all 5 web challs in the event:
+Connection Tester Goal
+Leveraging SQLi and Command Injection to get the flag.
+My Solution
+The app has a login form and there isn’t any credentials given, so tried some simple SQL Injection to bypass the login, normally admin account existed so inject:
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-11-24 10:34:41 +0700 +07'>November 24, 2025</span>&nbsp;·&nbsp;<span>0 min</span></footer>
+  <footer class="entry-footer"><span title='2025-11-24 10:34:41 +0700 +07'>November 24, 2025</span>&nbsp;·&nbsp;<span>5 min</span></footer>
   <a class="entry-link" aria-label="post link to Patriot CTF 2025 - Web Challenges Writeups" href="http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/"></a>
 </article>
 
@@ -327,25 +350,6 @@ Which injection type places malicious instructions directly in the user input?
   <footer class="entry-footer"><span title='2025-11-19 08:33:29 +0700 +07'>November 19, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to TryHackMe - Input Manipulation & Prompt Injection Room Walkthrough" href="http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-relative-path-overwrite-advanced.jpg" alt="DreamHack - Relative Path Overwrite Advanced">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Relative Path Overwrite Advanced (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Relative Path Overwrite Advanced (web) Link: https://dreamhack.io/wargame/challenges/440 Level: 2 Date: 18-11-2025 Goal Leveraging Relative Path Overwrite and XSS Scripting to force the bot sending the flag to you.
-My Solution The app has the vuln.php where we can inject XSS Scripting:
-&lt;script src=&#34;filter.js&#34;&gt;&lt;/script&gt; &lt;pre id=param&gt;&lt;/pre&gt; &lt;script&gt; var param_elem = document.getElementById(&#34;param&#34;); var url = new URL(window.location.href); var param = url.searchParams.get(&#34;param&#34;); if (typeof filter === &#39;undefined&#39;) { param = &#34;nope !!&#34;; } else { for (var i = 0; i &lt; filter.length; i&#43;&#43;) { if (param.toLowerCase().includes(filter[i])) { param = &#34;nope !!&#34;; break; } } } param_elem.innerHTML = param; &lt;/script&gt; However it needs the filter to not undefined in order to run our param, currently filter is undefined by default: Here is the progress we have to do to exploit the app, first we have to set a filter=[] for the vuln page to prevent the nope !! of filter === &#39;undefined&#39;, then force the bot to make a request to our server with the document.cookie.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-18 21:29:09 +0700 +07'>November 18, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Relative Path Overwrite Advanced Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-relative-path-overwrite-advanced-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -363,6 +367,8 @@ My Solution The app has the vuln.php where we can inject XSS Scripting:
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/">DreamHack - Special Letter Translator Web Challenge Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/">Patriot CTF 2025 - Web Challenges Writeups</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/">DreamHack - Black-Hacker-Company Web Challenge Write-up</a></div>
@@ -370,8 +376,6 @@ My Solution The app has the vuln.php where we can inject XSS Scripting:
         <div><a href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/">DreamHack - Not-only Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/">TryHackMe - OWASP Juice Shop Room Walkthrough</a></div>
         
     </section>
 
@@ -389,7 +393,7 @@ My Solution The app has the vuln.php where we can inject XSS Scripting:
         <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/blog/"> Blog </a>
-                       
+                         
     </section>
 
     <section id="post-content">
