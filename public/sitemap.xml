@@ -3,31 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-11-24T21:47:12+07:00</lastmod>
+    <lastmod>2025-11-25T14:53:54+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/ctfs/</loc>
-    <lastmod>2025-11-24T21:47:12+07:00</lastmod>
+    <lastmod>2025-11-25T14:53:54+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/dreamhack/</loc>
-    <lastmod>2025-11-24T21:47:12+07:00</lastmod>
+    <lastmod>2025-11-25T14:53:54+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/</loc>
-    <lastmod>2025-11-24T21:47:12+07:00</lastmod>
+    <loc>http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/</loc>
+    <lastmod>2025-11-25T14:53:54+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-11-24T21:47:12+07:00</lastmod>
+    <lastmod>2025-11-25T14:53:54+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-11-25T14:53:54+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/</loc>
     <lastmod>2025-11-24T21:47:12+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

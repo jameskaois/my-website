@@ -159,6 +159,24 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Test site">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Test site Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Test site (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: Test site (web) Link: https://dreamhack.io/wargame/challenges/2064 Level: 2 Date: 25-11-2025 Goal My Solution To get the flag in /flag we have to be the admin to get access to /admin however we’re still not the admin now, and the setcookie and readcookie is hidden:
+# def setcookie(id_str): # The code for this function is hidden # def readcookie(cookie_str): # The code for this function is hidden We can just blind testing to get admin role. There is a vulnerable in /logintest route:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-25 14:53:54 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Test site Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Special Letter Translator">
 </figure>
   <header class="entry-header">
@@ -327,29 +345,6 @@ My Solution The app is vulnerable to XSS Scripting:
   <footer class="entry-footer"><span title='2025-11-19 10:21:25 +0700 +07'>November 19, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Are you admin? Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-input-manipulation-prompt-injection.png" alt="TryHackMe Input Manipulation & Prompt Injection Room">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - Input Manipulation &amp; Prompt Injection Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Room URL: https://tryhackme.com/room/inputmanipulationpromptinjection Difficulty: Easy Time to complete: 45 Walkthrough 1. Introduction No answer needed!
-2. System Prompt Leakage What do we call the exposure of hidden system instructions?
-=&gt; Answer: leakage
-3. Jailbreaking What evasive technique replaces or alters characters to bypass naive keyword filters?
-=&gt; Answer: Obfuscation
-4. Prompt Injection Which injection type smuggles instructions via uploaded documents, web pages, or plugins?
-=&gt; Answer: Indirect
-Which injection type places malicious instructions directly in the user input?
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-19 08:33:29 +0700 +07'>November 19, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - Input Manipulation & Prompt Injection Room Walkthrough" href="http://localhost:1313/posts/tryhackme-input-manipulation-prompt-injection-room-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -367,6 +362,8 @@ Which injection type places malicious instructions directly in the user input?
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/">DreamHack - Test site Web Challenge Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/">DreamHack - Special Letter Translator Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/">Patriot CTF 2025 - Web Challenges Writeups</a></div>
@@ -374,8 +371,6 @@ Which injection type places malicious instructions directly in the user input?
         <div><a href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/">DreamHack - Black-Hacker-Company Web Challenge Write-up</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/">DreamHack - Not-only Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up</a></div>
         
     </section>
 
