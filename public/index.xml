@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Nov 2025 14:53:54 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 25 Nov 2025 15:15:11 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - I LOVE XSS! Web Challenge Writeup</title>
+      <link>http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/</link>
+      <pubDate>Tue, 25 Nov 2025 15:15:11 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/</guid>
+      <description>I love xss. I love script</description>
+    </item>
     <item>
       <title>DreamHack - Test site Web Challenge Writeup</title>
       <link>http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/</link>
