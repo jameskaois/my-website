@@ -159,6 +159,26 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Flask-Dev">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - Flask-Dev Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: Flask-Dev (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: Flask-Dev (web) Link: https://dreamhack.io/wargame/challenges/74 Level: 4 Date: 27-11-2025 Goal Leveraging debugging mode in production to get the flag.
+My Solution The app.py is short and simple:
+#!/usr/bin/python3 from flask import Flask import os app = Flask(__name__) app.secret_key = os.urandom(32) @app.route(&#39;/&#39;) def index(): return &#39;Hello !&#39; @app.route(&#39;/&lt;path:file&gt;&#39;) def file(file): return open(file).read() app.run(host=&#39;0.0.0.0&#39;, port=8000, threaded=True, debug=True) The Dockerfile tells us that the /flag is an executable C script:
+RUN gcc /app/flag.c -o /flag \ &amp;&amp; chmod 111 /flag &amp;&amp; rm /app/flag.c Since the app is vulnerable in this route:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-27 09:54:30 +0700 +07'>November 27, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - Flask-Dev Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - 거북이">
 </figure>
   <header class="entry-header">
@@ -326,25 +346,6 @@ oops, i forgot my password!! somebody help me T_T (i remember that my password b
   <footer class="entry-footer"><span title='2025-11-21 15:04:03 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-cove.png" alt="TryHackMe OWASP Juice Shop">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TryHackMe - OWASP Juice Shop Room Walkthrough
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Room URL: https://tryhackme.com/room/owaspjuiceshop Difficulty: Easy Time to complete: 120 Walkthrough 1. Open for business! No answer needed!
-2. Let’s go on an adventure! Question #1: What’s the Administrator’s email address? =&gt; Answer: admin@juice-sh.op
-Question #2: What parameter is used for searching? =&gt; Answer: q
-Question #3: What show does Jim reference in his review? =&gt; Answer: Star Trek
-3. Inject the juice Question #1: Log into the administrator account! Using Burp Suite, change the email value to: &#34;&#39; OR 1=1 --&#34; and forward ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-21 09:32:03 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to TryHackMe - OWASP Juice Shop Room Walkthrough" href="http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -362,6 +363,8 @@ Question #3: What show does Jim reference in his review? =&gt; Answer: Star Trek
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/">DreamHack - Flask-Dev Web Challenge Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/">DreamHack - 거북이 Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/">DreamHack - I wish A grade Web Challenge Writeup</a></div>
@@ -369,8 +372,6 @@ Question #3: What show does Jim reference in his review? =&gt; Answer: Star Trek
         <div><a href="http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/">DreamHack - I LOVE XSS! Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/">DreamHack - Test site Web Challenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/">DreamHack - Special Letter Translator Web Challenge Writeup</a></div>
         
     </section>
 

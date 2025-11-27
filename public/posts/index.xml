@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Nov 2025 16:12:08 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 27 Nov 2025 09:54:30 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - Flask-Dev Web Challenge Writeup</title>
+      <link>http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/</link>
+      <pubDate>Thu, 27 Nov 2025 09:54:30 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/</guid>
+      <description>Find vulnerabilities and earn flags. Flags /flag can be obtained by running. This issue is for experienced web hackers.</description>
+    </item>
     <item>
       <title>DreamHack - 거북이 Web Challenge Writeup</title>
       <link>http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/</link>
