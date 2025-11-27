@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Nov 2025 15:15:11 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 25 Nov 2025 16:12:08 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - 거북이 Web Challenge Writeup</title>
+      <link>http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/</link>
+      <pubDate>Tue, 25 Nov 2025 16:12:08 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/</guid>
+      <description>I picked up the turtle in front of my house and put it in the fishing port, but the next day I saw it and it disappeared. “The fishing port is tall... how did they get out of it?”</description>
+    </item>
+    <item>
+      <title>DreamHack - I wish A grade Web Challenge Writeup</title>
+      <link>http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/</link>
+      <pubDate>Tue, 25 Nov 2025 15:45:16 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/</guid>
+      <description>I ruined the sociolinguistics exam... Somebody help me!! The flag format is 4TH3N3{...} Fixed a typo in the flag.</description>
+    </item>
     <item>
       <title>DreamHack - I LOVE XSS! Web Challenge Writeup</title>
       <link>http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/</link>

