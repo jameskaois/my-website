@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - KeyCat">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - KeyCat Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: KeyCat (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: KeyCat (web) Link: https://dreamhack.io/wargame/challenges/905 Level: 4 Date: 27-11-2025 Goal Leveraging the vulnerablilities to get 2 parts of the flag.
+My Solution Examining the code we can find 2 routes to get the flag which is /cat/flag and /cat/admin:
+router.get(&#39;/flag&#39;, Auth, (req, res) =&gt; { if (req.filename !== undefined &amp;&amp; req.filename.indexOf(FLAG_FILE_NAME) !== -1) { return res.status(200).send(`🙀🙀🙀🙀🙀🙀 ${FLAG_CONTENT_1}`); } else { return res.status(401).render(&#39;error&#39;, { img_path: &#39;/img/error.png&#39;, err_msg: &#39;Unauthorized...&#39;, }); } }); router.get(&#39;/admin&#39;, Auth, (req, res) =&gt; { if (req.username !== undefined &amp;&amp; req.username === &#39;cat_master&#39;) { return res.status(200).send(`Hello Cat Master😸 this is for you ${FLAG_CONTENT_2}`); } else { return res.status(403).send(&#34;Hello dreamhack! But I&#39;ve got nothing you want&#34;); } }); Now, let’s focus on getting the first part of the flag. It will check the req.filename with the variable FLAG_FILE_NAME, if we open the entrypoint.sh we should see how FLAG_FILE_NAME is created:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-27 16:26:15 +0700 +07'>November 27, 2025</span>&nbsp;·&nbsp;<span>6 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - KeyCat Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Flask-Dev">
 </figure>
   <header class="entry-header">
@@ -327,25 +346,6 @@ Find a user with admin rights! The user&#39;s password is a flag. The password f
   <footer class="entry-footer"><span title='2025-11-21 16:23:00 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Not-only Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - crack crack crack it">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: [wargame.kr] crack crack crack it (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: [wargame.kr] crack crack crack it (web) Link: https://dreamhack.io/wargame/challenges/330 Level: 2 Date: 21-11-2025 Goal Brute-force the password and get the flag.
-My Solution Based on the description:
-oops, i forgot my password!! somebody help me T_T (i remember that my password begin with &#39;G4HeulB&#39; and the other chars is composed of number, lower alphabet only..) notice: this .htaccess file is different each other IP Address. authentication have to be same ip plz, We can create our password generator with Python and use John-the-ripper to brute-force the password:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-21 15:04:03 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - [wargame.kr] crack crack crack it Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-wargame.kr-crack-crack-crack-it-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -363,6 +363,8 @@ oops, i forgot my password!! somebody help me T_T (i remember that my password b
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/">DreamHack - KeyCat Web Challenge Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/">DreamHack - Flask-Dev Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/">DreamHack - 거북이 Web Challenge Writeup</a></div>
@@ -370,8 +372,6 @@ oops, i forgot my password!! somebody help me T_T (i remember that my password b
         <div><a href="http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/">DreamHack - I wish A grade Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/">DreamHack - I LOVE XSS! Web Challenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/">DreamHack - Test site Web Challenge Writeup</a></div>
         
     </section>
 
