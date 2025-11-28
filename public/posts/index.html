@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - spring-view">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - spring-view Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: spring-view (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: spring-view (web) Link: https://dreamhack.io/wargame/challenges/99 Level: 4 Date: 28-11-2025 Goal Decompile the app.jar and leveraging SSTI to get the flag.
+My Solution Using Java Decompiler to decompile the app.jar we received this source code In UserController.class is where we have to examine to find the vulnerability:
+public class UserController { Logger log = LoggerFactory.getLogger(com.dreamhack.spring.UserController.class); @GetMapping({&#34;/&#34;}) public String index(@RequestParam(value = &#34;lang&#34;, required = false) String lang, Model model, HttpServletRequest request, HttpServletResponse response) { if (lang != null) { response.addCookie(new Cookie(&#34;lang&#34;, lang)); return &#34;redirect:/&#34;; } Cookie cookie_lang = WebUtils.getCookie(request, &#34;lang&#34;); if (cookie_lang == null) response.addCookie(new Cookie(&#34;lang&#34;, &#34;en&#34;)); model.addAttribute(&#34;message&#34;, &#34;Spring World !&#34;); return &#34;index&#34;; } @GetMapping({&#34;/welcome&#34;}) public String welcome(@CookieValue(value = &#34;lang&#34;, defaultValue = &#34;en&#34;) String lang) { return lang &#43; &#34;/welcome&#34;; } @GetMapping({&#34;/signup&#34;}) public String signup(@CookieValue(value = &#34;lang&#34;, defaultValue = &#34;en&#34;) String lang) { return lang &#43; &#34;/underconstruction&#34;; } @GetMapping({&#34;/signin&#34;}) public String signin(@CookieValue(value = &#34;lang&#34;, defaultValue = &#34;en&#34;) String lang) { return lang &#43; &#34;/underconstruction&#34;; } } We can see here all three routes /welcome, /signup and /signin all used the cookie lang value to render the template, here we can think of SSTI vulnerability.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-28 14:02:41 +0700 +07'>November 28, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - spring-view Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-spring-view-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - dreamschool">
 </figure>
   <header class="entry-header">
@@ -327,25 +346,6 @@ The app has a login form and there isn’t any credentials given, so tried some 
   <footer class="entry-footer"><span title='2025-11-24 10:34:41 +0700 +07'>November 24, 2025</span>&nbsp;·&nbsp;<span>5 min</span></footer>
   <a class="entry-link" aria-label="post link to Patriot CTF 2025 - Web Challenges Writeups" href="http://localhost:1313/posts/patriot-ctf-2025-web-challenges-writeups/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Black-Hacker-Company">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Black-Hacker-Company Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Black-Hacker-Company (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Black-Hacker-Company (web) Link: https://dreamhack.io/wargame/challenges/1834 Level: 2 Date: 22-11-2025 Goal Bypass filter and leveraging SSRF to get the flag.
-My Solution The app.py is simple with three routes:
-@app.route(&#39;/user-page&#39;, methods=[&#39;GET&#39;]) def user(): url = request.args.get(&#39;url&#39;) if not url: return jsonify({&#34;swap&#34;: &#34;Write URL&#34;}), 400 if not any(allow in url for allow in ALLOW_HOST): return jsonify({&#34;swap&#34;: &#34;URL not allowed&#34;}), 403 for bad in BLACK_LIST: if bad in url.lower(): return jsonify({&#34;swap&#34;: &#34;BAN LIST&#34;}), 403 try: result = subprocess.run( [&#34;curl&#34;, &#34;-s&#34;, url], text=True, capture_output=True, check=True ) return jsonify({&#34;response&#34;: result.stdout}) except subprocess.CalledProcessError as e: return jsonify({&#34;swap&#34;: &#34;Error!~&#34;, &#34;details&#34;: str(e)}), 500 @app.route(&#39;/access-token&#39;, methods=[&#39;GET&#39;]) def admin(): if request.remote_addr in [&#34;127.0.0.1&#34;]: password = request.args.get(&#34;password&#34;) if password: if password == PASSWORD: return jsonify({&#34;server&#34;: TOKEN}), 200 else: return jsonify({&#34;server&#34;: &#34;Nop~ Password Wrong&gt;&lt;&#34;}), 403 else: return jsonify({&#34;server&#34;: &#34;Write Password!&#34;}), 400 else: return jsonify({&#34;server&#34;: &#34;Only Localhost Can Access : )&#34;}), 403 @app.route(&#39;/admin&#39;, methods=[&#39;GET&#39;]) def check(): if request.args.get(&#34;token&#34;) == TOKEN: return &#34;&lt;h1&gt;dotori-company : $#@&amp;*(@#&amp;*(@)) BeePPP.. &lt;/h1&gt;&#34; &#43; FLAG else: return jsonify({&#34;server&#34;: &#34;you are not admin...&#34;}), 403 The /access-token will check our given password and if correct it will returned token which will be used to get the flag in /admin. However, /access-token just accepts request from 127.0.0.1 IP so we have to use the /user-page. The filter:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-22 09:41:11 +0700 +07'>November 22, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Black-Hacker-Company Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -363,6 +363,8 @@ My Solution The app.py is simple with three routes:
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-spring-view-web-challenge-writeup/">DreamHack - spring-view Web Challenge Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/">DreamHack - dreamschool Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/">DreamHack - KeyCat Web Challenge Writeup</a></div>
@@ -370,8 +372,6 @@ My Solution The app.py is simple with three routes:
         <div><a href="http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/">DreamHack - Flask-Dev Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/">DreamHack - 거북이 Web Challenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/">DreamHack - I wish A grade Web Challenge Writeup</a></div>
         
     </section>
 
