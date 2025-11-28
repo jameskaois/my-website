@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - dreamschool">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">DreamHack - dreamschool Web Challenge Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: dreamschool (Web)
+Metadata Author: jameskaois CTF: DreamHack Challenge: dreamschool (web) Link: https://dreamhack.io/wargame/challenges/259 Level: 7 Date: 28-11-2025 Goal Examining the code, leveraging SSTI, brute-forcing the secret board id and get the flag.
+My Solution The app is a complicated one, but it is vulnerable to SSTI related to error handling I suggest you examining the code and force the app returns the config of the app.
+From this you can get 2 important variables AUTH_PUBLIC_KEY and FLAG_SCHOOL. You will take this and create the JWT, since the app is using PyJWT==1.7.1, this library JWT is vulnerable to algorithm confusion, so we can force the server to decode a token using HS256. With this code:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-28 09:11:35 +0700 +07'>November 28, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to DreamHack - dreamschool Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - KeyCat">
 </figure>
   <header class="entry-header">
@@ -327,25 +346,6 @@ My Solution The app.py is simple with three routes:
   <footer class="entry-footer"><span title='2025-11-22 09:41:11 +0700 +07'>November 22, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Black-Hacker-Company Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-black-hacker-company-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Not-only">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Not-only Web Challenge Write-up
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Not-only (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Not-only (web) Link: https://dreamhack.io/wargame/challenges/1619 Level: 2 Date: 21-11-2025 Goal Find the correct user and brute-force the password to get the flag.
-My Solution Based on the description:
-Find a user with admin rights! The user&#39;s password is a flag. The password format is a string containing numbers, uppercase and lowercase letters, and special characters. { } How many admin users are there? The flag format is DH{} We have some details. We have to:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-21 16:23:00 +0700 +07'>November 21, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Not-only Web Challenge Write-up" href="http://localhost:1313/posts/dreamhack-not-only-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -363,6 +363,8 @@ Find a user with admin rights! The user&#39;s password is a flag. The password f
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/">DreamHack - dreamschool Web Challenge Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/">DreamHack - KeyCat Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/">DreamHack - Flask-Dev Web Challenge Writeup</a></div>
@@ -370,8 +372,6 @@ Find a user with admin rights! The user&#39;s password is a flag. The password f
         <div><a href="http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/">DreamHack - 거북이 Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/">DreamHack - I wish A grade Web Challenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/">DreamHack - I LOVE XSS! Web Challenge Writeup</a></div>
         
     </section>
 

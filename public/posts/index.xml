@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Nov 2025 16:26:15 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 28 Nov 2025 09:11:35 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DreamHack - dreamschool Web Challenge Writeup</title>
+      <link>http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/</link>
+      <pubDate>Fri, 28 Nov 2025 09:11:35 +0700</pubDate>
+      <guid>http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/</guid>
+      <description>dreamschool, a school community for all schools around the world Hello! I am DreamSchool, which manages a community for all schools from elementary school to university 💙 I heard that something strange is happening on Dream University&amp;#39;s secret bulletin board, but the board is locked, so I can&amp;#39;t even see it as an administrator 😢 Be sure to find out what&amp;#39;s happening at Dream University!</description>
+    </item>
     <item>
       <title>DreamHack - KeyCat Web Challenge Writeup</title>
       <link>http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/</link>
