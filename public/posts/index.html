@@ -159,6 +159,24 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-championship-2025-cover.jpeg" alt="WannaGame Championship CTF 2025 longtrip Web Writeup">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WannaGame Championship CTF 2025 longtrip Web Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: longtrip (Web)
+Metadata Author: jameskaois CTF: WannaGame Championship CTF 2025 Challenge: longtrip (web) Target / URL: https://ctf.cnsc.com.vn/games/1/challenges?challenge=24 Points: 947 Solved: 6 Date: 10-12-2025 Goal Enjoying the longtrip and get the flag.
+My Solution The challenge comes with no source code, visit the home page: Doing some enumeration steps with dirsearch, found /login page, login with admin:1234 as in description, found a XML Parser tool, tried using the template to see how it works:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-16 15:57:02 +0700 +07'>December 16, 2025</span>&nbsp;·&nbsp;<span>6 min</span></footer>
+  <a class="entry-link" aria-label="post link to WannaGame Championship CTF 2025 longtrip Web Writeup" href="http://localhost:1313/posts/wannagame-championship-ctf-2025-longtrip-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-championship-2025-cover.jpeg" alt="WannaGame Championship CTF 2025 CTFguideline Web Writeup">
 </figure>
   <header class="entry-header">
@@ -328,24 +346,6 @@ import bleach ALLOWED_TAGS = [&#39;script&#39;] #I only love script tags! ALLOWE
   <footer class="entry-footer"><span title='2025-11-25 15:15:11 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - I LOVE XSS! Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Test site">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Test site Web Challenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Test site (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Test site (web) Link: https://dreamhack.io/wargame/challenges/2064 Level: 2 Date: 25-11-2025 Goal My Solution To get the flag in /flag we have to be the admin to get access to /admin however we’re still not the admin now, and the setcookie and readcookie is hidden:
-# def setcookie(id_str): # The code for this function is hidden # def readcookie(cookie_str): # The code for this function is hidden We can just blind testing to get admin role. There is a vulnerable in /logintest route:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-25 14:53:54 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Test site Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -363,6 +363,8 @@ Metadata Author: jameskaois CTF: DreamHack Challenge: Test site (web) Link: http
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-longtrip-writeup/">WannaGame Championship CTF 2025 longtrip Web Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-ctfguideline-writeup/">WannaGame Championship CTF 2025 CTFguideline Web Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-trust-web-writeup/">WannaGame Championship CTF 2025 Trust Web Writeup</a></div>
@@ -370,8 +372,6 @@ Metadata Author: jameskaois CTF: DreamHack Challenge: Test site (web) Link: http
         <div><a href="http://localhost:1313/posts/dreamhack-spring-view-web-challenge-writeup/">DreamHack - spring-view Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/">DreamHack - dreamschool Web Challenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/">DreamHack - KeyCat Web Challenge Writeup</a></div>
         
     </section>
 
