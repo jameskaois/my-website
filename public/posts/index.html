@@ -159,6 +159,25 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-championship-2025-cover.jpeg" alt="WannaGame Championship CTF 2025 CTFguideline Web Writeup">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WannaGame Championship CTF 2025 CTFguideline Web Writeup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Room / Challenge: CTFguideline (Web)
+Metadata Author: jameskaois CTF: WannaGame Championship CTF 2025 Challenge: CTFguideline (web) Target / URL: https://ctf.cnsc.com.vn/games/1/challenges?challenge=23 Points: 967 Solved: 5 Date: 09-12-2025 Goal Leveraging the Race Condition XSS in the home page, submit to the bot to get the flag.
+My Solution Visit the home page and view the page source we should find the script.js which is the main script for the page:
+/* ============================================================ Load config ============================================================ */ var config; fetch(&#39;config.json&#39;) .then(resp =&gt; resp.json()) .then(async resp =&gt; { config = resp; document.body.style.backgroundColor = config.background; document.body.style.color = config.text_color; await loadContentsList(config); if (location.hash.length &gt; 0) (config.skin = &#39;Pane&#39;), initPane(config); else { const url = new URL(location.href); if (url.searchParams.get(&#39;doc&#39;)) (config.skin = &#39;Modern&#39;), initModern(config); else (config.skin = &#39;Default&#39;), initDefault(config); } }); if (location.hash.length &gt; 0) { sanitizeHash(); window.onhashchange = () =&gt; loadPaneContent(config); } /* ============================================================ Build navigation list ============================================================ */ async function loadContentsList(config) { const nav = document.getElementById(&#39;nav&#39;); nav.innerHTML = &#39;&#39;; config.contents.forEach(file =&gt; { const name = file.replace(&#39;.html&#39;, &#39;&#39;); nav.innerHTML &#43;= ` &lt;li&gt;&lt;a href=&#34;#&#34; class=&#34;nav-item&#34; data-file=&#34;${file}&#34;&gt;${name}&lt;/a&gt;&lt;/li&gt; `; }); attachNavHandlers(config); } /* ============================================================ Navigation Handlers ============================================================ */ function attachNavHandlers(config) { document.querySelectorAll(&#39;.nav-item&#39;).forEach(item =&gt; { item.addEventListener(&#39;click&#39;, e =&gt; { e.preventDefault(); const file = item.getAttribute(&#39;data-file&#39;); if (config.skin === &#39;Pane&#39;) { location.hash = file; // Pane uses hash } else if (config.skin === &#39;Default&#39;) { loadDefault(file); } else if (config.skin === &#39;Modern&#39;) { const url = new URL(location.href); url.searchParams.set(&#39;doc&#39;, file); location.href = url.toString(); } }); }); } /* ============================================================ Pane Theme — 3 Panel View ============================================================ */ function initPane(config) { hideAllViewers(); document.body.classList.add(&#39;pane&#39;); document.getElementById(&#39;viewerLeft&#39;).style.display = &#39;block&#39;; document.getElementById(&#39;viewerCenter&#39;).style.display = &#39;block&#39;; document.getElementById(&#39;viewerRight&#39;).style.display = &#39;block&#39;; loadPaneContent(config); } function sanitizeHash() { currentHash = location.hash.substring(1); if (currentHash) { var decodedHash = decodeURIComponent(currentHash); var sanitizedHash = decodedHash.replace(/(javascript:|data:|[&lt;&gt;])/gi, &#39;&#39;); if (decodedHash != sanitizedHash) { document.location.hash = encodeURI(sanitizedHash); } } } function loadPaneContent(config) { sanitizeHash(); let file = location.hash.substring(1) || config.default; if (file) { document.getElementById( &#39;viewerLeft&#39;, ).innerHTML = `&lt;h2&gt;Overview&lt;/h2&gt;&lt;p&gt;You selected: ${encodeURIComponent(file)}&lt;/p&gt;`; url = new URL(location.href); if (config) { if (!config.load_remote) { file = &#39;contents/&#39; &#43; file; } else { if (!file.startsWith(&#39;http://&#39;) &amp;&amp; !file.startsWith(&#39;https://&#39;)) file = url.origin &#43; url.pathname &#43; &#39;/contents&#39; &#43; file; } } document.getElementById(&#39;viewerCenter&#39;).contentWindow.location.replace(decodeURI(file)); document.getElementById(&#39;viewerRight&#39;).innerHTML = `&lt;h2&gt;Extras&lt;/h2&gt;&lt;p&gt;Copyright.&lt;/p&gt;`; } } /* ============================================================ Default Theme ============================================================ */ function initDefault(config) { hideAllViewers(); document.body.classList.add(&#39;default&#39;); document.getElementById(&#39;viewer&#39;).style.display = &#39;block&#39;; loadDefault(config.default); } async function loadDefault(file) { const text = await fetch(&#39;contents/&#39; &#43; file).then(r =&gt; r.text()); document.getElementById(&#39;viewer&#39;).innerHTML = text; } /* ============================================================ Modern Theme ============================================================ */ function initModern(config) { hideAllViewers(); document.body.classList.add(&#39;modern&#39;); document.getElementById(&#39;viewer&#39;).style.display = &#39;block&#39;; const params = new URLSearchParams(location.search); const doc = params.get(&#39;doc&#39;) || config.default; loadModern(doc); } async function loadModern(file) { const text = await fetch(&#39;contents/&#39; &#43; file).then(r =&gt; r.text()); document.getElementById(&#39;viewer&#39;).innerHTML = `&lt;div class=&#34;modern-card&#34;&gt;${text}&lt;/div&gt;`; } /* ============================================================ Helpers ============================================================ */ function hideAllViewers() { document.querySelectorAll(&#39;#viewer, .pane-panel&#39;).forEach(el =&gt; { el.style.display = &#39;none&#39;; }); } Also, from this we can find the config.json:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-16 15:54:42 +0700 +07'>December 16, 2025</span>&nbsp;·&nbsp;<span>4 min</span></footer>
+  <a class="entry-link" aria-label="post link to WannaGame Championship CTF 2025 CTFguideline Web Writeup" href="http://localhost:1313/posts/wannagame-championship-ctf-2025-ctfguideline-writeup/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-championship-2025-cover.jpeg" alt="WannaGame Championship CTF 2025 Trust Web Writeup">
 </figure>
   <header class="entry-header">
@@ -327,24 +346,6 @@ Metadata Author: jameskaois CTF: DreamHack Challenge: Test site (web) Link: http
   <footer class="entry-footer"><span title='2025-11-25 14:53:54 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Test site Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-test-site-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Special Letter Translator">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Special Letter Translator Web Challenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Goal Gaining privileges and leveraging RCE to get the flag.
-My Solution Based on the description and the source code the first thing we have to do is gain VIP role, the SECRET_KEY in app.py:
-SECRET_KEY = &#34;SECRET_KEY&#34; Try logged in as guest with password guest check this is the wrong secret key, then we have to brute-force the secret key in order to create our own JWT token, my brute-force Python script:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-24 21:47:12 +0700 +07'>November 24, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Special Letter Translator Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-special-letter-translator-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -362,6 +363,8 @@ SECRET_KEY = &#34;SECRET_KEY&#34; Try logged in as guest with password guest che
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-ctfguideline-writeup/">WannaGame Championship CTF 2025 CTFguideline Web Writeup</a></div>
+        
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-trust-web-writeup/">WannaGame Championship CTF 2025 Trust Web Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-spring-view-web-challenge-writeup/">DreamHack - spring-view Web Challenge Writeup</a></div>
@@ -369,8 +372,6 @@ SECRET_KEY = &#34;SECRET_KEY&#34; Try logged in as guest with password guest che
         <div><a href="http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/">DreamHack - dreamschool Web Challenge Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/">DreamHack - KeyCat Web Challenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/">DreamHack - Flask-Dev Web Challenge Writeup</a></div>
         
     </section>
 
