@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Dec 2025 15:57:02 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Dec 2025 15:27:41 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe - Solar, exploiting log4j Room Walkthrough</title>
+      <link>http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/</link>
+      <pubDate>Thu, 18 Dec 2025 15:27:41 +0700</pubDate>
+      <guid>http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/</guid>
+      <description>Explore CVE-2021-44228, a vulnerability in log4j affecting almost all software under the sun.</description>
+    </item>
     <item>
       <title>WannaGame Championship CTF 2025 longtrip Web Writeup</title>
       <link>http://localhost:1313/posts/wannagame-championship-ctf-2025-longtrip-writeup/</link>

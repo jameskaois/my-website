@@ -159,6 +159,24 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/tryhackme-cove.png" alt="TryHackMe Solar, exploiting log4j">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TryHackMe - Solar, exploiting log4j Room Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview Room URL: https://tryhackme.com/room/solar Difficulty: Medium Time to complete: 60 Walkthrough 1. CVE-2021-44228 Introduction No answer needed!
+2. Reconnaissance What service is running on port 8983? (Just the name of the software)
+nmap -sV -p 8983 &lt;MACHINE_IP&gt; =&gt; Answer: Apache Solr
+3. Discovery Take a close look at the first page visible when navigating to http://MACHINE_IP:8983. You should be able to see clear indicators that log4j is in use within the application for logging activity. What is the -Dsolr.log.dir argument set to, displayed on the front page? ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-18 15:27:41 +0700 +07'>December 18, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
+  <a class="entry-link" aria-label="post link to TryHackMe - Solar, exploiting log4j Room Walkthrough" href="http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/wannagame-championship-2025-cover.jpeg" alt="WannaGame Championship CTF 2025 longtrip Web Writeup">
 </figure>
   <header class="entry-header">
@@ -326,26 +344,6 @@ My Solution Based on the readme.txt got we can tried logging in as 202511037 to 
   <footer class="entry-footer"><span title='2025-11-25 15:45:16 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - I wish A grade Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - I LOVE XSS!">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - I LOVE XSS! Web Challenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: I LOVE XSS! (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: I LOVE XSS! (web) Link: https://dreamhack.io/wargame/challenges/2061 Level: 2 Date: 25-11-2025 Goal Leveraging XSS Scriptin to get the flag.
-My Solution The app has a banned list for XSS Scripting:
-banlist = [&#34;`&#34;,&#34;&#39;&#34;,&#34;alert(&#34;,&#34;fetch(&#34;,&#34;replace(&#34;,&#34;[&#34;,&#34;]&#34;,&#34;javascript&#34;,&#34;@&#34;,&#34;!&#34;,&#34;%&#34;,&#34;location&#34;,&#34;href&#34;,&#34;window&#34;,&#34;eval&#34;] Also in sanitizer.py it do allow &lt;script&gt; tag however no any attributes is allowed:
-import bleach ALLOWED_TAGS = [&#39;script&#39;] #I only love script tags! ALLOWED_ATTRIBUTES = {} ALLOWED_PROTOCOLS = [&#39;http&#39;, &#39;https&#39;] def sanitize_input(user_input: str) -&gt; str: return bleach.clean( user_input, tags=ALLOWED_TAGS, attributes=ALLOWED_ATTRIBUTES, protocols=ALLOWED_PROTOCOLS, strip=True, strip_comments=True ) Initially, I create a payload:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-25 15:15:11 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - I LOVE XSS! Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-i-love-xss-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -363,6 +361,8 @@ import bleach ALLOWED_TAGS = [&#39;script&#39;] #I only love script tags! ALLOWE
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/">TryHackMe - Solar, exploiting log4j Room Walkthrough</a></div>
+        
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-longtrip-writeup/">WannaGame Championship CTF 2025 longtrip Web Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-ctfguideline-writeup/">WannaGame Championship CTF 2025 CTFguideline Web Writeup</a></div>
@@ -370,8 +370,6 @@ import bleach ALLOWED_TAGS = [&#39;script&#39;] #I only love script tags! ALLOWE
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-trust-web-writeup/">WannaGame Championship CTF 2025 Trust Web Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/dreamhack-spring-view-web-challenge-writeup/">DreamHack - spring-view Web Challenge Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/">DreamHack - dreamschool Web Challenge Writeup</a></div>
         
     </section>
 
