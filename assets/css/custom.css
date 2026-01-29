@@ -146,7 +146,7 @@ body {
     justify-content: center;
     transition: color ease 0.3s;
     margin-right: 12px;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .sidebar-footer a:hover {
@@ -346,7 +346,9 @@ body {
     padding: 28px 28px 20px;
     color: #868686;
     position: relative;
-    box-shadow: rgb(21, 21, 21, 0.72) 0 6px 18px 0, rgb(137, 135, 135, 0.24) 0 0 0 1px;
+    box-shadow:
+        rgb(21, 21, 21, 0.72) 0 6px 18px 0,
+        rgb(137, 135, 135, 0.24) 0 0 0 1px;
     overflow: hidden;
 }
 
@@ -732,7 +734,9 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
     z-index: 1000;
     border: 1px solid #212122;
 }
@@ -768,7 +772,9 @@ body {
     border-radius: 10px;
     padding: 16px;
     transition: background-color 0.35s ease-in-out;
-    box-shadow: rgb(21, 21, 21, 0.72) 0 6px 18px 0, rgb(137, 135, 135, 0.24) 0 0 0 1px;
+    box-shadow:
+        rgb(21, 21, 21, 0.72) 0 6px 18px 0,
+        rgb(137, 135, 135, 0.24) 0 0 0 1px;
 }
 
 .post-single .related-item::before {

@@ -1,4 +1,5 @@
 ---
 title: 'Portfolio'
-date: 2025-09-01
+type: 'portfolio'
+layout: 'custom'
 ---
