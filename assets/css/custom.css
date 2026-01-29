@@ -1,3 +1,7 @@
+:root {
+    --primary-color: #d2603a;
+}
+
 html {
     width: 100vw;
     min-height: 100vh;
@@ -1164,4 +1168,9 @@ body {
 .category li a:hover {
     color: #d2603a;
     text-decoration: underline;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
 }

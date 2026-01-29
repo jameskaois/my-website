@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Dec 2025 15:27:41 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jan 2026 08:56:41 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSL CTF 2026 Web Writeups</title>
+      <link>http://localhost:1313/posts/vsl-ctf-2026-web-writeups/</link>
+      <pubDate>Thu, 29 Jan 2026 08:56:41 +0700</pubDate>
+      <guid>http://localhost:1313/posts/vsl-ctf-2026-web-writeups/</guid>
+      <description>My writeup for web challs in VSL CTF 2026</description>
+    </item>
     <item>
       <title>TryHackMe - Solar, exploiting log4j Room Walkthrough</title>
       <link>http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/</link>

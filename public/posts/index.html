@@ -28,7 +28,7 @@
         }
 
     </style>
-</noscript><link rel="stylesheet" href="/css/custom.min.63fa54a2907ef17de5b711b6a3bfab36f6c57ca719c46ce6516cfd0d8ee7b452.css" />
+</noscript><link rel="stylesheet" href="/css/custom.min.51a97c46672476b40b99565ed5570b33a6abd9e49c9b8310550bbae4320b5a29.css" />
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -156,6 +156,28 @@
     Posts
   </h1>
 </header>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/vsl-ctf-2026-cover.jpg" alt="VSL CTF 2026 Web Writeups">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">VSL CTF 2026 Web Writeups
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Contribution Contribution Contribution Contribution
+mrGraph Goal
+Leveraging the GraphQL Injection to get the flag in the database.
+My Solution
+The new intern made a website, there must be vulnerability. Examining sources of available pages, we can find a route that we can take advantage of /api/graphql (visible in /users route).
+In order to know all the schemas existed in the database, run this in the Console tab of browser:
+fetch(&#39;/api/graphql&#39;, { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: JSON.stringify({ query: ` query { __schema { types { name fields { name } } } }`, }), }) .then(response =&gt; response.json()) .then(data =&gt; { console.log(JSON.stringify(data, null, 2)); }); Got a really suspicious postPassword field:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-29 08:56:41 +0700 +07'>January 29, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to VSL CTF 2026 Web Writeups" href="http://localhost:1313/posts/vsl-ctf-2026-web-writeups/"></a>
+</article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
@@ -326,24 +348,6 @@ if (f.filename or &#34;&#34;).lower().endswith(&#34;.zip&#34;) or &#34;zip&#34; 
   <footer class="entry-footer"><span title='2025-11-25 16:12:08 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - 거북이 Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - I wish A grade">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - I wish A grade Web Challenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: I wish A grade (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: I wish A grade (web) Link: https://dreamhack.io/wargame/challenges/2380 Level: 2 Date: 25-11-2025 Goal Follow the hints, leverage SQL Injection to get the flag.
-My Solution Based on the readme.txt got we can tried logging in as 202511037 to see what we got. After some time examining the website, I found a hidden announcements which is in /announce/1:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-25 15:45:16 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - I wish A grade Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-i-wish-a-grade-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -361,6 +365,8 @@ My Solution Based on the readme.txt got we can tried logging in as 202511037 to 
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/vsl-ctf-2026-web-writeups/">VSL CTF 2026 Web Writeups</a></div>
+        
         <div><a href="http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/">TryHackMe - Solar, exploiting log4j Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-longtrip-writeup/">WannaGame Championship CTF 2025 longtrip Web Writeup</a></div>
@@ -368,8 +374,6 @@ My Solution Based on the readme.txt got we can tried logging in as 202511037 to 
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-ctfguideline-writeup/">WannaGame Championship CTF 2025 CTFguideline Web Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-trust-web-writeup/">WannaGame Championship CTF 2025 Trust Web Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/dreamhack-spring-view-web-challenge-writeup/">DreamHack - spring-view Web Challenge Writeup</a></div>
         
     </section>
 
@@ -387,7 +391,7 @@ My Solution Based on the readme.txt got we can tried logging in as 202511037 to 
         <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/blog/"> Blog </a>
-                           
+                             
     </section>
 
     <section id="post-content">
