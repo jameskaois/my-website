@@ -11,8 +11,17 @@
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Jan 2026 08:56:41 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 13:03:22 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)</title>
+      <link>http://localhost:1313/posts/case-study-pre-authentication-rce-in-koacook-order-online-system-cve-2025-55182/</link>
+      <pubDate>Sat, 21 Mar 2026 13:03:22 +0700</pubDate>
+      <guid>http://localhost:1313/posts/case-study-pre-authentication-rce-in-koacook-order-online-system-cve-2025-55182/</guid>
+      <description>&lt;h2 id=&#34;executive-summary&#34;&gt;Executive Summary&lt;/h2&gt;
+&lt;p&gt;While performing a white-box security audit of a legacy internal application, I identified a critical, pre-authentication Remote Code Execution (RCE) vulnerability stemming from the unsafe deserialization of payloads within the React Server Components (RSC) transport protocol, commonly referred to as the Flight protocol. This vulnerability is tracked as &lt;strong&gt;CVE-2025-55182&lt;/strong&gt;, colloquially known as &lt;strong&gt;React2Shell&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I have responsibly disclosed the finding and patched the application by upgrading the vulnerable dependencies (react, react-dom, and next). This post details the technical mechanics of the exploit, provides a sanitized Proof of Concept (PoC), and illustrates the remediation path.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>VSL CTF 2026 Web Writeups</title>
       <link>http://localhost:1313/posts/vsl-ctf-2026-web-writeups/</link>

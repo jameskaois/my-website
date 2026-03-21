@@ -28,7 +28,7 @@
         }
 
     </style>
-</noscript><link rel="stylesheet" href="/css/custom.min.51a97c46672476b40b99565ed5570b33a6abd9e49c9b8310550bbae4320b5a29.css" />
+</noscript><link rel="stylesheet" href="/css/custom.min.3bd238e71479465d15065fd6c79eb812502e44fbd5e30c10fec6687af48a8998.css" />
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -159,6 +159,23 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Pre-Authentication RCE in KoaCook Order Online System">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Executive Summary While performing a white-box security audit of a legacy internal application, I identified a critical, pre-authentication Remote Code Execution (RCE) vulnerability stemming from the unsafe deserialization of payloads within the React Server Components (RSC) transport protocol, commonly referred to as the Flight protocol. This vulnerability is tracked as CVE-2025-55182, colloquially known as React2Shell.
+I have responsibly disclosed the finding and patched the application by upgrading the vulnerable dependencies (react, react-dom, and next). This post details the technical mechanics of the exploit, provides a sanitized Proof of Concept (PoC), and illustrates the remediation path.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-21 13:03:22 +0700 +07'>March 21, 2026</span>&nbsp;·&nbsp;<span>3 min</span></footer>
+  <a class="entry-link" aria-label="post link to Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)" href="http://localhost:1313/posts/case-study-pre-authentication-rce-in-koacook-order-online-system-cve-2025-55182/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/vsl-ctf-2026-cover.jpg" alt="VSL CTF 2026 Web Writeups">
 </figure>
   <header class="entry-header">
@@ -166,8 +183,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Contribution Contribution Contribution Contribution
-mrGraph Goal
+    <p>mrGraph Goal
 Leveraging the GraphQL Injection to get the flag in the database.
 My Solution
 The new intern made a website, there must be vulnerability. Examining sources of available pages, we can find a route that we can take advantage of /api/graphql (visible in /users route).
@@ -175,7 +191,7 @@ In order to know all the schemas existed in the database, run this in the Consol
 fetch(&#39;/api/graphql&#39;, { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: JSON.stringify({ query: ` query { __schema { types { name fields { name } } } }`, }), }) .then(response =&gt; response.json()) .then(data =&gt; { console.log(JSON.stringify(data, null, 2)); }); Got a really suspicious postPassword field:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-01-29 08:56:41 +0700 +07'>January 29, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <footer class="entry-footer"><span title='2026-01-29 08:56:41 +0700 +07'>January 29, 2026</span>&nbsp;·&nbsp;<span>9 min</span></footer>
   <a class="entry-link" aria-label="post link to VSL CTF 2026 Web Writeups" href="http://localhost:1313/posts/vsl-ctf-2026-web-writeups/"></a>
 </article>
 
@@ -329,25 +345,6 @@ RUN gcc /app/flag.c -o /flag \ &amp;&amp; chmod 111 /flag &amp;&amp; rm /app/fla
   <footer class="entry-footer"><span title='2025-11-27 09:54:30 +0700 +07'>November 27, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - Flask-Dev Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - 거북이">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - 거북이 Web Challenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: 거북이 (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: 거북이 (web) Link: https://dreamhack.io/wargame/challenges/2194 Level: 2 Date: 25-11-2025 Goal Leveraging Zip Slip vulnerability and get the flag.
-My Solution The app is vulnerable to Zip Slip vulnerability, the vulnerable block of code in /upload:
-if (f.filename or &#34;&#34;).lower().endswith(&#34;.zip&#34;) or &#34;zip&#34; in (f.content_type or &#34;&#34;).lower(): data = f.read() zf = zipfile.ZipFile(io.BytesIO(data)) names = [] for info in zf.infolist(): target = UPLOAD_DIR / info.filename # &lt;--- VULNERABLE CODE HERE if info.is_dir(): target.mkdir(parents=True, exist_ok=True) else: target.parent.mkdir(parents=True, exist_ok=True) with zf.open(info) as src, open(target, &#34;wb&#34;) as dst: shutil.copyfileobj(src, dst) names.append(info.filename) return jsonify(ok=True, saved=names) The app doesn’t have any filetering or sanitizing so if we upload with a file with name ../templates/test.html, it will replace the test.html in templates folder with our file, then since this is a Flask app, we can use SSTI to get the flag content.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-25 16:12:08 +0700 +07'>November 25, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - 거북이 Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-%EA%B1%B0%EB%B6%81%EC%9D%B4-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -365,6 +362,8 @@ if (f.filename or &#34;&#34;).lower().endswith(&#34;.zip&#34;) or &#34;zip&#34; 
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/case-study-pre-authentication-rce-in-koacook-order-online-system-cve-2025-55182/">Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)</a></div>
+        
         <div><a href="http://localhost:1313/posts/vsl-ctf-2026-web-writeups/">VSL CTF 2026 Web Writeups</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/">TryHackMe - Solar, exploiting log4j Room Walkthrough</a></div>
@@ -372,8 +371,6 @@ if (f.filename or &#34;&#34;).lower().endswith(&#34;.zip&#34;) or &#34;zip&#34; 
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-longtrip-writeup/">WannaGame Championship CTF 2025 longtrip Web Writeup</a></div>
         
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-ctfguideline-writeup/">WannaGame Championship CTF 2025 CTFguideline Web Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-trust-web-writeup/">WannaGame Championship CTF 2025 Trust Web Writeup</a></div>
         
     </section>
 
@@ -391,7 +388,7 @@ if (f.filename or &#34;&#34;).lower().endswith(&#34;.zip&#34;) or &#34;zip&#34; 
         <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/blog/"> Blog </a>
-                             
+                               
     </section>
 
     <section id="post-content">
