@@ -7,31 +7,35 @@ This is the source code for my personal website, built with [Hugo](https://gohug
 ---
 
 ## ✨ About
+
 This site is where I write about:
+
 - Cybersecurity (CTFs, OverTheWire, tools, tips)
 - Tech & programming
-- My personal journey in learning and building projects  
+- My personal journey in learning and building projects
 
 I also use it as my online space to experiment with web design and share resources I find useful.
 
 ---
 
 ## 🎨 Features
+
 - Dark cyber-styled theme
-- Responsive design for all devices  
-- Blog posts with covers, categories, tags, breadcrumbs, related posts  
-- SEO ready (sitemap, robots.txt, OpenGraph, Twitter cards)  
-- RSS feed  
-- Custom domain with GitHub Pages  
+- Responsive design for all devices
+- Blog posts with covers, categories, tags, breadcrumbs, related posts
+- SEO ready (sitemap, robots.txt, OpenGraph, Twitter cards)
+- RSS feed
+- Custom domain with GitHub Pages
 
 ---
 
 ## 👤 Author
-**James Cao**  
 
-- 🌐 [jameskaois.com](https://jameskaois.com)  
-- 🐦 [Twitter](https://x.com/jameskaois)  
-- 💼 [LinkedIn](https://www.linkedin.com/in/hpcao299)  
+**James Cao**
+
+- 🌐 [jameskaois.com](https://jameskaois.com)
+- 🐦 [Twitter](https://x.com/jameskaois)
+- 💼 [LinkedIn](https://www.linkedin.com/in/jameskaois)
 
 ---
 
