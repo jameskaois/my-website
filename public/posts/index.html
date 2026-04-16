@@ -159,6 +159,21 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/hackthebox-facts-cover.png" alt="HackTheBox Facts Cover">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Hackthebox Facts Machine Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Reconnaissance &amp; Enumeration User Flag Root Flag</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-16 14:01:07 +0700 +07'>April 16, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+  <a class="entry-link" aria-label="post link to Hackthebox Facts Machine Walkthrough" href="http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/posts/hackthebox-silentium-cover.png" alt="HackTheBox Silentium Cover">
 </figure>
   <header class="entry-header">
@@ -167,9 +182,11 @@
   </header>
   <div class="entry-content">
     <p>Reconnaissance &amp; Enumeration Doing simple nmap command:
-nmap -v -sV &lt;MACHINE_IP&gt; User Flag Root Flag</p>
+nmap -v -sV &lt;MACHINE_IP&gt; The server has 2 ports http and ssh, visit the website I couldn’t get anything useful the only thing is I found 3 leadership users, which may be used to gain access through ssh:
+I brute-force the domain in order to see I got anything useful:
+ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://silentium.htb -H &#34;Host: FUZZ.silentium.htb&#34; -fs 8753 &gt; result.txt cat result.txt | grep &#34;Status: 200&#34; ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-04-15 17:06:19 +0700 +07'>April 15, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+  <footer class="entry-footer"><span title='2026-04-15 17:06:19 +0700 +07'>April 15, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to HackTheBox Silentium Machine Walkthrough" href="http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/"></a>
 </article>
 
@@ -322,25 +339,6 @@ From this you can get 2 important variables AUTH_PUBLIC_KEY and FLAG_SCHOOL. You
   <footer class="entry-footer"><span title='2025-11-28 09:11:35 +0700 +07'>November 28, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - dreamschool Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - KeyCat">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - KeyCat Web Challenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: KeyCat (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: KeyCat (web) Link: https://dreamhack.io/wargame/challenges/905 Level: 4 Date: 27-11-2025 Goal Leveraging the vulnerablilities to get 2 parts of the flag.
-My Solution Examining the code we can find 2 routes to get the flag which is /cat/flag and /cat/admin:
-router.get(&#39;/flag&#39;, Auth, (req, res) =&gt; { if (req.filename !== undefined &amp;&amp; req.filename.indexOf(FLAG_FILE_NAME) !== -1) { return res.status(200).send(`🙀🙀🙀🙀🙀🙀 ${FLAG_CONTENT_1}`); } else { return res.status(401).render(&#39;error&#39;, { img_path: &#39;/img/error.png&#39;, err_msg: &#39;Unauthorized...&#39;, }); } }); router.get(&#39;/admin&#39;, Auth, (req, res) =&gt; { if (req.username !== undefined &amp;&amp; req.username === &#39;cat_master&#39;) { return res.status(200).send(`Hello Cat Master😸 this is for you ${FLAG_CONTENT_2}`); } else { return res.status(403).send(&#34;Hello dreamhack! But I&#39;ve got nothing you want&#34;); } }); Now, let’s focus on getting the first part of the flag. It will check the req.filename with the variable FLAG_FILE_NAME, if we open the entrypoint.sh we should see how FLAG_FILE_NAME is created:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-27 16:26:15 +0700 +07'>November 27, 2025</span>&nbsp;·&nbsp;<span>6 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - KeyCat Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -358,6 +356,8 @@ router.get(&#39;/flag&#39;, Auth, (req, res) =&gt; { if (req.filename !== undefi
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/">Hackthebox Facts Machine Walkthrough</a></div>
+        
         <div><a href="http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/">HackTheBox Silentium Machine Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/case-study-pre-authentication-rce-in-koacook-order-online-system-cve-2025-55182/">Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)</a></div>
@@ -365,8 +365,6 @@ router.get(&#39;/flag&#39;, Auth, (req, res) =&gt; { if (req.filename !== undefi
         <div><a href="http://localhost:1313/posts/vsl-ctf-2026-web-writeups/">VSL CTF 2026 Web Writeups</a></div>
         
         <div><a href="http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/">TryHackMe - Solar, exploiting log4j Room Walkthrough</a></div>
-        
-        <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-longtrip-writeup/">WannaGame Championship CTF 2025 longtrip Web Writeup</a></div>
         
     </section>
 

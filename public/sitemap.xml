@@ -3,26 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-04-15T17:06:19+07:00</lastmod>
+    <lastmod>2026-04-16T14:01:07+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/hackthebox/</loc>
-    <lastmod>2026-04-15T17:06:19+07:00</lastmod>
+    <lastmod>2026-04-16T14:01:07+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/</loc>
-    <lastmod>2026-04-15T17:06:19+07:00</lastmod>
+    <loc>http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/</loc>
+    <lastmod>2026-04-16T14:01:07+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-04-15T17:06:19+07:00</lastmod>
+    <lastmod>2026-04-16T14:01:07+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-04-16T14:01:07+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/</loc>
     <lastmod>2026-04-15T17:06:19+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
