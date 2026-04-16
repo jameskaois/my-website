@@ -11,10 +11,17 @@
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Apr 2026 14:01:07 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 14:27:58 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hackthebox Facts Machine Walkthrough</title>
+      <title>UMass CTF 2026 Writeups</title>
+      <link>http://localhost:1313/posts/umass-ctf-2026-writeups/</link>
+      <pubDate>Thu, 16 Apr 2026 14:27:58 +0700</pubDate>
+      <guid>http://localhost:1313/posts/umass-ctf-2026-writeups/</guid>
+      <description>My writeup for challenges in UMass CTF 2026</description>
+    </item>
+    <item>
+      <title>HackTheBox Facts Machine Walkthrough</title>
       <link>http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/</link>
       <pubDate>Thu, 16 Apr 2026 14:01:07 +0700</pubDate>
       <guid>http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/</guid>

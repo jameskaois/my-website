@@ -28,7 +28,7 @@
         }
 
     </style>
-</noscript><link rel="stylesheet" href="/css/custom.min.0bea77248c11d589774c1f2a3ce8e0a28189e9526c0b3d45f179092309617f73.css" />
+</noscript><link rel="stylesheet" href="/css/custom.min.74e4742ed38a3ee9c14ad71ce07501ebcebeb427107e377275f65bc68fc244ff.css" />
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -159,17 +159,37 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/hackthebox-facts-cover.png" alt="HackTheBox Facts Cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/umass-ctf-2026-cover.jpg" alt="UMass CTF 2026 Web Writeups">
 </figure>
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Hackthebox Facts Machine Walkthrough
+    <h2 class="entry-hint-parent">UMass CTF 2026 Writeups
     </h2>
   </header>
   <div class="entry-content">
-    <p>Reconnaissance &amp; Enumeration User Flag Root Flag</p>
+    <p>mrGraph Goal
+My Solution
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-16 14:27:58 +0700 +07'>April 16, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+  <a class="entry-link" aria-label="post link to UMass CTF 2026 Writeups" href="http://localhost:1313/posts/umass-ctf-2026-writeups/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/hackthebox-facts-cover.png" alt="HackTheBox Facts Cover">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">HackTheBox Facts Machine Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Reconnaissance &amp; Enumeration Running simple nmap command:
+nmap -v -sV &lt;MACHINE_IP&gt; Two simple http and ssh services. Access to the website http://facts.htb. After an amount of time of enumeration, I found an /admin/login where I check the source and found the technology behind the app: Camaleon CMS. Found a CVE that we can leverage of it:
+CVE-2024-46987: a Path Traversal bug in Camaleon CMS 2.8.0 &lt; 2.8.2 (work on 2.9.0). It allows authenticated users to read sensitive server files via the MediaController. Intended for authorized security auditing and educational research only. github.com/Goultarde/CVE-2024-46987
+...</p>
   </div>
   <footer class="entry-footer"><span title='2026-04-16 14:01:07 +0700 +07'>April 16, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Hackthebox Facts Machine Walkthrough" href="http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/"></a>
+  <a class="entry-link" aria-label="post link to HackTheBox Facts Machine Walkthrough" href="http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -320,25 +340,6 @@ public class UserController { Logger log = LoggerFactory.getLogger(com.dreamhack
   <footer class="entry-footer"><span title='2025-11-28 14:02:41 +0700 +07'>November 28, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - spring-view Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-spring-view-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - dreamschool">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - dreamschool Web Challenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: dreamschool (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: dreamschool (web) Link: https://dreamhack.io/wargame/challenges/259 Level: 7 Date: 28-11-2025 Goal Examining the code, leveraging SSTI, brute-forcing the secret board id and get the flag.
-My Solution The app is a complicated one, but it is vulnerable to SSTI related to error handling I suggest you examining the code and force the app returns the config of the app.
-From this you can get 2 important variables AUTH_PUBLIC_KEY and FLAG_SCHOOL. You will take this and create the JWT, since the app is using PyJWT==1.7.1, this library JWT is vulnerable to algorithm confusion, so we can force the server to decode a token using HS256. With this code:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-28 09:11:35 +0700 +07'>November 28, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - dreamschool Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-dreamschool-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -356,15 +357,15 @@ From this you can get 2 important variables AUTH_PUBLIC_KEY and FLAG_SCHOOL. You
         <h2>Recently Added</h2>
 
         
-        <div><a href="http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/">Hackthebox Facts Machine Walkthrough</a></div>
+        <div><a href="http://localhost:1313/posts/umass-ctf-2026-writeups/">UMass CTF 2026 Writeups</a></div>
+        
+        <div><a href="http://localhost:1313/posts/hackthebox-facts-machine-walkthrough/">HackTheBox Facts Machine Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/">HackTheBox Silentium Machine Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/case-study-pre-authentication-rce-in-koacook-order-online-system-cve-2025-55182/">Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)</a></div>
         
         <div><a href="http://localhost:1313/posts/vsl-ctf-2026-web-writeups/">VSL CTF 2026 Web Writeups</a></div>
-        
-        <div><a href="http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/">TryHackMe - Solar, exploiting log4j Room Walkthrough</a></div>
         
     </section>
 
@@ -382,7 +383,7 @@ From this you can get 2 important variables AUTH_PUBLIC_KEY and FLAG_SCHOOL. You
         <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/blog/"> Blog </a>
-                                 
+                                   
     </section>
 
     <section id="post-content">
