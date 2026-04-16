@@ -28,7 +28,7 @@
         }
 
     </style>
-</noscript><link rel="stylesheet" href="/css/custom.min.3bd238e71479465d15065fd6c79eb812502e44fbd5e30c10fec6687af48a8998.css" />
+</noscript><link rel="stylesheet" href="/css/custom.min.0bea77248c11d589774c1f2a3ce8e0a28189e9526c0b3d45f179092309617f73.css" />
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -125,7 +125,7 @@
 
         <div class="sidebar-footer">
           <a href="https://github.com/jameskaois" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/hpcao299/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/jameskaois/" target="_blank"><i class="fab fa-linkedin"></i></a>
           <a href="https://x.com/jameskaois" target="_blank"><i class="fab fa-twitter"></i></a>
           <a href="https://tryhackme.com/p/jameskaois" target="_blank"><i class="fas fa-user-secret"></i></i></a>
           <a href="http://localhost:1313/index.xml" target="_blank">
@@ -159,7 +159,23 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/crew-ctf-2025.webp" alt="Pre-Authentication RCE in KoaCook Order Online System">
+        <img loading="lazy" src="http://localhost:1313/images/posts/hackthebox-silentium-cover.png" alt="HackTheBox Silentium Cover">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">HackTheBox Silentium Machine Walkthrough
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Reconnaissance &amp; Enumeration Doing simple nmap command:
+nmap -v -sV &lt;MACHINE_IP&gt; User Flag Root Flag</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-15 17:06:19 +0700 +07'>April 15, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+  <a class="entry-link" aria-label="post link to HackTheBox Silentium Machine Walkthrough" href="http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/posts/patched-koacook-rce.png" alt="Pre-Authentication RCE in KoaCook Order Online System">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)
@@ -325,26 +341,6 @@ router.get(&#39;/flag&#39;, Auth, (req, res) =&gt; { if (req.filename !== undefi
   <footer class="entry-footer"><span title='2025-11-27 16:26:15 +0700 +07'>November 27, 2025</span>&nbsp;·&nbsp;<span>6 min</span></footer>
   <a class="entry-link" aria-label="post link to DreamHack - KeyCat Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-keycat-web-challenge-writeup/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/posts/dreamhack-writeup.jpg" alt="DreamHack - Flask-Dev">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">DreamHack - Flask-Dev Web Challenge Writeup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Room / Challenge: Flask-Dev (Web)
-Metadata Author: jameskaois CTF: DreamHack Challenge: Flask-Dev (web) Link: https://dreamhack.io/wargame/challenges/74 Level: 4 Date: 27-11-2025 Goal Leveraging debugging mode in production to get the flag.
-My Solution The app.py is short and simple:
-#!/usr/bin/python3 from flask import Flask import os app = Flask(__name__) app.secret_key = os.urandom(32) @app.route(&#39;/&#39;) def index(): return &#39;Hello !&#39; @app.route(&#39;/&lt;path:file&gt;&#39;) def file(file): return open(file).read() app.run(host=&#39;0.0.0.0&#39;, port=8000, threaded=True, debug=True) The Dockerfile tells us that the /flag is an executable C script:
-RUN gcc /app/flag.c -o /flag \ &amp;&amp; chmod 111 /flag &amp;&amp; rm /app/flag.c Since the app is vulnerable in this route:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-27 09:54:30 +0700 +07'>November 27, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to DreamHack - Flask-Dev Web Challenge Writeup" href="http://localhost:1313/posts/dreamhack-flask-dev-web-challenge-writeup/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
@@ -362,6 +358,8 @@ RUN gcc /app/flag.c -o /flag \ &amp;&amp; chmod 111 /flag &amp;&amp; rm /app/fla
         <h2>Recently Added</h2>
 
         
+        <div><a href="http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/">HackTheBox Silentium Machine Walkthrough</a></div>
+        
         <div><a href="http://localhost:1313/posts/case-study-pre-authentication-rce-in-koacook-order-online-system-cve-2025-55182/">Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)</a></div>
         
         <div><a href="http://localhost:1313/posts/vsl-ctf-2026-web-writeups/">VSL CTF 2026 Web Writeups</a></div>
@@ -369,8 +367,6 @@ RUN gcc /app/flag.c -o /flag \ &amp;&amp; chmod 111 /flag &amp;&amp; rm /app/fla
         <div><a href="http://localhost:1313/posts/tryhackme-solar-exploiting-log4j-room-walkthrough/">TryHackMe - Solar, exploiting log4j Room Walkthrough</a></div>
         
         <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-longtrip-writeup/">WannaGame Championship CTF 2025 longtrip Web Writeup</a></div>
-        
-        <div><a href="http://localhost:1313/posts/wannagame-championship-ctf-2025-ctfguideline-writeup/">WannaGame Championship CTF 2025 CTFguideline Web Writeup</a></div>
         
     </section>
 
@@ -388,7 +384,7 @@ RUN gcc /app/flag.c -o /flag \ &amp;&amp; chmod 111 /flag &amp;&amp; rm /app/fla
         <a class="sidebar-tag" href="http://localhost:1313/tags/overthewire/"> OverTheWire </a>
           
         <a class="sidebar-tag" href="http://localhost:1313/tags/blog/"> Blog </a>
-                               
+                                 
     </section>
 
     <section id="post-content">

@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Mar 2026 13:03:22 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 17:06:19 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox Silentium Machine Walkthrough</title>
+      <link>http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/</link>
+      <pubDate>Wed, 15 Apr 2026 17:06:19 +0700</pubDate>
+      <guid>http://localhost:1313/posts/hackthebox-silentium-machine-walkthrough/</guid>
+      <description>Detailed HTB Silentium writeup. Follow this complete walkthrough to capture the user and root flags using practical penetration testing techniques.</description>
+    </item>
     <item>
       <title>Case Study: Pre-Authentication RCE in KoaCook Order Online System (CVE-2025-55182)</title>
       <link>http://localhost:1313/posts/case-study-pre-authentication-rce-in-koacook-order-online-system-cve-2025-55182/</link>

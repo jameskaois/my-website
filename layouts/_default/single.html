@@ -30,8 +30,21 @@
 
   <!-- Post Content -->
   <div class="post-content">
-    {{ .Content }}
+    {{ if .Params.htb_active }}
+    <div style="border: 1px solid #ff4444; border-left: 6px solid #ff4444; padding: 24px; border-radius: 6px; background-color: #1a1a1a; color: #e0e0e0; margin: 30px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+    <h3 style="margin-top: 0; color: #ff5555; font-family: monospace; font-size: 1.4em;">
+      [!] WALKTHROUGH LOCKED
+    </h3>
+    <p style="margin-bottom: 0; font-size: 1.1em; line-height: 1.6;">
+      This target is currently <strong>ACTIVE</strong> on HackTheBox.<br> 
+      To prevent spoilers and respect platform rules, the exploit steps are temporarily restricted. Check back once the machine retires!
+    </p>
   </div>
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
+  </div>
+  
 
   {{/*  <!-- Author Box -->
   {{ partial "author-box.html" . }}  */}}
